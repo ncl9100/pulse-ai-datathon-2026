@@ -5,3 +5,4 @@ Pulse AI Datathon Repo hosted by DSC Club @NYU
 v0 + Next.js + Shadcn/ui + Recharts + Claude/OpenAI API + DuckDB
 
 ## Group name
+B N K Y
