@@ -1,0 +1,11 @@
+
+
+# Python (common)
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Large local datasets (adjust paths as needed)
+datasets/labor_logs_all.csv
