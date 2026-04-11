@@ -1,10 +1,7 @@
-04_BILLING_CASH_FLOW
+BILLING & CASH FLOW
 ====================
+Payment timing, overdue invoices, and unreleased retention.
 
-Invoice status, payment timing, and retention analysis.
-  billing_progress.csv            — Latest pct_complete per SOV line (most recent billing app)
-  billing_timeline.csv            — All billing periods for trend analysis
-  cash_flow_summary.csv           — Per-project: paid apps, stuck apps, overdue amounts
-  overdue_applications.csv        — Every invoice overdue >30 days, sorted by days overdue
-  retention_analysis.csv          — Retention held per project; flags releasable amounts
-                                    on projects past substantial completion
+  cash_flow_summary    : per-project billing totals and payment lag stats
+  overdue_applications : invoices past due date, sorted by days overdue
+  retention_analysis   : projects with retention still held past completion date

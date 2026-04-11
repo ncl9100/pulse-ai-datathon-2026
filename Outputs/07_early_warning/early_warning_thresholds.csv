@@ -1,8 +1,8 @@
-signal,poor_median,healthy_median,threshold,separation,higher_means_risk
-early_rfi_count,11.5,9.0,10.25,2.5,True
-early_partial_shipment_%,16.67,14.29,15.48,2.38,True
-early_rfi_cost_impact_%,26.97,25.0,25.98,1.97,True
-early_co_count,2.0,1.0,1.5,1.0,True
-early_ot_ratio_%,5.35,5.43,5.39,0.07,False
-early_co_rejection_rate_%,0.0,0.0,0.0,0.0,False
-early_upstream_design_%,0.0,0.0,0.0,0.0,False
+signal,poor_median,healthy_median,threshold,direction
+project_cpi,0.8,1.702,1.251,lower_is_worse
+early_co_count,2.0,1.0,1.5,higher_is_worse
+early_scope_cos,0.0,0.0,0.0,higher_is_worse
+early_rfi_count,13.0,8.0,10.5,higher_is_worse
+early_ot_ratio,5.309,5.393,5.351,higher_is_worse
+early_partial_mat,16.37,16.238,16.304,higher_is_worse
+early_billing_lag,31.833,32.5,32.167,higher_is_worse

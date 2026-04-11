@@ -1,9 +1,7 @@
-07_EARLY_WARNING
-================
+EARLY WARNING MODEL
+====================
+Risk scores for every project using only data from the first 20% of the timeline.
 
-Risk scoring model using only early-period signals to predict final project outcome.
-  early_warning_scores.csv        — 0-100 risk score per project with signal values
-                                    and risk category (Low/Moderate/Elevated/High)
-  early_warning_thresholds.csv    — The 7 signal thresholds and their separation power
-  early_warning_validation.csv    — Model accuracy metrics on completed projects
-                                    (precision, recall, accuracy at score threshold 55)
+  early_warning_scores     : 0–100 risk score + High/Moderate/Low label per project
+  early_warning_thresholds : the 7 signal thresholds derived from historical data
+  early_warning_validation : accuracy/precision/recall on completed projects

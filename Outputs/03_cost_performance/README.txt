@@ -1,9 +1,12 @@
-03_COST_PERFORMANCE
-===================
+COST PERFORMANCE
+=================
+Earned Value Management metrics per SOV line and per project.
 
-Actual cost vs. budgeted cost, and CPI (efficiency) metrics.
-  actual_cost_per_line.csv        — Actual labor and material cost per (project, SOV line)
-                                    with variance against budget estimates
-  cpi_per_line.csv                — CPI, Earned Value, Estimate At Completion per SOV line
-  cpi_per_project.csv             — Rolled-up project CPI, VAC, and risk flag
-  CPI < 0.85 = At Risk. CPI < 0.70 = Critical.
+  actual_cost_per_line : labor + material actual cost vs. budget per scope
+  billing_progress     : latest % complete per scope (from most recent billing app)
+  billing_timeline     : all billing applications per project over time
+  cpi_per_line         : CPI, EAC, VAC per scope
+  cpi_per_project      : rolled-up project CPI; status = Efficient/On Track/Watch/At Risk/Critical
+
+Note: retention_held and net_payment_due in billing_timeline are recomputed
+from cumulative_billed × 10% (authoritative formula).

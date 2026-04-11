@@ -1,406 +1,406 @@
-project_id,total_co_count,approved_co_count,rejected_co_count,approved_co_revenue_$,rejected_co_loss_$,ve_reduction_$,total_approved_schedule_days,co_rejection_rate_%,project_name,project_type,gc_name,original_contract_value,original_duration_days,co_loss_rate_%
-PRJ-2018-001,10.0,8.0,2.0,4293800.0,1162200.0,384000.0,24.0,20.0,Minneapolis Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,38264000,469,21.3
-PRJ-2018-002,13.0,7.0,6.0,2294000.0,2508400.0,411400.0,32.0,46.15384615384615,Louisville Office Park - Core & Shell MEP,Commercial/Office,JE Dunn,29163000,540,52.23
-PRJ-2018-003,9.0,6.0,3.0,1084000.0,492300.0,96700.0,26.0,33.33333333333333,Las Vegas Elementary Campus - Climate Systems,Education,Turner Construction,11837000,528,31.23
-PRJ-2018-004,8.0,5.0,3.0,593600.0,510700.0,107900.0,7.0,37.5,Houston Data Center - Precision Cooling Systems,Data Center,JE Dunn,11221000,492,46.25
-PRJ-2018-005,9.0,8.0,1.0,831000.0,0.0,185700.0,28.0,11.11111111111111,Phoenix Senior Living - HVAC Upgrade,Residential,Skanska USA,7700000,349,0.0
-PRJ-2018-006,10.0,8.0,2.0,1227000.0,559300.0,0.0,5.0,20.0,Kansas City Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,10039000,547,31.31
-PRJ-2018-007,8.0,6.0,2.0,1658300.0,71200.0,47500.0,5.0,25.0,Portland Corporate Campus - HVAC Systems,Education,Turner Construction,18587000,280,4.12
-PRJ-2018-008,12.0,12.0,0.0,1265300.0,0.0,60300.0,12.0,0.0,Louisville High School - New Construction,Education,Skanska USA,6212000,651,0.0
-PRJ-2018-009,6.0,6.0,0.0,427800.0,0.0,376900.0,4.0,0.0,Houston Edge Data Center - Thermal Management,Data Center,Mortenson,14845000,342,0.0
-PRJ-2018-010,3.0,2.0,1.0,408000.0,0.0,148700.0,19.0,33.33333333333333,San Antonio Mixed-Income Housing - Climate Control,Other,JE Dunn,12617000,236,0.0
-PRJ-2018-011,7.0,4.0,3.0,1044600.0,1462400.0,153000.0,19.0,42.857142857142854,Albuquerque Hospital - Mechanical Systems Renovation,Healthcare,Mortenson,45289000,376,58.33
-PRJ-2018-012,7.0,5.0,2.0,555300.0,401000.0,112200.0,10.0,28.57142857142857,Pittsburgh Business Center - MEP Systems,Other,DPR Construction,9048000,522,41.93
-PRJ-2018-013,12.0,6.0,6.0,313800.0,415900.0,63800.0,26.0,50.0,Indianapolis Unified School District - HVAC Modernization,Education,DPR Construction,4495000,611,57.0
-PRJ-2018-014,10.0,6.0,4.0,871400.0,945600.0,148600.0,14.0,40.0,Indianapolis Cloud Campus Phase 1 - Cooling,Education,JE Dunn,11702000,418,52.04
-PRJ-2018-015,18.0,13.0,5.0,4143500.0,1565300.0,468500.0,38.0,27.77777777777778,Minneapolis Mixed-Income Housing - Climate Control,Other,Skanska USA,22510000,574,27.42
-PRJ-2018-016,19.0,15.0,4.0,4255100.0,1313700.0,592400.0,23.0,21.052631578947366,Houston Surgery Center - Climate Control,Other,JE Dunn,20272000,551,23.59
-PRJ-2018-017,10.0,7.0,3.0,1269400.0,99600.0,659000.0,21.0,30.0,San Antonio Business Center - MEP Systems,Other,DPR Construction,19383000,305,7.28
-PRJ-2018-018,10.0,7.0,3.0,520700.0,555900.0,95400.0,14.0,30.0,Las Vegas Unified School District - HVAC Modernization,Education,Turner Construction,9820000,625,51.63
-PRJ-2018-019,10.0,7.0,3.0,2044600.0,1839900.0,0.0,38.0,30.0,Oklahoma City Edge Data Center - Thermal Management,Data Center,Mortenson,19967000,833,47.37
-PRJ-2018-020,12.0,10.0,2.0,1441500.0,221800.0,27700.0,16.0,16.666666666666664,Chicago Mixed-Income Housing - Climate Control,Other,Mortenson,8195000,611,13.33
-PRJ-2018-021,15.0,12.0,3.0,5369000.0,1701600.0,1622900.0,40.0,20.0,San Antonio Surgery Center - Climate Control,Other,JE Dunn,53167000,702,24.07
-PRJ-2018-022,15.0,10.0,5.0,4652700.0,1844400.0,887100.0,23.0,33.33333333333333,Tampa Office Park - Core & Shell MEP,Commercial/Office,Turner Construction,33663000,411,28.39
-PRJ-2018-023,10.0,8.0,2.0,770800.0,377900.0,154100.0,10.0,20.0,Richmond High School - New Construction,Education,DPR Construction,8862000,600,32.9
-PRJ-2018-024,12.0,9.0,3.0,3171100.0,853900.0,176100.0,31.0,25.0,Raleigh Edge Data Center - Thermal Management,Data Center,JE Dunn,20604000,431,21.21
-PRJ-2018-025,13.0,10.0,3.0,2203300.0,1177900.0,305400.0,19.0,23.076923076923077,Portland Senior Living - HVAC Upgrade,Residential,Skanska USA,19887000,880,34.84
-PRJ-2018-026,11.0,10.0,1.0,700500.0,86700.0,56400.0,54.0,9.090909090909092,Las Vegas Surgery Center - Climate Control,Other,Turner Construction,5488000,593,11.01
-PRJ-2018-027,17.0,11.0,6.0,2053900.0,1263900.0,353300.0,34.0,35.294117647058826,Albuquerque Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,14573000,707,38.09
-PRJ-2018-028,12.0,10.0,2.0,896500.0,208000.0,181800.0,33.0,16.666666666666664,Louisville Elementary Campus - Climate Systems,Education,Skanska USA,10351000,462,18.83
-PRJ-2018-029,10.0,9.0,1.0,2096900.0,25100.0,0.0,24.0,10.0,Kansas City Colocation Facility - HVAC,Other,JE Dunn,9526000,544,1.18
-PRJ-2018-030,17.0,15.0,2.0,3209200.0,821000.0,136900.0,65.0,11.76470588235294,Portland Mixed-Income Housing - Climate Control,Other,Skanska USA,15609000,434,20.37
-PRJ-2018-031,13.0,7.0,6.0,2347700.0,2525700.0,251800.0,11.0,46.15384615384615,Kansas City Surgery Center - Climate Control,Other,Skanska USA,40498000,629,51.83
-PRJ-2018-032,17.0,12.0,5.0,3949700.0,1846300.0,168600.0,55.0,29.411764705882355,Sacramento Office Park - Core & Shell MEP,Commercial/Office,DPR Construction,23117000,404,31.85
-PRJ-2018-033,7.0,6.0,1.0,349800.0,0.0,269800.0,21.0,14.285714285714285,Pittsburgh Middle School - HVAC Systems,Education,Skanska USA,12190000,442,0.0
-PRJ-2018-034,12.0,8.0,4.0,1725300.0,749600.0,0.0,45.0,33.33333333333333,Boston Colocation Facility - HVAC,Other,DPR Construction,18213000,747,30.29
-PRJ-2018-035,9.0,6.0,3.0,1522600.0,511300.0,0.0,31.0,33.33333333333333,Indianapolis Apartment Complex - MEP,Residential,Turner Construction,11962000,338,25.14
-PRJ-2018-036,9.0,8.0,1.0,3747400.0,714400.0,200600.0,7.0,11.11111111111111,Pittsburgh Medical Campus - New HVAC Installation,Healthcare,Mortenson,30618000,457,16.01
-PRJ-2018-037,18.0,13.0,5.0,5799600.0,2215400.0,624700.0,56.0,27.77777777777778,Albuquerque Business Center - MEP Systems,Other,JE Dunn,33532000,803,27.64
-PRJ-2018-038,10.0,9.0,1.0,874900.0,351200.0,247600.0,19.0,10.0,Columbus Unified School District - HVAC Modernization,Education,JE Dunn,10084000,263,28.64
-PRJ-2018-039,6.0,3.0,3.0,99200.0,208300.0,62400.0,2.0,50.0,Albuquerque Data Center - Precision Cooling Systems,Data Center,Skanska USA,5379000,520,67.74
-PRJ-2018-040,11.0,10.0,1.0,1894500.0,169000.0,468800.0,33.0,9.090909090909092,Sacramento Mixed-Income Housing - Climate Control,Other,DPR Construction,20326000,506,8.19
-PRJ-2018-041,8.0,8.0,0.0,5053800.0,0.0,0.0,33.0,0.0,San Antonio Regional Medical Center - HVAC Upgrade,Healthcare,Skanska USA,40791000,403,0.0
-PRJ-2018-042,8.0,5.0,3.0,1268600.0,690500.0,0.0,40.0,37.5,Columbus Office Park - Core & Shell MEP,Commercial/Office,JE Dunn,15625000,432,35.25
-PRJ-2018-043,19.0,15.0,4.0,1754600.0,467400.0,115200.0,56.0,21.052631578947366,Salt Lake City High School - New Construction,Education,Skanska USA,7392000,512,21.04
-PRJ-2018-044,11.0,6.0,5.0,702400.0,387300.0,0.0,14.0,45.45454545454545,Oklahoma City Cloud Campus Phase 1 - Cooling,Education,Mortenson,7204000,497,35.54
-PRJ-2018-045,8.0,5.0,3.0,367600.0,185500.0,56600.0,9.0,37.5,Cincinnati Apartment Complex - MEP,Residential,Skanska USA,4201000,570,33.54
-PRJ-2018-046,10.0,8.0,2.0,830800.0,188000.0,41300.0,0.0,20.0,Albuquerque Medical Campus - New HVAC Installation,Healthcare,Skanska USA,6747000,384,18.45
-PRJ-2018-047,11.0,5.0,6.0,668500.0,1014000.0,0.0,45.0,54.54545454545454,Oklahoma City Office Park - Core & Shell MEP,Commercial/Office,DPR Construction,12546000,393,60.27
-PRJ-2018-048,12.0,9.0,3.0,545200.0,260400.0,80400.0,2.0,25.0,Boston Unified School District - HVAC Modernization,Education,DPR Construction,6077000,664,32.32
-PRJ-2018-049,9.0,7.0,2.0,391700.0,94700.0,107500.0,0.0,22.22222222222222,San Antonio Data Center - Precision Cooling Systems,Data Center,Skanska USA,4707000,520,19.47
-PRJ-2018-050,8.0,4.0,4.0,334700.0,87800.0,11100.0,17.0,50.0,Boston Senior Living - HVAC Upgrade,Residential,Skanska USA,3613000,528,20.78
-PRJ-2018-051,10.0,8.0,2.0,638000.0,0.0,140100.0,22.0,20.0,San Antonio Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,6433000,515,0.0
-PRJ-2018-052,12.0,9.0,3.0,246700.0,167500.0,45200.0,33.0,25.0,Richmond Mixed-Use Tower - Mechanical,Commercial/Office,Skanska USA,3101000,442,40.44
-PRJ-2018-053,11.0,9.0,2.0,303500.0,20100.0,104800.0,7.0,18.181818181818183,Las Vegas High School - New Construction,Education,Mortenson,3488000,443,6.21
-PRJ-2018-054,18.0,14.0,4.0,2616600.0,1324900.0,508900.0,26.0,22.22222222222222,Denver Edge Data Center - Thermal Management,Data Center,DPR Construction,19488000,812,33.61
-PRJ-2018-055,14.0,10.0,4.0,867600.0,227400.0,52700.0,18.0,28.57142857142857,Oklahoma City Mixed-Income Housing - Climate Control,Other,JE Dunn,5485000,704,20.77
-PRJ-2018-056,12.0,6.0,6.0,3878200.0,3393500.0,362900.0,0.0,50.0,Boston Medical Campus - New HVAC Installation,Healthcare,Skanska USA,36355000,459,46.67
-PRJ-2018-057,8.0,8.0,0.0,1011400.0,0.0,178900.0,39.0,0.0,Sacramento Office Park - Core & Shell MEP,Commercial/Office,Mortenson,14417000,581,0.0
-PRJ-2018-058,3.0,2.0,1.0,-93900.0,0.0,118500.0,0.0,33.33333333333333,Boston Middle School - HVAC Systems,Education,DPR Construction,5584000,168,-0.0
-PRJ-2018-059,14.0,7.0,7.0,676100.0,1164400.0,441100.0,17.0,50.0,Atlanta Data Center - Precision Cooling Systems,Data Center,DPR Construction,13417000,581,63.27
-PRJ-2018-060,6.0,5.0,1.0,258700.0,125600.0,137900.0,0.0,16.666666666666664,Boston Apartment Complex - MEP,Residential,Skanska USA,12239000,287,32.68
-PRJ-2018-061,6.0,5.0,1.0,2754900.0,1311500.0,0.0,14.0,16.666666666666664,Las Vegas Hospital - Mechanical Systems Renovation,Healthcare,Mortenson,36618000,548,32.25
-PRJ-2018-062,14.0,9.0,5.0,1796100.0,1040300.0,108600.0,32.0,35.714285714285715,Chicago Business Center - MEP Systems,Other,Turner Construction,18069000,695,36.68
-PRJ-2018-063,6.0,5.0,1.0,353800.0,156600.0,0.0,12.0,16.666666666666664,Cincinnati High School - New Construction,Education,Mortenson,5612000,338,30.68
-PRJ-2018-064,19.0,15.0,4.0,1526000.0,453600.0,399400.0,26.0,21.052631578947366,Minneapolis Cloud Campus Phase 1 - Cooling,Education,DPR Construction,12004000,544,22.91
-PRJ-2018-065,11.0,6.0,5.0,959600.0,618300.0,189800.0,6.0,45.45454545454545,Richmond Residential Tower - HVAC Systems,Commercial/Office,Skanska USA,10603000,526,39.18
-PRJ-2018-066,12.0,10.0,2.0,3055900.0,365400.0,0.0,55.0,16.666666666666664,Portland Regional Medical Center - HVAC Upgrade,Healthcare,Skanska USA,19638000,545,10.68
-PRJ-2018-067,5.0,3.0,2.0,-153400.0,481600.0,443900.0,0.0,40.0,Nashville Corporate Campus - HVAC Systems,Education,Skanska USA,27567000,210,146.74
-PRJ-2018-068,14.0,9.0,5.0,356900.0,251300.0,428500.0,28.0,35.714285714285715,Tampa Unified School District - HVAC Modernization,Education,JE Dunn,8544000,442,41.32
-PRJ-2018-069,9.0,9.0,0.0,2706100.0,0.0,0.0,30.0,0.0,Boston Colocation Facility - HVAC,Other,Mortenson,15603000,398,0.0
-PRJ-2018-070,11.0,10.0,1.0,2490800.0,340900.0,146800.0,33.0,9.090909090909092,Portland Senior Living - HVAC Upgrade,Residential,JE Dunn,14309000,434,12.04
-PRJ-2018-071,19.0,14.0,5.0,5484600.0,1149500.0,245800.0,46.0,26.31578947368421,Atlanta Regional Medical Center - HVAC Upgrade,Healthcare,Mortenson,28100000,392,17.33
-PRJ-2018-072,5.0,5.0,0.0,1125200.0,0.0,0.0,14.0,0.0,Richmond Corporate Campus - HVAC Systems,Education,DPR Construction,17167000,281,0.0
-PRJ-2018-073,4.0,3.0,1.0,350400.0,16100.0,0.0,14.0,25.0,Minneapolis Middle School - HVAC Systems,Education,Skanska USA,5550000,186,4.39
-PRJ-2018-074,9.0,6.0,3.0,399200.0,189900.0,0.0,16.0,33.33333333333333,Chicago Edge Data Center - Thermal Management,Data Center,JE Dunn,4055000,319,32.24
-PRJ-2018-075,17.0,12.0,5.0,2301300.0,1054700.0,125600.0,66.0,29.411764705882355,Indianapolis Senior Living - HVAC Upgrade,Residential,Skanska USA,11890000,796,31.43
-PRJ-2018-076,10.0,7.0,3.0,1411100.0,641100.0,0.0,23.0,30.0,Pittsburgh Surgery Center - Climate Control,Other,Turner Construction,16224000,653,31.24
-PRJ-2018-077,11.0,7.0,4.0,760300.0,320300.0,45700.0,14.0,36.36363636363637,Minneapolis Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,4898000,393,29.64
-PRJ-2018-078,11.0,8.0,3.0,784000.0,212600.0,134200.0,14.0,27.27272727272727,Baltimore High School - New Construction,Education,JE Dunn,8156000,583,21.33
-PRJ-2018-079,12.0,9.0,3.0,2767800.0,811300.0,0.0,17.0,25.0,Baltimore Colocation Facility - HVAC,Other,Turner Construction,16064000,470,22.67
-PRJ-2018-080,12.0,9.0,3.0,3469000.0,410500.0,215700.0,44.0,25.0,Raleigh Senior Living - HVAC Upgrade,Residential,Turner Construction,21159000,490,10.58
-PRJ-2019-081,10.0,8.0,2.0,4659000.0,1706000.0,429900.0,5.0,20.0,Indianapolis Surgery Center - Climate Control,Other,Turner Construction,52999000,730,26.8
-PRJ-2019-082,17.0,12.0,5.0,4122500.0,997000.0,1417300.0,59.0,29.411764705882355,Raleigh Business Center - MEP Systems,Other,JE Dunn,41115000,684,19.47
-PRJ-2019-083,8.0,6.0,2.0,700600.0,36200.0,0.0,23.0,25.0,Cincinnati Elementary Campus - Climate Systems,Education,JE Dunn,8483000,575,4.91
-PRJ-2019-084,13.0,9.0,4.0,890300.0,522000.0,41400.0,26.0,30.76923076923077,Sacramento Data Center - Precision Cooling Systems,Data Center,Turner Construction,7196000,426,36.96
-PRJ-2019-085,11.0,11.0,0.0,662600.0,0.0,214300.0,28.0,0.0,Louisville Residential Tower - HVAC Systems,Commercial/Office,JE Dunn,6578000,468,0.0
-PRJ-2019-086,11.0,8.0,3.0,2154200.0,365700.0,103300.0,20.0,27.27272727272727,Louisville Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,16463000,447,14.51
-PRJ-2019-087,11.0,9.0,2.0,1925300.0,1050400.0,174200.0,10.0,18.181818181818183,Atlanta Mixed-Use Tower - Mechanical,Commercial/Office,Skanska USA,23848000,793,35.3
-PRJ-2019-088,14.0,6.0,8.0,644700.0,1068500.0,115200.0,14.0,57.14285714285714,Oklahoma City Elementary Campus - Climate Systems,Education,JE Dunn,9124000,448,62.37
-PRJ-2019-089,11.0,8.0,3.0,1775700.0,955000.0,170600.0,35.0,27.27272727272727,Tampa Cloud Campus Phase 1 - Cooling,Education,Mortenson,12969000,449,34.97
-PRJ-2019-090,12.0,9.0,3.0,521000.0,95900.0,14800.0,37.0,25.0,Tampa Senior Living - HVAC Upgrade,Residential,DPR Construction,3276000,324,15.55
-PRJ-2019-091,8.0,7.0,1.0,3367900.0,163900.0,0.0,33.0,12.5,Portland Surgery Center - Climate Control,Other,JE Dunn,37972000,370,4.64
-PRJ-2019-092,11.0,9.0,2.0,796400.0,342000.0,383800.0,25.0,18.181818181818183,Raleigh Corporate Campus - HVAC Systems,Education,Turner Construction,13785000,357,30.04
-PRJ-2019-093,9.0,6.0,3.0,967300.0,284900.0,0.0,5.0,33.33333333333333,Baltimore Middle School - HVAC Systems,Education,JE Dunn,10135000,416,22.75
-PRJ-2019-094,7.0,4.0,3.0,1266000.0,496800.0,60800.0,0.0,42.857142857142854,Atlanta Data Center - Precision Cooling Systems,Data Center,DPR Construction,21983000,380,28.18
-PRJ-2019-095,20.0,15.0,5.0,1634100.0,818400.0,111700.0,39.0,25.0,Phoenix Senior Living - HVAC Upgrade,Residential,DPR Construction,11001000,685,33.37
-PRJ-2019-096,6.0,6.0,0.0,419900.0,0.0,103400.0,12.0,0.0,Portland Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,9588000,364,0.0
-PRJ-2019-097,8.0,8.0,0.0,931800.0,0.0,0.0,33.0,0.0,Cincinnati Mixed-Use Tower - Mechanical,Commercial/Office,DPR Construction,8337000,440,0.0
-PRJ-2019-098,8.0,7.0,1.0,766000.0,252600.0,0.0,4.0,12.5,Baltimore Unified School District - HVAC Modernization,Education,Turner Construction,6621000,569,24.8
-PRJ-2019-099,6.0,6.0,0.0,731600.0,0.0,170000.0,16.0,0.0,San Antonio Colocation Facility - HVAC,Other,Mortenson,10701000,320,0.0
-PRJ-2019-100,6.0,4.0,2.0,220900.0,208200.0,75600.0,5.0,33.33333333333333,Richmond Mixed-Income Housing - Climate Control,Other,Skanska USA,5785000,277,48.52
-PRJ-2019-101,6.0,5.0,1.0,2539400.0,1188500.0,628900.0,0.0,16.666666666666664,Pittsburgh Hospital - Mechanical Systems Renovation,Healthcare,Turner Construction,43110000,243,31.88
-PRJ-2019-102,10.0,9.0,1.0,2436500.0,250800.0,1053600.0,7.0,10.0,Indianapolis Business Center - MEP Systems,Other,DPR Construction,42813000,723,9.33
-PRJ-2019-103,17.0,16.0,1.0,778100.0,50300.0,219100.0,16.0,5.88235294117647,Kansas City Middle School - HVAC Systems,Education,Mortenson,5820000,618,6.07
-PRJ-2019-104,6.0,6.0,0.0,1026700.0,0.0,57600.0,30.0,0.0,Atlanta Edge Data Center - Thermal Management,Data Center,DPR Construction,14396000,331,0.0
-PRJ-2019-105,4.0,4.0,0.0,597300.0,0.0,131900.0,7.0,0.0,Raleigh Mixed-Income Housing - Climate Control,Other,DPR Construction,14305000,243,0.0
-PRJ-2019-106,9.0,7.0,2.0,5120100.0,1529100.0,537200.0,42.0,22.22222222222222,Raleigh Regional Medical Center - HVAC Upgrade,Healthcare,Skanska USA,50158000,393,23.0
-PRJ-2019-107,10.0,7.0,3.0,736200.0,1110800.0,438400.0,17.0,30.0,Boston Office Park - Core & Shell MEP,Commercial/Office,DPR Construction,16925000,566,60.14
-PRJ-2019-108,20.0,13.0,7.0,2288000.0,502000.0,180800.0,60.0,35.0,Richmond Elementary Campus - Climate Systems,Education,JE Dunn,10813000,579,17.99
-PRJ-2019-109,6.0,5.0,1.0,932900.0,180400.0,0.0,19.0,16.666666666666664,Portland Colocation Facility - HVAC,Other,Turner Construction,14103000,452,16.2
-PRJ-2019-110,3.0,2.0,1.0,210200.0,83200.0,0.0,4.0,33.33333333333333,Las Vegas Senior Living - HVAC Upgrade,Residential,DPR Construction,3872000,340,28.36
-PRJ-2019-111,8.0,6.0,2.0,763200.0,669500.0,115000.0,14.0,25.0,Louisville Surgery Center - Climate Control,Other,Skanska USA,10721000,588,46.73
-PRJ-2019-112,6.0,5.0,1.0,687100.0,148600.0,0.0,7.0,16.666666666666664,Atlanta Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,10030000,408,17.78
-PRJ-2019-113,13.0,12.0,1.0,543500.0,9700.0,8500.0,35.0,7.6923076923076925,Kansas City Middle School - HVAC Systems,Education,Turner Construction,3319000,819,1.75
-PRJ-2019-114,9.0,7.0,2.0,1690400.0,891800.0,364400.0,7.0,22.22222222222222,Tampa Colocation Facility - HVAC,Other,JE Dunn,21934000,539,34.54
-PRJ-2019-115,10.0,8.0,2.0,2735900.0,708800.0,339000.0,47.0,20.0,Phoenix Senior Living - HVAC Upgrade,Residential,JE Dunn,25864000,436,20.58
-PRJ-2019-116,6.0,5.0,1.0,2380600.0,0.0,367900.0,5.0,16.666666666666664,Minneapolis Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,30690000,331,0.0
-PRJ-2019-117,10.0,9.0,1.0,1985500.0,0.0,666900.0,16.0,10.0,Atlanta Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,23416000,308,0.0
-PRJ-2019-118,11.0,8.0,3.0,589500.0,132100.0,38500.0,14.0,27.27272727272727,Portland Unified School District - HVAC Modernization,Education,JE Dunn,4569000,371,18.31
-PRJ-2019-119,11.0,9.0,2.0,2588200.0,877800.0,0.0,7.0,18.181818181818183,Albuquerque Data Center - Precision Cooling Systems,Data Center,JE Dunn,19776000,516,25.33
-PRJ-2019-120,12.0,10.0,2.0,430700.0,236500.0,142100.0,56.0,16.666666666666664,Albuquerque Senior Living - HVAC Upgrade,Residential,DPR Construction,7611000,626,35.45
-PRJ-2019-121,17.0,13.0,4.0,7961300.0,3827000.0,135000.0,35.0,23.52941176470588,Columbus Surgery Center - Climate Control,Other,DPR Construction,47765000,815,32.46
-PRJ-2019-122,4.0,1.0,3.0,-15900.0,125900.0,52800.0,0.0,75.0,Denver Office Park - Core & Shell MEP,Commercial/Office,Mortenson,3259000,386,114.45
-PRJ-2019-123,7.0,4.0,3.0,689800.0,354300.0,116200.0,0.0,42.857142857142854,Oklahoma City High School - New Construction,Education,JE Dunn,9763000,464,33.93
-PRJ-2019-124,8.0,6.0,2.0,534200.0,135400.0,35600.0,7.0,25.0,Sacramento Colocation Facility - HVAC,Other,DPR Construction,6722000,331,20.22
-PRJ-2019-125,12.0,9.0,3.0,1381700.0,215200.0,271700.0,9.0,25.0,Boston Mixed-Income Housing - Climate Control,Other,DPR Construction,14385000,721,13.48
-PRJ-2019-126,20.0,17.0,3.0,10305700.0,732700.0,1014600.0,68.0,15.0,Cincinnati Surgery Center - Climate Control,Other,DPR Construction,42999000,587,6.64
-PRJ-2019-127,11.0,9.0,2.0,1093300.0,293700.0,273400.0,0.0,18.181818181818183,Phoenix Mixed-Use Tower - Mechanical,Commercial/Office,JE Dunn,12380000,316,21.18
-PRJ-2019-128,7.0,6.0,1.0,133700.0,56600.0,62600.0,7.0,14.285714285714285,Kansas City High School - New Construction,Education,JE Dunn,3238000,602,29.74
-PRJ-2019-129,6.0,5.0,1.0,871700.0,63100.0,58500.0,6.0,16.666666666666664,Boston Colocation Facility - HVAC,Other,Mortenson,14922000,506,6.75
-PRJ-2019-130,17.0,16.0,1.0,1564200.0,59700.0,225400.0,42.0,5.88235294117647,Columbus Senior Living - HVAC Upgrade,Residential,Turner Construction,7207000,347,3.68
-PRJ-2019-131,12.0,10.0,2.0,5880200.0,841200.0,510200.0,23.0,16.666666666666664,Cincinnati Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,44330000,614,12.52
-PRJ-2019-132,10.0,9.0,1.0,315200.0,50300.0,54100.0,14.0,10.0,San Antonio Corporate Campus - HVAC Systems,Education,Turner Construction,4919000,583,13.76
-PRJ-2019-133,10.0,7.0,3.0,511700.0,619600.0,136900.0,10.0,30.0,Oklahoma City Elementary Campus - Climate Systems,Education,Turner Construction,8572000,322,54.77
-PRJ-2019-134,9.0,5.0,4.0,508700.0,399100.0,0.0,24.0,44.44444444444444,Minneapolis Cloud Campus Phase 1 - Cooling,Education,JE Dunn,5471000,355,43.96
-PRJ-2019-135,8.0,8.0,0.0,2149700.0,0.0,0.0,61.0,0.0,Minneapolis Mixed-Income Housing - Climate Control,Other,JE Dunn,17311000,466,0.0
-PRJ-2019-136,10.0,9.0,1.0,768500.0,126800.0,154000.0,9.0,10.0,Salt Lake City Medical Campus - New HVAC Installation,Healthcare,Skanska USA,8264000,348,14.16
-PRJ-2019-137,11.0,8.0,3.0,4167000.0,1221400.0,0.0,27.0,27.27272727272727,Kansas City Office Park - Core & Shell MEP,Commercial/Office,JE Dunn,28675000,483,22.67
-PRJ-2019-138,14.0,12.0,2.0,2613700.0,35000.0,85700.0,60.0,14.285714285714285,Albuquerque Elementary Campus - Climate Systems,Education,Turner Construction,12417000,760,1.32
-PRJ-2019-139,8.0,8.0,0.0,1153100.0,0.0,0.0,28.0,0.0,Sacramento Colocation Facility - HVAC,Other,Turner Construction,7332000,334,0.0
-PRJ-2019-140,14.0,12.0,2.0,2088800.0,391900.0,0.0,66.0,14.285714285714285,Boston Senior Living - HVAC Upgrade,Residential,DPR Construction,11399000,631,15.8
-PRJ-2019-141,8.0,6.0,2.0,3203500.0,1268100.0,0.0,23.0,25.0,Richmond Medical Campus - New HVAC Installation,Healthcare,Turner Construction,37483000,560,28.36
-PRJ-2019-142,9.0,7.0,2.0,1479900.0,261400.0,657000.0,23.0,22.22222222222222,Louisville Business Center - MEP Systems,Other,JE Dunn,27982000,329,15.01
-PRJ-2019-143,9.0,8.0,1.0,246100.0,61500.0,6600.0,24.0,11.11111111111111,Indianapolis Middle School - HVAC Systems,Education,JE Dunn,3114000,497,19.99
-PRJ-2019-144,14.0,12.0,2.0,1449800.0,300400.0,180600.0,53.0,14.285714285714285,Richmond Data Center - Precision Cooling Systems,Data Center,DPR Construction,8799000,434,17.16
-PRJ-2019-145,8.0,6.0,2.0,126100.0,159700.0,109700.0,14.0,25.0,Oklahoma City Mixed-Income Housing - Climate Control,Other,Skanska USA,4355000,439,55.88
-PRJ-2019-146,9.0,5.0,4.0,409600.0,505500.0,63200.0,30.0,44.44444444444444,Denver Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,7959000,341,55.24
-PRJ-2019-147,17.0,11.0,6.0,3270300.0,1895700.0,137000.0,9.0,35.294117647058826,Oklahoma City Office Park - Core & Shell MEP,Commercial/Office,Skanska USA,18067000,448,36.7
-PRJ-2019-148,9.0,8.0,1.0,645600.0,157600.0,118100.0,28.0,11.11111111111111,Las Vegas Middle School - HVAC Systems,Education,JE Dunn,7547000,499,19.62
-PRJ-2019-149,9.0,6.0,3.0,1340100.0,876700.0,260900.0,19.0,33.33333333333333,Boston Data Center - Precision Cooling Systems,Data Center,JE Dunn,21493000,573,39.55
-PRJ-2019-150,20.0,16.0,4.0,3744600.0,983700.0,719900.0,51.0,20.0,Oklahoma City Mixed-Income Housing - Climate Control,Other,JE Dunn,26488000,641,20.8
-PRJ-2019-151,8.0,6.0,2.0,3244900.0,874400.0,0.0,18.0,25.0,Albuquerque Surgery Center - Climate Control,Other,JE Dunn,29676000,632,21.23
-PRJ-2019-152,11.0,8.0,3.0,200000.0,124000.0,18800.0,17.0,27.27272727272727,Phoenix Mixed-Use Tower - Mechanical,Commercial/Office,Mortenson,2246000,477,38.27
-PRJ-2019-153,20.0,16.0,4.0,1328800.0,158800.0,56800.0,63.0,20.0,Indianapolis Middle School - HVAC Systems,Education,DPR Construction,4947000,607,10.67
-PRJ-2019-154,11.0,9.0,2.0,575500.0,310500.0,47600.0,49.0,18.181818181818183,Las Vegas Colocation Facility - HVAC,Other,DPR Construction,6455000,742,35.05
-PRJ-2019-155,6.0,5.0,1.0,423800.0,38700.0,99200.0,14.0,16.666666666666664,Cincinnati Mixed-Income Housing - Climate Control,Other,Skanska USA,7959000,609,8.37
-PRJ-2019-156,7.0,6.0,1.0,3566400.0,0.0,305400.0,19.0,14.285714285714285,Richmond Regional Medical Center - HVAC Upgrade,Healthcare,Mortenson,36862000,424,0.0
-PRJ-2019-157,13.0,11.0,2.0,1068700.0,237200.0,0.0,89.0,15.384615384615385,Portland Office Park - Core & Shell MEP,Commercial/Office,Mortenson,6804000,450,18.16
-PRJ-2019-158,6.0,4.0,2.0,365200.0,171400.0,0.0,12.0,33.33333333333333,Denver High School - New Construction,Education,DPR Construction,5838000,415,31.94
-PRJ-2019-159,6.0,5.0,1.0,886500.0,349900.0,136500.0,14.0,16.666666666666664,Albuquerque Data Center - Precision Cooling Systems,Data Center,JE Dunn,18511000,517,28.3
-PRJ-2019-160,12.0,8.0,4.0,1122700.0,270100.0,98800.0,47.0,33.33333333333333,Cincinnati Apartment Complex - MEP,Residential,JE Dunn,6817000,511,19.39
-PRJ-2020-161,17.0,8.0,9.0,6299700.0,9738300.0,877300.0,26.0,52.94117647058824,Phoenix Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,58874000,659,60.72
-PRJ-2020-162,5.0,3.0,2.0,147900.0,650800.0,370000.0,2.0,40.0,Denver Corporate Campus - HVAC Systems,Education,Turner Construction,29697000,264,81.48
-PRJ-2020-163,19.0,14.0,5.0,1874200.0,454000.0,27200.0,39.0,26.31578947368421,Nashville High School - New Construction,Education,Mortenson,7125000,777,19.5
-PRJ-2020-164,7.0,6.0,1.0,822900.0,0.0,22700.0,5.0,14.285714285714285,Richmond Cloud Campus Phase 1 - Cooling,Education,Turner Construction,7029000,503,0.0
-PRJ-2020-165,17.0,16.0,1.0,1864100.0,0.0,221500.0,28.0,5.88235294117647,Salt Lake City Senior Living - HVAC Upgrade,Residential,JE Dunn,8448000,710,0.0
-PRJ-2020-166,9.0,7.0,2.0,6137300.0,1832500.0,0.0,16.0,22.22222222222222,Portland Medical Campus - New HVAC Installation,Healthcare,Turner Construction,52683000,629,22.99
-PRJ-2020-167,6.0,3.0,3.0,648500.0,488800.0,0.0,7.0,50.0,Minneapolis Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,10960000,525,42.98
-PRJ-2020-168,4.0,3.0,1.0,339900.0,38200.0,0.0,28.0,25.0,Cincinnati High School - New Construction,Education,JE Dunn,7650000,262,10.1
-PRJ-2020-169,7.0,5.0,2.0,680800.0,0.0,302100.0,16.0,28.57142857142857,Portland Colocation Facility - HVAC,Other,Skanska USA,10657000,345,0.0
-PRJ-2020-170,3.0,3.0,0.0,119100.0,0.0,17700.0,21.0,0.0,Minneapolis Residential Tower - HVAC Systems,Commercial/Office,JE Dunn,4816000,184,0.0
-PRJ-2020-171,6.0,5.0,1.0,152100.0,30800.0,87700.0,14.0,16.666666666666664,Las Vegas Surgery Center - Climate Control,Other,Skanska USA,5525000,230,16.84
-PRJ-2020-172,10.0,8.0,2.0,567900.0,175200.0,0.0,7.0,20.0,Boston Business Center - MEP Systems,Other,DPR Construction,4940000,531,23.58
-PRJ-2020-173,12.0,9.0,3.0,366100.0,221100.0,50900.0,11.0,25.0,Boston Middle School - HVAC Systems,Education,Skanska USA,3384000,381,37.65
-PRJ-2020-174,11.0,10.0,1.0,1364300.0,66300.0,80900.0,14.0,9.090909090909092,Louisville Cloud Campus Phase 1 - Cooling,Education,JE Dunn,8026000,626,4.63
-PRJ-2020-175,10.0,7.0,3.0,2693000.0,852300.0,114400.0,17.0,30.0,Baltimore Senior Living - HVAC Upgrade,Residential,DPR Construction,21782000,474,24.04
-PRJ-2020-176,7.0,4.0,3.0,205800.0,2247100.0,417800.0,12.0,42.857142857142854,Chicago Regional Medical Center - HVAC Upgrade,Healthcare,Skanska USA,29701000,515,91.61
-PRJ-2020-177,8.0,6.0,2.0,1460400.0,104100.0,104700.0,19.0,25.0,Atlanta Corporate Campus - HVAC Systems,Education,Turner Construction,11218000,332,6.65
-PRJ-2020-178,9.0,6.0,3.0,492600.0,645200.0,156300.0,21.0,33.33333333333333,Houston High School - New Construction,Education,DPR Construction,13653000,302,56.71
-PRJ-2020-179,13.0,10.0,3.0,2663300.0,841800.0,315300.0,6.0,23.076923076923077,Louisville Edge Data Center - Thermal Management,Data Center,DPR Construction,22670000,787,24.02
-PRJ-2020-180,20.0,17.0,3.0,1672000.0,327500.0,263400.0,86.0,15.0,Kansas City Senior Living - HVAC Upgrade,Residential,Mortenson,8550000,728,16.38
-PRJ-2020-181,7.0,6.0,1.0,4279800.0,0.0,304300.0,28.0,14.285714285714285,Oklahoma City Medical Campus - New HVAC Installation,Healthcare,Skanska USA,37213000,495,0.0
-PRJ-2020-182,11.0,6.0,5.0,960300.0,654700.0,0.0,21.0,45.45454545454545,Houston Office Park - Core & Shell MEP,Commercial/Office,JE Dunn,7358000,534,40.54
-PRJ-2020-183,18.0,13.0,5.0,2204300.0,646200.0,438200.0,35.0,27.77777777777778,Kansas City Elementary Campus - Climate Systems,Education,Turner Construction,14144000,820,22.67
-PRJ-2020-184,13.0,12.0,1.0,958500.0,99500.0,33200.0,49.0,7.6923076923076925,San Antonio Cloud Campus Phase 1 - Cooling,Education,Skanska USA,5820000,825,9.4
-PRJ-2020-185,7.0,4.0,3.0,188300.0,168700.0,31800.0,21.0,42.857142857142854,Baltimore Apartment Complex - MEP,Residential,DPR Construction,3792000,564,47.25
-PRJ-2020-186,9.0,5.0,4.0,1919600.0,1116000.0,445000.0,19.0,44.44444444444444,Atlanta Medical Campus - New HVAC Installation,Healthcare,Turner Construction,27278000,409,36.76
-PRJ-2020-187,7.0,6.0,1.0,663000.0,0.0,100100.0,16.0,14.285714285714285,Las Vegas Corporate Campus - HVAC Systems,Education,DPR Construction,10850000,537,0.0
-PRJ-2020-188,15.0,14.0,1.0,2066200.0,0.0,81900.0,8.0,6.666666666666667,Kansas City Unified School District - HVAC Modernization,Education,Skanska USA,7817000,525,0.0
-PRJ-2020-189,11.0,8.0,3.0,2307900.0,869300.0,232100.0,49.0,27.27272727272727,Salt Lake City Colocation Facility - HVAC,Other,DPR Construction,25784000,703,27.36
-PRJ-2020-190,7.0,7.0,0.0,660600.0,0.0,74200.0,44.0,0.0,Oklahoma City Residential Tower - HVAC Systems,Commercial/Office,Skanska USA,6390000,385,0.0
-PRJ-2020-191,12.0,11.0,1.0,5915800.0,965900.0,466200.0,30.0,8.333333333333332,Phoenix Medical Campus - New HVAC Installation,Healthcare,DPR Construction,46534000,282,14.04
-PRJ-2020-192,9.0,5.0,4.0,1043300.0,1372300.0,0.0,12.0,44.44444444444444,Houston Corporate Campus - HVAC Systems,Education,DPR Construction,16402000,605,56.81
-PRJ-2020-193,20.0,18.0,2.0,4387400.0,667600.0,49200.0,45.0,10.0,Boston Middle School - HVAC Systems,Education,JE Dunn,14923000,761,13.21
-PRJ-2020-194,6.0,4.0,2.0,1030400.0,942700.0,0.0,14.0,33.33333333333333,Salt Lake City Data Center - Precision Cooling Systems,Data Center,JE Dunn,19531000,281,47.78
-PRJ-2020-195,18.0,13.0,5.0,3216600.0,606700.0,266800.0,50.0,27.77777777777778,San Antonio Senior Living - HVAC Upgrade,Residential,DPR Construction,16764000,485,15.87
-PRJ-2020-196,17.0,12.0,5.0,4798500.0,2859400.0,619200.0,56.0,29.411764705882355,Baltimore Surgery Center - Climate Control,Other,Mortenson,35312000,656,37.34
-PRJ-2020-197,8.0,6.0,2.0,234600.0,0.0,29900.0,40.0,25.0,Chicago Corporate Campus - HVAC Systems,Education,JE Dunn,2640000,321,0.0
-PRJ-2020-198,12.0,9.0,3.0,1292400.0,381100.0,0.0,42.0,25.0,Minneapolis Elementary Campus - Climate Systems,Education,JE Dunn,10617000,379,22.77
-PRJ-2020-199,6.0,4.0,2.0,713600.0,866900.0,0.0,5.0,33.33333333333333,Cincinnati Data Center - Precision Cooling Systems,Data Center,Skanska USA,17456000,491,54.85
-PRJ-2020-200,7.0,6.0,1.0,690500.0,52900.0,0.0,14.0,14.285714285714285,Boston Senior Living - HVAC Upgrade,Residential,JE Dunn,4488000,386,7.12
-PRJ-2020-201,14.0,12.0,2.0,6868500.0,1085300.0,354900.0,52.0,14.285714285714285,Raleigh Regional Medical Center - HVAC Upgrade,Healthcare,DPR Construction,43769000,513,13.65
-PRJ-2020-202,20.0,16.0,4.0,6492200.0,1768500.0,539200.0,30.0,20.0,Salt Lake City Corporate Campus - HVAC Systems,Education,DPR Construction,27217000,778,21.41
-PRJ-2020-203,17.0,14.0,3.0,926000.0,129200.0,53300.0,79.0,17.647058823529413,San Antonio High School - New Construction,Education,DPR Construction,4570000,822,12.24
-PRJ-2020-204,9.0,4.0,5.0,925800.0,1888700.0,260600.0,12.0,55.55555555555556,Sacramento Edge Data Center - Thermal Management,Data Center,Turner Construction,22017000,395,67.11
-PRJ-2020-205,13.0,10.0,3.0,565000.0,306500.0,298200.0,19.0,23.076923076923077,Atlanta Apartment Complex - MEP,Residential,Turner Construction,7258000,759,35.17
-PRJ-2020-206,12.0,9.0,3.0,2675400.0,1390200.0,0.0,40.0,25.0,Pittsburgh Medical Campus - New HVAC Installation,Healthcare,Skanska USA,19628000,488,34.19
-PRJ-2020-207,4.0,4.0,0.0,157800.0,0.0,0.0,23.0,0.0,Salt Lake City Office Park - Core & Shell MEP,Commercial/Office,Mortenson,3989000,232,0.0
-PRJ-2020-208,13.0,10.0,3.0,1182500.0,913200.0,78100.0,46.0,23.076923076923077,Louisville High School - New Construction,Education,Turner Construction,13209000,639,43.57
-PRJ-2020-209,7.0,5.0,2.0,1154900.0,344800.0,0.0,7.0,28.57142857142857,Phoenix Cloud Campus Phase 1 - Cooling,Education,JE Dunn,13910000,624,22.99
-PRJ-2020-210,4.0,4.0,0.0,692700.0,0.0,159000.0,5.0,0.0,Boston Apartment Complex - MEP,Residential,DPR Construction,15485000,304,0.0
-PRJ-2020-211,8.0,8.0,0.0,4908500.0,0.0,0.0,9.0,0.0,Las Vegas Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,39163000,532,0.0
-PRJ-2020-212,20.0,16.0,4.0,7122700.0,1814200.0,454700.0,100.0,20.0,Oklahoma City Corporate Campus - HVAC Systems,Education,JE Dunn,31617000,740,20.3
-PRJ-2020-213,7.0,7.0,0.0,211900.0,0.0,69100.0,12.0,0.0,Richmond Middle School - HVAC Systems,Education,Mortenson,3162000,426,0.0
-PRJ-2020-214,6.0,5.0,1.0,877200.0,190300.0,0.0,21.0,16.666666666666664,Raleigh Edge Data Center - Thermal Management,Data Center,JE Dunn,12266000,388,17.83
-PRJ-2020-215,14.0,11.0,3.0,3185300.0,1077700.0,673800.0,14.0,21.428571428571427,Phoenix Residential Tower - HVAC Systems,Commercial/Office,Skanska USA,25173000,536,25.28
-PRJ-2020-216,9.0,6.0,3.0,1578200.0,2967800.0,870800.0,7.0,33.33333333333333,Kansas City Surgery Center - Climate Control,Other,JE Dunn,50756000,559,65.28
-PRJ-2020-217,6.0,4.0,2.0,273300.0,137600.0,0.0,42.0,33.33333333333333,Boston Corporate Campus - HVAC Systems,Education,Skanska USA,4321000,360,33.49
-PRJ-2020-218,14.0,11.0,3.0,977500.0,434700.0,131400.0,35.0,21.428571428571427,Portland Middle School - HVAC Systems,Education,JE Dunn,10797000,608,30.78
-PRJ-2020-219,7.0,6.0,1.0,2473400.0,258500.0,195800.0,19.0,14.285714285714285,Denver Cloud Campus Phase 1 - Cooling,Education,Mortenson,26976000,598,9.46
-PRJ-2020-220,11.0,6.0,5.0,1448700.0,1110200.0,0.0,34.0,45.45454545454545,Portland Apartment Complex - MEP,Residential,Skanska USA,16642000,705,43.39
-PRJ-2020-221,15.0,12.0,3.0,2282300.0,454300.0,336600.0,37.0,20.0,Kansas City Regional Medical Center - HVAC Upgrade,Healthcare,DPR Construction,13847000,591,16.6
-PRJ-2020-222,11.0,8.0,3.0,767600.0,692800.0,61600.0,5.0,27.27272727272727,Oklahoma City Corporate Campus - HVAC Systems,Education,Skanska USA,10170000,683,47.44
-PRJ-2020-223,12.0,5.0,7.0,455900.0,519400.0,99400.0,5.0,58.333333333333336,Atlanta High School - New Construction,Education,DPR Construction,7827000,376,53.26
-PRJ-2020-224,10.0,8.0,2.0,1721900.0,524500.0,0.0,16.0,20.0,San Antonio Edge Data Center - Thermal Management,Data Center,Skanska USA,17418000,441,23.35
-PRJ-2020-225,10.0,9.0,1.0,574700.0,120200.0,35200.0,11.0,10.0,Salt Lake City Residential Tower - HVAC Systems,Commercial/Office,JE Dunn,5017000,569,17.3
-PRJ-2020-226,11.0,8.0,3.0,6235400.0,2140300.0,290700.0,14.0,27.27272727272727,Nashville Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,52146000,550,25.55
-PRJ-2020-227,14.0,6.0,8.0,1563300.0,2556300.0,352200.0,17.0,57.14285714285714,Phoenix Mixed-Use Tower - Mechanical,Commercial/Office,Mortenson,27835000,480,62.05
-PRJ-2020-228,6.0,4.0,2.0,453300.0,211800.0,0.0,21.0,33.33333333333333,Oklahoma City Unified School District - HVAC Modernization,Education,JE Dunn,8395000,493,31.84
-PRJ-2020-229,6.0,4.0,2.0,724800.0,343400.0,0.0,11.0,33.33333333333333,Denver Colocation Facility - HVAC,Other,Mortenson,7202000,348,32.15
-PRJ-2020-230,3.0,2.0,1.0,244300.0,0.0,66300.0,0.0,33.33333333333333,Atlanta Residential Tower - HVAC Systems,Commercial/Office,DPR Construction,6912000,301,0.0
-PRJ-2020-231,20.0,14.0,6.0,2076500.0,1346000.0,85300.0,36.0,30.0,Houston Medical Campus - New HVAC Installation,Healthcare,JE Dunn,11391000,595,39.33
-PRJ-2020-232,10.0,7.0,3.0,621100.0,520900.0,35900.0,19.0,30.0,Minneapolis Corporate Campus - HVAC Systems,Education,JE Dunn,7301000,550,45.61
-PRJ-2020-233,9.0,8.0,1.0,276700.0,42700.0,103500.0,16.0,11.11111111111111,Kansas City Middle School - HVAC Systems,Education,Skanska USA,4218000,513,13.37
-PRJ-2020-234,6.0,4.0,2.0,1021800.0,672900.0,0.0,9.0,33.33333333333333,Pittsburgh Cloud Campus Phase 1 - Cooling,Education,DPR Construction,18348000,392,39.71
-PRJ-2020-235,14.0,11.0,3.0,3113700.0,634700.0,439100.0,23.0,21.428571428571427,Oklahoma City Senior Living - HVAC Upgrade,Residential,Skanska USA,17688000,645,16.93
-PRJ-2020-236,7.0,7.0,0.0,1315400.0,0.0,0.0,21.0,0.0,Denver Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,12168000,313,0.0
-PRJ-2020-237,7.0,5.0,2.0,2091800.0,459300.0,372900.0,4.0,28.57142857142857,Sacramento Business Center - MEP Systems,Other,Skanska USA,33680000,452,18.0
-PRJ-2020-238,8.0,5.0,3.0,645000.0,387000.0,103100.0,37.0,37.5,Nashville Middle School - HVAC Systems,Education,Turner Construction,9628000,436,37.5
-PRJ-2020-239,15.0,11.0,4.0,4660800.0,2138900.0,179500.0,31.0,26.666666666666668,Nashville Edge Data Center - Thermal Management,Data Center,JE Dunn,25204000,440,31.46
-PRJ-2020-240,14.0,10.0,4.0,1267200.0,575900.0,0.0,33.0,28.57142857142857,Atlanta Residential Tower - HVAC Systems,Commercial/Office,JE Dunn,8580000,561,31.25
-PRJ-2021-241,6.0,3.0,3.0,807200.0,1236100.0,0.0,33.0,50.0,Portland Hospital - Mechanical Systems Renovation,Healthcare,Mortenson,21326000,566,60.5
-PRJ-2021-242,11.0,7.0,4.0,1568200.0,741500.0,109400.0,30.0,36.36363636363637,Sacramento Office Park - Core & Shell MEP,Commercial/Office,Turner Construction,12997000,506,32.1
-PRJ-2021-243,20.0,12.0,8.0,572300.0,496200.0,63500.0,18.0,40.0,Columbus Middle School - HVAC Systems,Education,Mortenson,3832000,591,46.44
-PRJ-2021-244,6.0,4.0,2.0,799800.0,180200.0,99900.0,19.0,33.33333333333333,Minneapolis Colocation Facility - HVAC,Other,Turner Construction,13475000,573,18.39
-PRJ-2021-245,11.0,8.0,3.0,1344600.0,400600.0,32100.0,7.0,27.27272727272727,Phoenix Residential Tower - HVAC Systems,Commercial/Office,Mortenson,9375000,347,22.95
-PRJ-2021-246,14.0,12.0,2.0,1635100.0,443900.0,92800.0,61.0,14.285714285714285,San Antonio Hospital - Mechanical Systems Renovation,Healthcare,DPR Construction,9501000,638,21.35
-PRJ-2021-247,6.0,2.0,4.0,37100.0,1635400.0,153700.0,0.0,66.66666666666666,Columbus Business Center - MEP Systems,Other,JE Dunn,16914000,299,97.78
-PRJ-2021-248,6.0,6.0,0.0,955500.0,0.0,0.0,19.0,0.0,San Antonio Elementary Campus - Climate Systems,Education,JE Dunn,10337000,417,0.0
-PRJ-2021-249,11.0,9.0,2.0,2639700.0,778700.0,259200.0,12.0,18.181818181818183,Cincinnati Edge Data Center - Thermal Management,Data Center,DPR Construction,22257000,555,22.78
-PRJ-2021-250,11.0,9.0,2.0,1699200.0,268700.0,46000.0,12.0,18.181818181818183,Sacramento Senior Living - HVAC Upgrade,Residential,DPR Construction,13401000,469,13.65
-PRJ-2021-251,11.0,6.0,5.0,5910500.0,1214300.0,449100.0,7.0,45.45454545454545,Raleigh Surgery Center - Climate Control,Other,Skanska USA,37123000,693,17.04
-PRJ-2021-252,6.0,5.0,1.0,1103900.0,61700.0,145700.0,10.0,16.666666666666664,Raleigh Office Park - Core & Shell MEP,Commercial/Office,Skanska USA,16141000,333,5.29
-PRJ-2021-253,15.0,13.0,2.0,1853800.0,780800.0,377200.0,42.0,13.333333333333334,Oklahoma City Elementary Campus - Climate Systems,Education,Turner Construction,15036000,705,29.64
-PRJ-2021-254,7.0,5.0,2.0,608400.0,325500.0,0.0,35.0,28.57142857142857,Baltimore Edge Data Center - Thermal Management,Data Center,Mortenson,7049000,502,34.85
-PRJ-2021-255,3.0,2.0,1.0,254200.0,59500.0,0.0,0.0,33.33333333333333,Louisville Apartment Complex - MEP,Residential,Mortenson,10826000,294,18.97
-PRJ-2021-256,6.0,5.0,1.0,2652700.0,349400.0,0.0,12.0,16.666666666666664,Minneapolis Surgery Center - Climate Control,Other,Mortenson,27189000,449,11.64
-PRJ-2021-257,14.0,10.0,4.0,3656700.0,1149500.0,298400.0,30.0,28.57142857142857,San Antonio Office Park - Core & Shell MEP,Commercial/Office,DPR Construction,22625000,710,23.92
-PRJ-2021-258,8.0,4.0,4.0,325700.0,518200.0,0.0,19.0,50.0,Portland Unified School District - HVAC Modernization,Education,Turner Construction,6385000,377,61.41
-PRJ-2021-259,11.0,9.0,2.0,1761500.0,616500.0,0.0,9.0,18.181818181818183,Atlanta Colocation Facility - HVAC,Other,Mortenson,11725000,564,25.93
-PRJ-2021-260,12.0,9.0,3.0,214600.0,28100.0,70700.0,28.0,25.0,Nashville Mixed-Income Housing - Climate Control,Other,Mortenson,2608000,716,11.58
-PRJ-2021-261,5.0,2.0,3.0,32200.0,820000.0,220300.0,5.0,60.0,Raleigh Medical Campus - New HVAC Installation,Healthcare,DPR Construction,24629000,302,96.22
-PRJ-2021-262,12.0,9.0,3.0,2089900.0,625800.0,975900.0,19.0,25.0,Richmond Office Park - Core & Shell MEP,Commercial/Office,Skanska USA,25551000,484,23.04
-PRJ-2021-263,11.0,9.0,2.0,1200400.0,303000.0,118800.0,48.0,18.181818181818183,Phoenix Elementary Campus - Climate Systems,Education,DPR Construction,9504000,339,20.15
-PRJ-2021-264,17.0,8.0,9.0,2340900.0,2452800.0,591500.0,26.0,52.94117647058824,Boston Edge Data Center - Thermal Management,Data Center,Turner Construction,19784000,779,51.17
-PRJ-2021-265,11.0,10.0,1.0,902100.0,136900.0,81500.0,34.0,9.090909090909092,Salt Lake City Senior Living - HVAC Upgrade,Residential,Mortenson,5721000,464,13.18
-PRJ-2021-266,12.0,12.0,0.0,1917800.0,0.0,248400.0,45.0,0.0,Salt Lake City Surgery Center - Climate Control,Other,Skanska USA,14520000,426,0.0
-PRJ-2021-267,11.0,10.0,1.0,2232000.0,156700.0,0.0,45.0,9.090909090909092,Raleigh Corporate Campus - HVAC Systems,Education,JE Dunn,11491000,688,6.56
-PRJ-2021-268,6.0,4.0,2.0,69300.0,44600.0,69500.0,9.0,33.33333333333333,Raleigh Unified School District - HVAC Modernization,Education,Mortenson,2795000,260,39.16
-PRJ-2021-269,13.0,11.0,2.0,1011600.0,174000.0,116200.0,30.0,15.384615384615385,Indianapolis Edge Data Center - Thermal Management,Data Center,DPR Construction,5968000,688,14.68
-PRJ-2021-270,6.0,5.0,1.0,695900.0,26400.0,124200.0,7.0,16.666666666666664,Richmond Apartment Complex - MEP,Residential,Mortenson,10208000,563,3.65
-PRJ-2021-271,13.0,11.0,2.0,5602200.0,1791900.0,470300.0,58.0,15.384615384615385,Atlanta Regional Medical Center - HVAC Upgrade,Healthcare,Skanska USA,37774000,643,24.23
-PRJ-2021-272,4.0,3.0,1.0,160500.0,58400.0,0.0,5.0,25.0,Denver Business Center - MEP Systems,Other,Mortenson,3248000,231,26.68
-PRJ-2021-273,4.0,4.0,0.0,198300.0,0.0,0.0,4.0,0.0,Portland High School - New Construction,Education,Turner Construction,3323000,297,0.0
-PRJ-2021-274,12.0,10.0,2.0,2099100.0,109900.0,0.0,74.0,16.666666666666664,Kansas City Colocation Facility - HVAC,Other,Turner Construction,14505000,478,4.98
-PRJ-2021-275,5.0,4.0,1.0,871700.0,283900.0,0.0,14.0,20.0,Las Vegas Residential Tower - HVAC Systems,Commercial/Office,DPR Construction,17258000,226,24.57
-PRJ-2021-276,11.0,6.0,5.0,3466500.0,1662500.0,571100.0,42.0,45.45454545454545,Columbus Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,39364000,600,32.41
-PRJ-2021-277,6.0,5.0,1.0,703500.0,101200.0,0.0,16.0,16.666666666666664,Houston Business Center - MEP Systems,Other,Turner Construction,11417000,254,12.58
-PRJ-2021-278,9.0,6.0,3.0,743400.0,323200.0,0.0,12.0,33.33333333333333,Boston Middle School - HVAC Systems,Education,Skanska USA,7335000,507,30.3
-PRJ-2021-279,8.0,8.0,0.0,751700.0,0.0,50100.0,34.0,0.0,Baltimore Data Center - Precision Cooling Systems,Data Center,JE Dunn,6492000,443,0.0
-PRJ-2021-280,11.0,8.0,3.0,795500.0,952100.0,383300.0,19.0,27.27272727272727,Denver Apartment Complex - MEP,Residential,Turner Construction,17061000,735,54.48
-PRJ-2021-281,9.0,6.0,3.0,3465600.0,1686100.0,615800.0,44.0,33.33333333333333,Houston Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,43539000,398,32.73
-PRJ-2021-282,11.0,6.0,5.0,2618800.0,960300.0,0.0,37.0,45.45454545454545,Louisville Corporate Campus - HVAC Systems,Education,Skanska USA,20659000,546,26.83
-PRJ-2021-283,10.0,10.0,0.0,287300.0,0.0,36400.0,14.0,0.0,Richmond High School - New Construction,Education,Skanska USA,3010000,611,0.0
-PRJ-2021-284,6.0,5.0,1.0,90900.0,116300.0,174600.0,9.0,16.666666666666664,Richmond Cloud Campus Phase 1 - Cooling,Education,Turner Construction,6507000,448,56.13
-PRJ-2021-285,11.0,7.0,4.0,678300.0,455700.0,0.0,9.0,36.36363636363637,Atlanta Mixed-Income Housing - Climate Control,Other,Mortenson,6250000,440,40.19
-PRJ-2021-286,11.0,11.0,0.0,4508600.0,0.0,338500.0,21.0,0.0,Chicago Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,33113000,574,0.0
-PRJ-2021-287,6.0,5.0,1.0,85300.0,123700.0,256300.0,12.0,16.666666666666664,Minneapolis Corporate Campus - HVAC Systems,Education,Mortenson,9202000,262,59.19
-PRJ-2021-288,11.0,5.0,6.0,925600.0,698100.0,51400.0,19.0,54.54545454545454,Indianapolis Unified School District - HVAC Modernization,Education,Mortenson,9948000,577,42.99
-PRJ-2021-289,17.0,15.0,2.0,4334500.0,208500.0,86200.0,21.0,11.76470588235294,Pittsburgh Data Center - Precision Cooling Systems,Data Center,DPR Construction,18201000,757,4.59
-PRJ-2021-290,14.0,10.0,4.0,1953200.0,1166200.0,172800.0,37.0,28.57142857142857,Phoenix Mixed-Income Housing - Climate Control,Other,Turner Construction,17033000,429,37.39
-PRJ-2021-291,13.0,8.0,5.0,2255400.0,1402400.0,342800.0,28.0,38.46153846153847,Columbus Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,26365000,564,38.34
-PRJ-2021-292,20.0,16.0,4.0,2572500.0,697700.0,278500.0,49.0,20.0,Chicago Corporate Campus - HVAC Systems,Education,Turner Construction,13023000,748,21.34
-PRJ-2021-293,11.0,9.0,2.0,1314600.0,155300.0,82800.0,12.0,18.181818181818183,Kansas City Elementary Campus - Climate Systems,Education,Turner Construction,8829000,640,10.57
-PRJ-2021-294,11.0,7.0,4.0,1019900.0,699500.0,0.0,20.0,36.36363636363637,Pittsburgh Colocation Facility - HVAC,Other,Mortenson,8748000,854,40.68
-PRJ-2021-295,16.0,15.0,1.0,1012100.0,114400.0,215800.0,71.0,6.25,Sacramento Apartment Complex - MEP,Residential,Mortenson,8337000,716,10.16
-PRJ-2021-296,10.0,6.0,4.0,4658000.0,2317500.0,468100.0,42.0,40.0,Richmond Hospital - Mechanical Systems Renovation,Healthcare,Skanska USA,41720000,661,33.22
-PRJ-2021-297,11.0,10.0,1.0,1554200.0,354800.0,630500.0,12.0,9.090909090909092,Kansas City Business Center - MEP Systems,Other,DPR Construction,30058000,326,18.59
-PRJ-2021-298,12.0,11.0,1.0,1731000.0,289000.0,77700.0,51.0,8.333333333333332,San Antonio High School - New Construction,Education,Turner Construction,11208000,579,14.31
-PRJ-2021-299,9.0,7.0,2.0,852800.0,204600.0,165800.0,10.0,22.22222222222222,Boston Colocation Facility - HVAC,Other,JE Dunn,8616000,500,19.35
-PRJ-2021-300,4.0,3.0,1.0,772100.0,439800.0,0.0,0.0,25.0,Minneapolis Senior Living - HVAC Upgrade,Residential,Turner Construction,12081000,246,36.29
-PRJ-2021-301,8.0,3.0,5.0,452300.0,674100.0,29200.0,7.0,62.5,Richmond Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,10245000,556,59.85
-PRJ-2021-302,4.0,2.0,2.0,559200.0,363700.0,0.0,5.0,50.0,Pittsburgh Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,10296000,356,39.41
-PRJ-2021-303,12.0,6.0,6.0,497500.0,711200.0,119100.0,5.0,50.0,Nashville Unified School District - HVAC Modernization,Education,Mortenson,9518000,741,58.84
-PRJ-2021-304,10.0,9.0,1.0,727300.0,0.0,23400.0,38.0,10.0,Tampa Edge Data Center - Thermal Management,Data Center,Mortenson,4796000,358,0.0
-PRJ-2021-305,18.0,16.0,2.0,1490600.0,114700.0,206700.0,17.0,11.11111111111111,Albuquerque Senior Living - HVAC Upgrade,Residential,Skanska USA,7776000,630,7.15
-PRJ-2021-306,12.0,11.0,1.0,7569000.0,0.0,663000.0,33.0,8.333333333333332,Raleigh Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,38835000,606,0.0
-PRJ-2021-307,10.0,6.0,4.0,3780800.0,1493400.0,131800.0,23.0,40.0,Columbus Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,31171000,437,28.32
-PRJ-2021-308,18.0,13.0,5.0,2676700.0,558400.0,0.0,49.0,27.77777777777778,Phoenix Middle School - HVAC Systems,Education,DPR Construction,11781000,778,17.26
-PRJ-2021-309,16.0,11.0,5.0,3112900.0,1491500.0,598700.0,35.0,31.25,Portland Colocation Facility - HVAC,Other,Turner Construction,22317000,816,32.39
-PRJ-2021-310,6.0,5.0,1.0,1952600.0,0.0,77500.0,2.0,16.666666666666664,Las Vegas Senior Living - HVAC Upgrade,Residential,Mortenson,22291000,351,0.0
-PRJ-2021-311,11.0,11.0,0.0,2615100.0,0.0,286200.0,23.0,0.0,Salt Lake City Regional Medical Center - HVAC Upgrade,Healthcare,Turner Construction,29341000,435,0.0
-PRJ-2021-312,11.0,9.0,2.0,2175700.0,28000.0,121300.0,42.0,18.181818181818183,Las Vegas Mixed-Use Tower - Mechanical,Commercial/Office,JE Dunn,12270000,571,1.27
-PRJ-2021-313,6.0,5.0,1.0,332500.0,123400.0,91500.0,2.0,16.666666666666664,Louisville Middle School - HVAC Systems,Education,Mortenson,5695000,271,27.07
-PRJ-2021-314,11.0,10.0,1.0,889100.0,63900.0,74300.0,35.0,9.090909090909092,Tampa Data Center - Precision Cooling Systems,Data Center,DPR Construction,6447000,450,6.71
-PRJ-2021-315,13.0,12.0,1.0,888300.0,171300.0,20600.0,30.0,7.6923076923076925,Baltimore Mixed-Income Housing - Climate Control,Other,Skanska USA,5465000,810,16.17
-PRJ-2021-316,7.0,5.0,2.0,2062100.0,823800.0,427300.0,2.0,28.57142857142857,Portland Medical Campus - New HVAC Installation,Healthcare,DPR Construction,32547000,553,28.55
-PRJ-2021-317,3.0,2.0,1.0,-8600.0,16900.0,17900.0,0.0,33.33333333333333,Salt Lake City Corporate Campus - HVAC Systems,Education,JE Dunn,3616000,221,203.61
-PRJ-2021-318,11.0,8.0,3.0,200700.0,94100.0,28800.0,2.0,27.27272727272727,Boston Middle School - HVAC Systems,Education,Mortenson,2373000,523,31.92
-PRJ-2021-319,12.0,9.0,3.0,1155700.0,266900.0,21200.0,70.0,25.0,Nashville Colocation Facility - HVAC,Other,Mortenson,8085000,467,18.76
-PRJ-2021-320,11.0,11.0,0.0,2309000.0,0.0,677700.0,33.0,0.0,Raleigh Apartment Complex - MEP,Residential,DPR Construction,22790000,845,0.0
-PRJ-2022-321,10.0,9.0,1.0,3041300.0,652600.0,92000.0,24.0,10.0,Cincinnati Regional Medical Center - HVAC Upgrade,Healthcare,DPR Construction,27273000,453,17.67
-PRJ-2022-322,17.0,16.0,1.0,547500.0,0.0,142800.0,61.0,5.88235294117647,Kansas City Corporate Campus - HVAC Systems,Education,Mortenson,4371000,819,0.0
-PRJ-2022-323,9.0,7.0,2.0,801800.0,134500.0,39800.0,12.0,22.22222222222222,Indianapolis Unified School District - HVAC Modernization,Education,Mortenson,6565000,319,14.37
-PRJ-2022-324,12.0,8.0,4.0,735200.0,243600.0,100500.0,33.0,33.33333333333333,Houston Colocation Facility - HVAC,Other,JE Dunn,5373000,480,24.89
-PRJ-2022-325,16.0,11.0,5.0,670700.0,294200.0,62000.0,9.0,31.25,Minneapolis Apartment Complex - MEP,Residential,Mortenson,4398000,630,30.49
-PRJ-2022-326,6.0,4.0,2.0,275200.0,0.0,150100.0,14.0,33.33333333333333,Kansas City Hospital - Mechanical Systems Renovation,Healthcare,Turner Construction,4754000,505,0.0
-PRJ-2022-327,12.0,7.0,5.0,2653200.0,1750300.0,144200.0,17.0,41.66666666666667,Salt Lake City Office Park - Core & Shell MEP,Commercial/Office,Turner Construction,29520000,782,39.75
-PRJ-2022-328,16.0,12.0,4.0,1236100.0,1526200.0,365400.0,35.0,25.0,Richmond High School - New Construction,Education,DPR Construction,15085000,438,55.25
-PRJ-2022-329,11.0,9.0,2.0,2778000.0,676500.0,429700.0,7.0,18.181818181818183,Pittsburgh Cloud Campus Phase 1 - Cooling,Education,JE Dunn,22622000,579,19.58
-PRJ-2022-330,4.0,3.0,1.0,26200.0,0.0,85000.0,7.0,25.0,Boston Mixed-Income Housing - Climate Control,Other,Mortenson,3812000,280,0.0
-PRJ-2022-331,11.0,10.0,1.0,4814000.0,209300.0,366800.0,63.0,9.090909090909092,Baltimore Regional Medical Center - HVAC Upgrade,Healthcare,JE Dunn,41560000,454,4.17
-PRJ-2022-332,10.0,7.0,3.0,1073200.0,564500.0,62900.0,40.0,30.0,Louisville Mixed-Use Tower - Mechanical,Commercial/Office,Turner Construction,11220000,614,34.47
-PRJ-2022-333,8.0,6.0,2.0,895000.0,233100.0,0.0,16.0,25.0,Chicago High School - New Construction,Education,Mortenson,13567000,615,20.66
-PRJ-2022-334,18.0,12.0,6.0,2617900.0,1965100.0,348000.0,40.0,33.33333333333333,Raleigh Edge Data Center - Thermal Management,Data Center,Mortenson,16918000,644,42.88
-PRJ-2022-335,7.0,5.0,2.0,668200.0,567200.0,156100.0,14.0,28.57142857142857,Louisville Mixed-Income Housing - Climate Control,Other,Mortenson,12951000,449,45.91
-PRJ-2022-336,11.0,9.0,2.0,2166600.0,0.0,937700.0,16.0,18.181818181818183,Cincinnati Medical Campus - New HVAC Installation,Healthcare,JE Dunn,19661000,374,0.0
-PRJ-2022-337,10.0,9.0,1.0,3835300.0,242500.0,0.0,32.0,10.0,Oklahoma City Corporate Campus - HVAC Systems,Education,JE Dunn,24013000,531,5.95
-PRJ-2022-338,10.0,9.0,1.0,1051100.0,29600.0,0.0,14.0,10.0,Salt Lake City Middle School - HVAC Systems,Education,DPR Construction,6503000,512,2.74
-PRJ-2022-339,17.0,10.0,7.0,3603600.0,1800000.0,162500.0,51.0,41.17647058823529,Pittsburgh Colocation Facility - HVAC,Other,Skanska USA,19158000,823,33.31
-PRJ-2022-340,7.0,6.0,1.0,2202100.0,426600.0,0.0,33.0,14.285714285714285,San Antonio Senior Living - HVAC Upgrade,Residential,JE Dunn,21923000,412,16.23
-PRJ-2022-341,11.0,6.0,5.0,2780000.0,1536700.0,182200.0,14.0,45.45454545454545,Boston Medical Campus - New HVAC Installation,Healthcare,DPR Construction,26652000,363,35.6
-PRJ-2022-342,6.0,4.0,2.0,1254400.0,140500.0,309300.0,0.0,33.33333333333333,San Antonio Business Center - MEP Systems,Other,Skanska USA,25975000,372,10.07
-PRJ-2022-343,10.0,6.0,4.0,328900.0,128500.0,82100.0,16.0,40.0,Boston Middle School - HVAC Systems,Education,Skanska USA,4342000,454,28.09
-PRJ-2022-344,6.0,5.0,1.0,568900.0,144200.0,29200.0,16.0,16.666666666666664,Las Vegas Cloud Campus Phase 1 - Cooling,Education,Mortenson,14429000,363,20.22
-PRJ-2022-345,19.0,15.0,4.0,4608000.0,1244400.0,431400.0,40.0,21.052631578947366,Indianapolis Apartment Complex - MEP,Residential,Turner Construction,20889000,536,21.26
-PRJ-2022-346,20.0,13.0,7.0,3606100.0,1852200.0,333000.0,58.0,35.0,Columbus Hospital - Mechanical Systems Renovation,Healthcare,Mortenson,23652000,798,33.93
-PRJ-2022-347,8.0,4.0,4.0,1234000.0,2219300.0,0.0,12.0,50.0,Raleigh Corporate Campus - HVAC Systems,Education,Skanska USA,27076000,490,64.27
-PRJ-2022-348,6.0,4.0,2.0,182900.0,52600.0,66000.0,21.0,33.33333333333333,Nashville High School - New Construction,Education,Mortenson,3189000,423,22.34
-PRJ-2022-349,9.0,8.0,1.0,1982400.0,384100.0,237200.0,33.0,11.11111111111111,Boston Data Center - Precision Cooling Systems,Data Center,Mortenson,22985000,509,16.23
-PRJ-2022-350,15.0,8.0,7.0,657300.0,784500.0,277200.0,46.0,46.666666666666664,San Antonio Senior Living - HVAC Upgrade,Residential,Mortenson,8036000,676,54.41
-PRJ-2022-351,9.0,7.0,2.0,2231600.0,658000.0,84700.0,17.0,22.22222222222222,Atlanta Medical Campus - New HVAC Installation,Healthcare,JE Dunn,26481000,329,22.77
-PRJ-2022-352,17.0,13.0,4.0,2259500.0,1187500.0,300000.0,34.0,23.52941176470588,Kansas City Business Center - MEP Systems,Other,DPR Construction,17595000,661,34.45
-PRJ-2022-353,7.0,5.0,2.0,633400.0,255300.0,0.0,14.0,28.57142857142857,Atlanta Elementary Campus - Climate Systems,Education,DPR Construction,6748000,490,28.73
-PRJ-2022-354,8.0,6.0,2.0,851000.0,472000.0,0.0,0.0,25.0,Las Vegas Colocation Facility - HVAC,Other,Skanska USA,11352000,384,35.68
-PRJ-2022-355,17.0,13.0,4.0,3062700.0,750300.0,354400.0,37.0,23.52941176470588,Raleigh Apartment Complex - MEP,Residential,Turner Construction,19636000,680,19.68
-PRJ-2022-356,10.0,9.0,1.0,5320500.0,232000.0,207900.0,31.0,10.0,Denver Surgery Center - Climate Control,Other,DPR Construction,30571000,648,4.18
-PRJ-2022-357,8.0,4.0,4.0,393400.0,469100.0,179900.0,14.0,50.0,Chicago Corporate Campus - HVAC Systems,Education,Skanska USA,12804000,280,54.39
-PRJ-2022-358,8.0,7.0,1.0,471800.0,52700.0,74600.0,28.0,12.5,Denver High School - New Construction,Education,Mortenson,6596000,587,10.05
-PRJ-2022-359,6.0,4.0,2.0,632800.0,221200.0,0.0,9.0,33.33333333333333,Kansas City Cloud Campus Phase 1 - Cooling,Education,JE Dunn,8202000,215,25.9
-PRJ-2022-360,10.0,8.0,2.0,932400.0,180200.0,120400.0,30.0,20.0,Denver Senior Living - HVAC Upgrade,Residential,DPR Construction,8177000,576,16.2
-PRJ-2022-361,7.0,6.0,1.0,1218800.0,221600.0,60600.0,14.0,14.285714285714285,Salt Lake City Hospital - Mechanical Systems Renovation,Healthcare,Turner Construction,12912000,577,15.38
-PRJ-2022-362,12.0,7.0,5.0,1908500.0,1115200.0,258500.0,37.0,41.66666666666667,Houston Business Center - MEP Systems,Other,Turner Construction,25395000,422,36.88
-PRJ-2022-363,7.0,5.0,2.0,303300.0,235500.0,0.0,16.0,28.57142857142857,Salt Lake City Middle School - HVAC Systems,Education,Turner Construction,5770000,350,43.71
-PRJ-2022-364,9.0,4.0,5.0,672900.0,1316000.0,0.0,2.0,55.55555555555556,Baltimore Edge Data Center - Thermal Management,Data Center,Skanska USA,17834000,428,66.17
-PRJ-2022-365,8.0,7.0,1.0,1569300.0,66500.0,275500.0,16.0,12.5,Richmond Apartment Complex - MEP,Residential,Skanska USA,20406000,462,4.07
-PRJ-2022-366,12.0,10.0,2.0,946600.0,350500.0,84800.0,12.0,16.666666666666664,Columbus Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,8337000,782,27.02
-PRJ-2022-367,14.0,10.0,4.0,882700.0,335300.0,248800.0,31.0,28.57142857142857,Houston Office Park - Core & Shell MEP,Commercial/Office,JE Dunn,6499000,596,27.53
-PRJ-2022-368,12.0,12.0,0.0,1183800.0,0.0,278400.0,9.0,0.0,Tampa Elementary Campus - Climate Systems,Education,Skanska USA,12855000,548,0.0
-PRJ-2022-369,12.0,7.0,5.0,1141500.0,1284100.0,83400.0,35.0,41.66666666666667,Louisville Edge Data Center - Thermal Management,Data Center,DPR Construction,16822000,451,52.94
-PRJ-2022-370,9.0,8.0,1.0,508200.0,48600.0,0.0,37.0,11.11111111111111,Richmond Mixed-Income Housing - Climate Control,Other,Turner Construction,3301000,306,8.73
-PRJ-2022-371,10.0,8.0,2.0,4262100.0,1383300.0,607500.0,28.0,20.0,Albuquerque Hospital - Mechanical Systems Renovation,Healthcare,JE Dunn,43335000,270,24.5
-PRJ-2022-372,12.0,6.0,6.0,314900.0,608700.0,116500.0,14.0,50.0,Pittsburgh Business Center - MEP Systems,Other,Skanska USA,7056000,728,65.91
-PRJ-2022-373,5.0,4.0,1.0,391500.0,171600.0,0.0,7.0,20.0,Las Vegas Elementary Campus - Climate Systems,Education,Skanska USA,7091000,303,30.47
-PRJ-2022-374,20.0,15.0,5.0,1285900.0,278400.0,136500.0,58.0,25.0,Houston Colocation Facility - HVAC,Other,JE Dunn,5458000,484,17.8
-PRJ-2022-375,12.0,9.0,3.0,2024700.0,443300.0,0.0,31.0,25.0,Pittsburgh Mixed-Income Housing - Climate Control,Other,Mortenson,11214000,712,17.96
-PRJ-2022-376,10.0,8.0,2.0,4062800.0,1347500.0,302000.0,23.0,20.0,Columbus Regional Medical Center - HVAC Upgrade,Healthcare,DPR Construction,36501000,709,24.91
-PRJ-2022-377,6.0,3.0,3.0,689900.0,396700.0,0.0,14.0,50.0,Louisville Corporate Campus - HVAC Systems,Education,JE Dunn,8864000,336,36.51
-PRJ-2022-378,5.0,5.0,0.0,49300.0,0.0,237300.0,14.0,0.0,Raleigh Elementary Campus - Climate Systems,Education,DPR Construction,9195000,202,0.0
-PRJ-2022-379,16.0,10.0,6.0,1354700.0,1045200.0,209700.0,21.0,37.5,Pittsburgh Data Center - Precision Cooling Systems,Data Center,Mortenson,11816000,459,43.55
-PRJ-2022-380,9.0,5.0,4.0,1462200.0,1087400.0,0.0,19.0,44.44444444444444,Portland Mixed-Income Housing - Climate Control,Other,DPR Construction,17710000,547,42.65
-PRJ-2023-381,7.0,5.0,2.0,2289700.0,997600.0,249900.0,12.0,28.57142857142857,Pittsburgh Surgery Center - Climate Control,Other,Turner Construction,41186000,496,30.35
-PRJ-2023-382,7.0,2.0,5.0,451100.0,739200.0,0.0,9.0,71.42857142857143,Baltimore Corporate Campus - HVAC Systems,Education,Skanska USA,10081000,479,62.1
-PRJ-2023-383,8.0,7.0,1.0,182300.0,0.0,111300.0,2.0,12.5,Pittsburgh High School - New Construction,Education,Mortenson,3222000,631,0.0
-PRJ-2023-384,12.0,11.0,1.0,2820700.0,187200.0,212600.0,23.0,8.333333333333332,Minneapolis Colocation Facility - HVAC,Other,Turner Construction,16654000,406,6.22
-PRJ-2023-385,8.0,6.0,2.0,1506500.0,508600.0,0.0,5.0,25.0,Houston Senior Living - HVAC Upgrade,Residential,Mortenson,11398000,603,25.24
-PRJ-2023-386,4.0,2.0,2.0,296800.0,685500.0,194600.0,14.0,50.0,Sacramento Regional Medical Center - HVAC Upgrade,Healthcare,DPR Construction,14714000,364,69.79
-PRJ-2023-387,20.0,18.0,2.0,2402300.0,197400.0,0.0,74.0,10.0,Sacramento Office Park - Core & Shell MEP,Commercial/Office,DPR Construction,6827000,448,7.59
-PRJ-2023-388,11.0,9.0,2.0,1806200.0,270800.0,123900.0,30.0,18.181818181818183,Tampa High School - New Construction,Education,Turner Construction,11540000,698,13.04
-PRJ-2023-389,4.0,2.0,2.0,343500.0,243900.0,253600.0,14.0,50.0,Houston Edge Data Center - Thermal Management,Data Center,DPR Construction,16458000,125,41.52
-PRJ-2023-390,18.0,13.0,5.0,1273300.0,498100.0,220400.0,44.0,27.77777777777778,Louisville Apartment Complex - MEP,Residential,JE Dunn,9884000,631,28.12
-PRJ-2023-391,19.0,15.0,4.0,2306800.0,370600.0,210300.0,12.0,21.052631578947366,Pittsburgh Regional Medical Center - HVAC Upgrade,Healthcare,Mortenson,9340000,468,13.84
-PRJ-2023-392,6.0,4.0,2.0,277000.0,381400.0,47300.0,21.0,33.33333333333333,Las Vegas Corporate Campus - HVAC Systems,Education,DPR Construction,9070000,276,57.93
-PRJ-2023-393,7.0,7.0,0.0,130600.0,0.0,131800.0,21.0,0.0,Las Vegas High School - New Construction,Education,Turner Construction,5279000,532,0.0
-PRJ-2023-394,7.0,5.0,2.0,625500.0,380600.0,49200.0,12.0,28.57142857142857,Pittsburgh Edge Data Center - Thermal Management,Data Center,Skanska USA,11747000,332,37.83
-PRJ-2023-395,5.0,3.0,2.0,208300.0,63500.0,0.0,0.0,40.0,Tampa Senior Living - HVAC Upgrade,Residential,Skanska USA,3591000,200,23.36
-PRJ-2023-396,9.0,7.0,2.0,2257100.0,595100.0,176600.0,21.0,22.22222222222222,Tampa Hospital - Mechanical Systems Renovation,Healthcare,Turner Construction,21976000,304,20.86
-PRJ-2023-397,11.0,7.0,4.0,3012800.0,1528000.0,0.0,26.0,36.36363636363637,Sacramento Corporate Campus - HVAC Systems,Education,Skanska USA,24152000,507,33.65
-PRJ-2023-398,12.0,8.0,4.0,886700.0,367900.0,31000.0,32.0,33.33333333333333,Denver Middle School - HVAC Systems,Education,DPR Construction,7209000,511,29.32
-PRJ-2023-399,16.0,13.0,3.0,1875200.0,517400.0,57300.0,45.0,18.75,Louisville Edge Data Center - Thermal Management,Data Center,JE Dunn,8502000,736,21.63
-PRJ-2023-400,6.0,5.0,1.0,1343000.0,77600.0,0.0,19.0,16.666666666666664,Columbus Apartment Complex - MEP,Residential,Turner Construction,9928000,368,5.46
-PRJ-2024-001,12.0,9.0,3.0,4192500.0,1587600.0,292800.0,26.0,25.0,Mercy General Hospital - HVAC Modernization,Healthcare,Turner Construction,35194000,523,27.47
-PRJ-2024-002,20.0,14.0,6.0,6338600.0,2773100.0,699000.0,30.0,30.0,Riverside Office Tower - Core & Shell MEP,Commercial/Office,DPR Construction,30260000,724,30.43
-PRJ-2024-003,8.0,5.0,3.0,321300.0,372800.0,0.0,12.0,37.5,Greenfield Elementary School - New Construction,Education,DPR Construction,5544000,428,53.71
-PRJ-2024-004,12.0,8.0,4.0,2743100.0,1215400.0,0.0,33.0,33.33333333333333,Summit Data Center - Phase 2 Expansion,Data Center,DPR Construction,16340000,283,30.7
-PRJ-2024-005,12.0,9.0,3.0,1570700.0,906800.0,194300.0,45.0,25.0,Harbor View Condominiums - 3 Buildings,Residential,Skanska USA,13650000,590,36.6
+project_id,total_cos,approved_cos,rejected_cos,pending_cos,total_co_value_usd,approved_value_usd,rejected_value_usd,recovery_rate_pct,rejection_rate_pct,gc_name,original_contract_value,project_type
+PRJ-2018-001,10,8,2,0,5456000,4293800,1162200.0,78.7,20.0,JE Dunn,38264000,Large
+PRJ-2018-002,13,7,6,0,4802400,2294000,2508400.0,47.8,46.2,JE Dunn,29163000,Large
+PRJ-2018-003,9,6,3,0,1479600,1084000,395600.0,73.3,33.3,Turner Construction,11837000,Medium
+PRJ-2018-004,8,5,3,0,1104300,593600,510700.0,53.8,37.5,JE Dunn,11221000,Medium
+PRJ-2018-005,9,8,1,0,738900,831000,-92100.0,112.5,11.1,Skanska USA,7700000,Medium
+PRJ-2018-006,10,8,2,0,1786300,1227000,559300.0,68.7,20.0,JE Dunn,10039000,Medium
+PRJ-2018-007,8,6,2,0,1682000,1658300,23700.0,98.6,25.0,Turner Construction,18587000,Medium
+PRJ-2018-008,12,12,0,0,1265300,1265300,,100.0,0.0,Skanska USA,6212000,Medium
+PRJ-2018-009,6,6,0,0,427800,427800,,100.0,0.0,Mortenson,14845000,Medium
+PRJ-2018-010,3,2,1,0,259300,408000,-148700.0,157.3,33.3,JE Dunn,12617000,Medium
+PRJ-2018-011,7,4,3,0,2507000,1044600,1462400.0,41.7,42.9,Mortenson,45289000,Large
+PRJ-2018-012,7,5,2,0,956300,555300,401000.0,58.1,28.6,DPR Construction,9048000,Medium
+PRJ-2018-013,12,6,6,0,665900,313800,352100.0,47.1,50.0,DPR Construction,4495000,Small
+PRJ-2018-014,10,6,4,0,1668400,871400,797000.0,52.2,40.0,JE Dunn,11702000,Medium
+PRJ-2018-015,18,13,5,0,5708800,4143500,1565300.0,72.6,27.8,Skanska USA,22510000,Large
+PRJ-2018-016,19,15,4,0,5458800,4255100,1203700.0,77.9,21.1,JE Dunn,20272000,Large
+PRJ-2018-017,10,7,3,0,967800,1269400,-301600.0,131.2,30.0,DPR Construction,19383000,Medium
+PRJ-2018-018,10,7,3,0,1076600,520700,555900.0,48.4,30.0,Turner Construction,9820000,Medium
+PRJ-2018-019,10,7,3,0,3884500,2044600,1839900.0,52.6,30.0,Mortenson,19967000,Medium
+PRJ-2018-020,12,10,2,0,1635600,1441500,194100.0,88.1,16.7,Mortenson,8195000,Medium
+PRJ-2018-021,15,12,3,0,7070600,5369000,1701600.0,75.9,20.0,JE Dunn,53167000,Mega
+PRJ-2018-022,15,10,5,0,5876900,4652700,1224200.0,79.2,33.3,Turner Construction,33663000,Large
+PRJ-2018-023,10,8,2,0,1148700,770800,377900.0,67.1,20.0,DPR Construction,8862000,Medium
+PRJ-2018-024,12,9,3,0,4025000,3171100,853900.0,78.8,25.0,JE Dunn,20604000,Large
+PRJ-2018-025,13,10,3,0,3190900,2203300,987600.0,69.0,23.1,Skanska USA,19887000,Medium
+PRJ-2018-026,11,10,1,0,787200,700500,86700.0,89.0,9.1,Turner Construction,5488000,Medium
+PRJ-2018-027,17,11,6,0,3182400,2053900,1128500.0,64.5,35.3,Turner Construction,14573000,Medium
+PRJ-2018-028,12,10,2,0,1104500,896500,208000.0,81.2,16.7,Skanska USA,10351000,Medium
+PRJ-2018-029,10,9,1,0,2122000,2096900,25100.0,98.8,10.0,JE Dunn,9526000,Medium
+PRJ-2018-030,17,15,2,0,4030200,3209200,821000.0,79.6,11.8,Skanska USA,15609000,Medium
+PRJ-2018-031,13,7,6,0,4873400,2347700,2525700.0,48.2,46.2,Skanska USA,40498000,Large
+PRJ-2018-032,17,12,5,0,5796000,3949700,1846300.0,68.1,29.4,DPR Construction,23117000,Large
+PRJ-2018-033,7,6,1,0,195900,349800,-153900.0,178.6,14.3,Skanska USA,12190000,Medium
+PRJ-2018-034,12,8,4,0,2474900,1725300,749600.0,69.7,33.3,DPR Construction,18213000,Medium
+PRJ-2018-035,9,6,3,0,2033900,1522600,511300.0,74.9,33.3,Turner Construction,11962000,Medium
+PRJ-2018-036,9,8,1,0,4461800,3747400,714400.0,84.0,11.1,Mortenson,30618000,Large
+PRJ-2018-037,18,13,5,0,8015000,5799600,2215400.0,72.4,27.8,JE Dunn,33532000,Large
+PRJ-2018-038,10,9,1,0,1226100,874900,351200.0,71.4,10.0,JE Dunn,10084000,Medium
+PRJ-2018-039,6,3,3,0,245100,99200,145900.0,40.5,50.0,Skanska USA,5379000,Medium
+PRJ-2018-040,11,10,1,0,2063500,1894500,169000.0,91.8,9.1,DPR Construction,20326000,Large
+PRJ-2018-041,8,8,0,0,5053800,5053800,,100.0,0.0,Skanska USA,40791000,Large
+PRJ-2018-042,8,5,3,0,1959100,1268600,690500.0,64.8,37.5,JE Dunn,15625000,Medium
+PRJ-2018-043,19,15,4,0,2129900,1754600,375300.0,82.4,21.1,Skanska USA,7392000,Medium
+PRJ-2018-044,11,6,5,0,1089700,702400,387300.0,64.5,45.5,Mortenson,7204000,Medium
+PRJ-2018-045,8,5,3,0,496500,367600,128900.0,74.0,37.5,Skanska USA,4201000,Small
+PRJ-2018-046,10,8,2,0,1018800,830800,188000.0,81.5,20.0,Skanska USA,6747000,Medium
+PRJ-2018-047,11,5,6,0,1682500,668500,1014000.0,39.7,54.5,DPR Construction,12546000,Medium
+PRJ-2018-048,12,9,3,0,805600,545200,260400.0,67.7,25.0,DPR Construction,6077000,Medium
+PRJ-2018-049,9,7,2,0,426400,391700,34700.0,91.9,22.2,Skanska USA,4707000,Small
+PRJ-2018-050,8,4,4,0,411400,334700,76700.0,81.4,50.0,Skanska USA,3613000,Small
+PRJ-2018-051,10,8,2,0,586300,638000,-51700.0,108.8,20.0,JE Dunn,6433000,Medium
+PRJ-2018-052,12,9,3,0,414200,246700,167500.0,59.6,25.0,Skanska USA,3101000,Small
+PRJ-2018-053,11,9,2,0,280900,303500,-22600.0,108.0,18.2,Mortenson,3488000,Small
+PRJ-2018-054,18,14,4,0,3941500,2616600,1324900.0,66.4,22.2,DPR Construction,19488000,Medium
+PRJ-2018-055,14,10,4,0,1042300,867600,174700.0,83.2,28.6,JE Dunn,5485000,Medium
+PRJ-2018-056,12,6,6,0,7271700,3878200,3393500.0,53.3,50.0,Skanska USA,36355000,Large
+PRJ-2018-057,8,8,0,0,1011400,1011400,,100.0,0.0,Mortenson,14417000,Medium
+PRJ-2018-058,3,2,1,0,-118500,-93900,-24600.0,79.2,33.3,DPR Construction,5584000,Medium
+PRJ-2018-059,14,7,7,0,1840500,676100,1164400.0,36.7,50.0,DPR Construction,13417000,Medium
+PRJ-2018-060,6,5,1,0,384300,258700,125600.0,67.3,16.7,Skanska USA,12239000,Medium
+PRJ-2018-061,6,5,1,0,4066400,2754900,1311500.0,67.7,16.7,Mortenson,36618000,Large
+PRJ-2018-062,14,9,5,0,2836400,1796100,1040300.0,63.3,35.7,Turner Construction,18069000,Medium
+PRJ-2018-063,6,5,1,0,510400,353800,156600.0,69.3,16.7,Mortenson,5612000,Medium
+PRJ-2018-064,19,15,4,0,1881700,1526000,355700.0,81.1,21.1,DPR Construction,12004000,Medium
+PRJ-2018-065,11,6,5,0,1477400,959600,517800.0,65.0,45.5,Skanska USA,10603000,Medium
+PRJ-2018-066,12,10,2,0,3421300,3055900,365400.0,89.3,16.7,Skanska USA,19638000,Medium
+PRJ-2018-067,5,3,2,0,328200,-153400,481600.0,-46.7,40.0,Skanska USA,27567000,Large
+PRJ-2018-068,14,9,5,0,464800,356900,107900.0,76.8,35.7,JE Dunn,8544000,Medium
+PRJ-2018-069,9,9,0,0,2706100,2706100,,100.0,0.0,Mortenson,15603000,Medium
+PRJ-2018-070,11,10,1,0,2831700,2490800,340900.0,88.0,9.1,JE Dunn,14309000,Medium
+PRJ-2018-071,19,14,5,0,6388300,5484600,903700.0,85.9,26.3,Mortenson,28100000,Large
+PRJ-2018-072,5,5,0,0,1125200,1125200,,100.0,0.0,DPR Construction,17167000,Medium
+PRJ-2018-073,4,3,1,0,366500,350400,16100.0,95.6,25.0,Skanska USA,5550000,Medium
+PRJ-2018-074,9,6,3,0,589100,399200,189900.0,67.8,33.3,JE Dunn,4055000,Small
+PRJ-2018-075,17,12,5,0,3356000,2301300,1054700.0,68.6,29.4,Skanska USA,11890000,Medium
+PRJ-2018-076,10,7,3,0,2052200,1411100,641100.0,68.8,30.0,Turner Construction,16224000,Medium
+PRJ-2018-077,11,7,4,0,1080600,760300,320300.0,70.4,36.4,Turner Construction,4898000,Small
+PRJ-2018-078,11,8,3,0,897300,784000,113300.0,87.4,27.3,JE Dunn,8156000,Medium
+PRJ-2018-079,12,9,3,0,3579100,2767800,811300.0,77.3,25.0,Turner Construction,16064000,Medium
+PRJ-2018-080,12,9,3,0,3663800,3469000,194800.0,94.7,25.0,Turner Construction,21159000,Large
+PRJ-2019-081,10,8,2,0,6365000,4659000,1706000.0,73.2,20.0,Turner Construction,52999000,Mega
+PRJ-2019-082,17,12,5,0,4398500,4122500,276000.0,93.7,29.4,JE Dunn,41115000,Large
+PRJ-2019-083,8,6,2,0,736800,700600,36200.0,95.1,25.0,JE Dunn,8483000,Medium
+PRJ-2019-084,13,9,4,0,1412300,890300,522000.0,63.0,30.8,Turner Construction,7196000,Medium
+PRJ-2019-085,11,11,0,0,662600,662600,,100.0,0.0,JE Dunn,6578000,Medium
+PRJ-2019-086,11,8,3,0,2416600,2154200,262400.0,89.1,27.3,Turner Construction,16463000,Medium
+PRJ-2019-087,11,9,2,0,2975700,1925300,1050400.0,64.7,18.2,Skanska USA,23848000,Large
+PRJ-2019-088,14,6,8,0,1598000,644700,953300.0,40.3,57.1,JE Dunn,9124000,Medium
+PRJ-2019-089,11,8,3,0,2730700,1775700,955000.0,65.0,27.3,Mortenson,12969000,Medium
+PRJ-2019-090,12,9,3,0,602100,521000,81100.0,86.5,25.0,DPR Construction,3276000,Small
+PRJ-2019-091,8,7,1,0,3531800,3367900,163900.0,95.4,12.5,JE Dunn,37972000,Large
+PRJ-2019-092,11,9,2,0,1138400,796400,342000.0,70.0,18.2,Turner Construction,13785000,Medium
+PRJ-2019-093,9,6,3,0,1252200,967300,284900.0,77.2,33.3,JE Dunn,10135000,Medium
+PRJ-2019-094,7,4,3,0,1702000,1266000,436000.0,74.4,42.9,DPR Construction,21983000,Large
+PRJ-2019-095,20,15,5,0,2452500,1634100,818400.0,66.6,25.0,DPR Construction,11001000,Medium
+PRJ-2019-096,6,6,0,0,419900,419900,,100.0,0.0,JE Dunn,9588000,Medium
+PRJ-2019-097,8,8,0,0,931800,931800,,100.0,0.0,DPR Construction,8337000,Medium
+PRJ-2019-098,8,7,1,0,1018600,766000,252600.0,75.2,12.5,Turner Construction,6621000,Medium
+PRJ-2019-099,6,6,0,0,731600,731600,,100.0,0.0,Mortenson,10701000,Medium
+PRJ-2019-100,6,4,2,0,429100,220900,208200.0,51.5,33.3,Skanska USA,5785000,Medium
+PRJ-2019-101,6,5,1,0,3727900,2539400,1188500.0,68.1,16.7,Turner Construction,43110000,Large
+PRJ-2019-102,10,9,1,0,2687300,2436500,250800.0,90.7,10.0,DPR Construction,42813000,Large
+PRJ-2019-103,17,16,1,0,828400,778100,50300.0,93.9,5.9,Mortenson,5820000,Medium
+PRJ-2019-104,6,6,0,0,1026700,1026700,,100.0,0.0,DPR Construction,14396000,Medium
+PRJ-2019-105,4,4,0,0,597300,597300,,100.0,0.0,DPR Construction,14305000,Medium
+PRJ-2019-106,9,7,2,0,6649200,5120100,1529100.0,77.0,22.2,Skanska USA,50158000,Mega
+PRJ-2019-107,10,7,3,0,1847000,736200,1110800.0,39.9,30.0,DPR Construction,16925000,Medium
+PRJ-2019-108,20,13,7,0,2657200,2288000,369200.0,86.1,35.0,JE Dunn,10813000,Medium
+PRJ-2019-109,6,5,1,0,1113300,932900,180400.0,83.8,16.7,Turner Construction,14103000,Medium
+PRJ-2019-110,3,2,1,0,293400,210200,83200.0,71.6,33.3,DPR Construction,3872000,Small
+PRJ-2019-111,8,6,2,0,1432700,763200,669500.0,53.3,25.0,Skanska USA,10721000,Medium
+PRJ-2019-112,6,5,1,0,835700,687100,148600.0,82.2,16.7,Turner Construction,10030000,Medium
+PRJ-2019-113,13,12,1,0,553200,543500,9700.0,98.2,7.7,Turner Construction,3319000,Small
+PRJ-2019-114,9,7,2,0,2582200,1690400,891800.0,65.5,22.2,JE Dunn,21934000,Large
+PRJ-2019-115,10,8,2,0,3444700,2735900,708800.0,79.4,20.0,JE Dunn,25864000,Large
+PRJ-2019-116,6,5,1,0,2183000,2380600,-197600.0,109.1,16.7,Turner Construction,30690000,Large
+PRJ-2019-117,10,9,1,0,1711300,1985500,-274200.0,116.0,10.0,Turner Construction,23416000,Large
+PRJ-2019-118,11,8,3,0,683100,589500,93600.0,86.3,27.3,JE Dunn,4569000,Small
+PRJ-2019-119,11,9,2,0,3466000,2588200,877800.0,74.7,18.2,JE Dunn,19776000,Medium
+PRJ-2019-120,12,10,2,0,667200,430700,236500.0,64.6,16.7,DPR Construction,7611000,Medium
+PRJ-2019-121,17,13,4,0,11788300,7961300,3827000.0,67.5,23.5,DPR Construction,47765000,Large
+PRJ-2019-122,4,1,3,0,73100,-15900,89000.0,-21.8,75.0,Mortenson,3259000,Small
+PRJ-2019-123,7,4,3,0,927900,689800,238100.0,74.3,42.9,JE Dunn,9763000,Medium
+PRJ-2019-124,8,6,2,0,669600,534200,135400.0,79.8,25.0,DPR Construction,6722000,Medium
+PRJ-2019-125,12,9,3,0,1500500,1381700,118800.0,92.1,25.0,DPR Construction,14385000,Medium
+PRJ-2019-126,20,17,3,0,10688100,10305700,382400.0,96.4,15.0,DPR Construction,42999000,Large
+PRJ-2019-127,11,9,2,0,1359900,1093300,266600.0,80.4,18.2,JE Dunn,12380000,Medium
+PRJ-2019-128,7,6,1,0,190300,133700,56600.0,70.3,14.3,JE Dunn,3238000,Small
+PRJ-2019-129,6,5,1,0,934800,871700,63100.0,93.2,16.7,Mortenson,14922000,Medium
+PRJ-2019-130,17,16,1,0,1623900,1564200,59700.0,96.3,5.9,Turner Construction,7207000,Medium
+PRJ-2019-131,12,10,2,0,6420400,5880200,540200.0,91.6,16.7,JE Dunn,44330000,Large
+PRJ-2019-132,10,9,1,0,365500,315200,50300.0,86.2,10.0,Turner Construction,4919000,Small
+PRJ-2019-133,10,7,3,0,1131300,511700,619600.0,45.2,30.0,Turner Construction,8572000,Medium
+PRJ-2019-134,9,5,4,0,907800,508700,399100.0,56.0,44.4,JE Dunn,5471000,Medium
+PRJ-2019-135,8,8,0,0,2149700,2149700,,100.0,0.0,JE Dunn,17311000,Medium
+PRJ-2019-136,10,9,1,0,895300,768500,126800.0,85.8,10.0,Skanska USA,8264000,Medium
+PRJ-2019-137,11,8,3,0,5388400,4167000,1221400.0,77.3,27.3,JE Dunn,28675000,Large
+PRJ-2019-138,14,12,2,0,2563000,2613700,-50700.0,102.0,14.3,Turner Construction,12417000,Medium
+PRJ-2019-139,8,8,0,0,1153100,1153100,,100.0,0.0,Turner Construction,7332000,Medium
+PRJ-2019-140,14,12,2,0,2480700,2088800,391900.0,84.2,14.3,DPR Construction,11399000,Medium
+PRJ-2019-141,8,6,2,0,4471600,3203500,1268100.0,71.6,25.0,Turner Construction,37483000,Large
+PRJ-2019-142,9,7,2,0,1603200,1479900,123300.0,92.3,22.2,JE Dunn,27982000,Large
+PRJ-2019-143,9,8,1,0,307600,246100,61500.0,80.0,11.1,JE Dunn,3114000,Small
+PRJ-2019-144,14,12,2,0,1750200,1449800,300400.0,82.8,14.3,DPR Construction,8799000,Medium
+PRJ-2019-145,8,6,2,0,285800,126100,159700.0,44.1,25.0,Skanska USA,4355000,Small
+PRJ-2019-146,9,5,4,0,915100,409600,505500.0,44.8,44.4,JE Dunn,7959000,Medium
+PRJ-2019-147,17,11,6,0,5166000,3270300,1895700.0,63.3,35.3,Skanska USA,18067000,Medium
+PRJ-2019-148,9,8,1,0,803200,645600,157600.0,80.4,11.1,JE Dunn,7547000,Medium
+PRJ-2019-149,9,6,3,0,2216800,1340100,876700.0,60.5,33.3,JE Dunn,21493000,Large
+PRJ-2019-150,20,16,4,0,4503300,3744600,758700.0,83.2,20.0,JE Dunn,26488000,Large
+PRJ-2019-151,8,6,2,0,4119300,3244900,874400.0,78.8,25.0,JE Dunn,29676000,Large
+PRJ-2019-152,11,8,3,0,324000,200000,124000.0,61.7,27.3,Mortenson,2246000,Small
+PRJ-2019-153,20,16,4,0,1430800,1328800,102000.0,92.9,20.0,DPR Construction,4947000,Small
+PRJ-2019-154,11,9,2,0,886000,575500,310500.0,65.0,18.2,DPR Construction,6455000,Medium
+PRJ-2019-155,6,5,1,0,462500,423800,38700.0,91.6,16.7,Skanska USA,7959000,Medium
+PRJ-2019-156,7,6,1,0,3261000,3566400,-305400.0,109.4,14.3,Mortenson,36862000,Large
+PRJ-2019-157,13,11,2,0,1305900,1068700,237200.0,81.8,15.4,Mortenson,6804000,Medium
+PRJ-2019-158,6,4,2,0,536600,365200,171400.0,68.1,33.3,DPR Construction,5838000,Medium
+PRJ-2019-159,6,5,1,0,1236400,886500,349900.0,71.7,16.7,JE Dunn,18511000,Medium
+PRJ-2019-160,12,8,4,0,1294000,1122700,171300.0,86.8,33.3,JE Dunn,6817000,Medium
+PRJ-2020-161,17,8,9,0,15160700,6299700,8861000.0,41.6,52.9,JE Dunn,58874000,Mega
+PRJ-2020-162,5,3,2,0,798700,147900,650800.0,18.5,40.0,Turner Construction,29697000,Large
+PRJ-2020-163,19,14,5,0,2301000,1874200,426800.0,81.5,26.3,Mortenson,7125000,Medium
+PRJ-2020-164,7,6,1,0,800200,822900,-22700.0,102.8,14.3,Turner Construction,7029000,Medium
+PRJ-2020-165,17,16,1,0,1768500,1864100,-95600.0,105.4,5.9,JE Dunn,8448000,Medium
+PRJ-2020-166,9,7,2,0,7969800,6137300,1832500.0,77.0,22.2,Turner Construction,52683000,Mega
+PRJ-2020-167,6,3,3,0,1137300,648500,488800.0,57.0,50.0,Turner Construction,10960000,Medium
+PRJ-2020-168,4,3,1,0,378100,339900,38200.0,89.9,25.0,JE Dunn,7650000,Medium
+PRJ-2020-169,7,5,2,0,378700,680800,-302100.0,179.8,28.6,Skanska USA,10657000,Medium
+PRJ-2020-170,3,3,0,0,119100,119100,,100.0,0.0,JE Dunn,4816000,Small
+PRJ-2020-171,6,5,1,0,182900,152100,30800.0,83.2,16.7,Skanska USA,5525000,Medium
+PRJ-2020-172,10,8,2,0,743100,567900,175200.0,76.4,20.0,DPR Construction,4940000,Small
+PRJ-2020-173,12,9,3,0,587200,366100,221100.0,62.3,25.0,Skanska USA,3384000,Small
+PRJ-2020-174,11,10,1,0,1430600,1364300,66300.0,95.4,9.1,JE Dunn,8026000,Medium
+PRJ-2020-175,10,7,3,0,3430900,2693000,737900.0,78.5,30.0,DPR Construction,21782000,Large
+PRJ-2020-176,7,4,3,0,2452900,205800,2247100.0,8.4,42.9,Skanska USA,29701000,Large
+PRJ-2020-177,8,6,2,0,1459800,1460400,-600.0,100.0,25.0,Turner Construction,11218000,Medium
+PRJ-2020-178,9,6,3,0,1137800,492600,645200.0,43.3,33.3,DPR Construction,13653000,Medium
+PRJ-2020-179,13,10,3,0,3189800,2663300,526500.0,83.5,23.1,DPR Construction,22670000,Large
+PRJ-2020-180,20,17,3,0,1963600,1672000,291600.0,85.1,15.0,Mortenson,8550000,Medium
+PRJ-2020-181,7,6,1,0,3975500,4279800,-304300.0,107.7,14.3,Skanska USA,37213000,Large
+PRJ-2020-182,11,6,5,0,1615000,960300,654700.0,59.5,45.5,JE Dunn,7358000,Medium
+PRJ-2020-183,18,13,5,0,2678500,2204300,474200.0,82.3,27.8,Turner Construction,14144000,Medium
+PRJ-2020-184,13,12,1,0,1058000,958500,99500.0,90.6,7.7,Skanska USA,5820000,Medium
+PRJ-2020-185,7,4,3,0,325200,188300,136900.0,57.9,42.9,DPR Construction,3792000,Small
+PRJ-2020-186,9,5,4,0,2965600,1919600,1046000.0,64.7,44.4,Turner Construction,27278000,Large
+PRJ-2020-187,7,6,1,0,593400,663000,-69600.0,111.7,14.3,DPR Construction,10850000,Medium
+PRJ-2020-188,15,14,1,0,1984300,2066200,-81900.0,104.1,6.7,Skanska USA,7817000,Medium
+PRJ-2020-189,11,8,3,0,3063700,2307900,755800.0,75.3,27.3,DPR Construction,25784000,Large
+PRJ-2020-190,7,7,0,0,660600,660600,,100.0,0.0,Skanska USA,6390000,Medium
+PRJ-2020-191,12,11,1,0,6881700,5915800,965900.0,86.0,8.3,DPR Construction,46534000,Large
+PRJ-2020-192,9,5,4,0,2415600,1043300,1372300.0,43.2,44.4,DPR Construction,16402000,Medium
+PRJ-2020-193,20,18,2,0,5055000,4387400,667600.0,86.8,10.0,JE Dunn,14923000,Medium
+PRJ-2020-194,6,4,2,0,1973100,1030400,942700.0,52.2,33.3,JE Dunn,19531000,Medium
+PRJ-2020-195,18,13,5,0,3740500,3216600,523900.0,86.0,27.8,DPR Construction,16764000,Medium
+PRJ-2020-196,17,12,5,0,7274100,4798500,2475600.0,66.0,29.4,Mortenson,35312000,Large
+PRJ-2020-197,8,6,2,0,204700,234600,-29900.0,114.6,25.0,JE Dunn,2640000,Small
+PRJ-2020-198,12,9,3,0,1673500,1292400,381100.0,77.2,25.0,JE Dunn,10617000,Medium
+PRJ-2020-199,6,4,2,0,1580500,713600,866900.0,45.2,33.3,Skanska USA,17456000,Medium
+PRJ-2020-200,7,6,1,0,743400,690500,52900.0,92.9,14.3,JE Dunn,4488000,Small
+PRJ-2020-201,14,12,2,0,7953800,6868500,1085300.0,86.4,14.3,DPR Construction,43769000,Large
+PRJ-2020-202,20,16,4,0,8138900,6492200,1646700.0,79.8,20.0,DPR Construction,27217000,Large
+PRJ-2020-203,17,14,3,0,1055200,926000,129200.0,87.8,17.6,DPR Construction,4570000,Small
+PRJ-2020-204,9,4,5,0,2735300,925800,1809500.0,33.8,55.6,Turner Construction,22017000,Large
+PRJ-2020-205,13,10,3,0,766000,565000,201000.0,73.8,23.1,Turner Construction,7258000,Medium
+PRJ-2020-206,12,9,3,0,4065600,2675400,1390200.0,65.8,25.0,Skanska USA,19628000,Medium
+PRJ-2020-207,4,4,0,0,157800,157800,,100.0,0.0,Mortenson,3989000,Small
+PRJ-2020-208,13,10,3,0,2095700,1182500,913200.0,56.4,23.1,Turner Construction,13209000,Medium
+PRJ-2020-209,7,5,2,0,1499700,1154900,344800.0,77.0,28.6,JE Dunn,13910000,Medium
+PRJ-2020-210,4,4,0,0,692700,692700,,100.0,0.0,DPR Construction,15485000,Medium
+PRJ-2020-211,8,8,0,0,4908500,4908500,,100.0,0.0,JE Dunn,39163000,Large
+PRJ-2020-212,20,16,4,0,8936900,7122700,1814200.0,79.7,20.0,JE Dunn,31617000,Large
+PRJ-2020-213,7,7,0,0,211900,211900,,100.0,0.0,Mortenson,3162000,Small
+PRJ-2020-214,6,5,1,0,1067500,877200,190300.0,82.2,16.7,JE Dunn,12266000,Medium
+PRJ-2020-215,14,11,3,0,4263000,3185300,1077700.0,74.7,21.4,Skanska USA,25173000,Large
+PRJ-2020-216,9,6,3,0,4546000,1578200,2967800.0,34.7,33.3,JE Dunn,50756000,Mega
+PRJ-2020-217,6,4,2,0,410900,273300,137600.0,66.5,33.3,Skanska USA,4321000,Small
+PRJ-2020-218,14,11,3,0,1412200,977500,434700.0,69.2,21.4,JE Dunn,10797000,Medium
+PRJ-2020-219,7,6,1,0,2731900,2473400,258500.0,90.5,14.3,Mortenson,26976000,Large
+PRJ-2020-220,11,6,5,0,2558900,1448700,1110200.0,56.6,45.5,Skanska USA,16642000,Medium
+PRJ-2020-221,15,12,3,0,2736600,2282300,454300.0,83.4,20.0,DPR Construction,13847000,Medium
+PRJ-2020-222,11,8,3,0,1460400,767600,692800.0,52.6,27.3,Skanska USA,10170000,Medium
+PRJ-2020-223,12,5,7,0,875900,455900,420000.0,52.0,58.3,DPR Construction,7827000,Medium
+PRJ-2020-224,10,8,2,0,2246400,1721900,524500.0,76.7,20.0,Skanska USA,17418000,Medium
+PRJ-2020-225,10,9,1,0,694900,574700,120200.0,82.7,10.0,JE Dunn,5017000,Medium
+PRJ-2020-226,11,8,3,0,8085000,6235400,1849600.0,77.1,27.3,Turner Construction,52146000,Mega
+PRJ-2020-227,14,6,8,0,3881100,1563300,2317800.0,40.3,57.1,Mortenson,27835000,Large
+PRJ-2020-228,6,4,2,0,665100,453300,211800.0,68.2,33.3,JE Dunn,8395000,Medium
+PRJ-2020-229,6,4,2,0,1068200,724800,343400.0,67.9,33.3,Mortenson,7202000,Medium
+PRJ-2020-230,3,2,1,0,178000,244300,-66300.0,137.2,33.3,DPR Construction,6912000,Medium
+PRJ-2020-231,20,14,6,0,3422500,2076500,1346000.0,60.7,30.0,JE Dunn,11391000,Medium
+PRJ-2020-232,10,7,3,0,1142000,621100,520900.0,54.4,30.0,JE Dunn,7301000,Medium
+PRJ-2020-233,9,8,1,0,319400,276700,42700.0,86.6,11.1,Skanska USA,4218000,Small
+PRJ-2020-234,6,4,2,0,1694700,1021800,672900.0,60.3,33.3,DPR Construction,18348000,Medium
+PRJ-2020-235,14,11,3,0,3400900,3113700,287200.0,91.6,21.4,Skanska USA,17688000,Medium
+PRJ-2020-236,7,7,0,0,1315400,1315400,,100.0,0.0,Turner Construction,12168000,Medium
+PRJ-2020-237,7,5,2,0,2551100,2091800,459300.0,82.0,28.6,Skanska USA,33680000,Large
+PRJ-2020-238,8,5,3,0,928900,645000,283900.0,69.4,37.5,Turner Construction,9628000,Medium
+PRJ-2020-239,15,11,4,0,6799700,4660800,2138900.0,68.5,26.7,JE Dunn,25204000,Large
+PRJ-2020-240,14,10,4,0,1843100,1267200,575900.0,68.8,28.6,JE Dunn,8580000,Medium
+PRJ-2021-241,6,3,3,0,2043300,807200,1236100.0,39.5,50.0,Mortenson,21326000,Large
+PRJ-2021-242,11,7,4,0,2309700,1568200,741500.0,67.9,36.4,Turner Construction,12997000,Medium
+PRJ-2021-243,20,12,8,0,1053200,572300,480900.0,54.3,40.0,Mortenson,3832000,Small
+PRJ-2021-244,6,4,2,0,880100,799800,80300.0,90.9,33.3,Turner Construction,13475000,Medium
+PRJ-2021-245,11,8,3,0,1745200,1344600,400600.0,77.0,27.3,Mortenson,9375000,Medium
+PRJ-2021-246,14,12,2,0,2079000,1635100,443900.0,78.6,14.3,DPR Construction,9501000,Medium
+PRJ-2021-247,6,2,4,0,1672500,37100,1635400.0,2.2,66.7,JE Dunn,16914000,Medium
+PRJ-2021-248,6,6,0,0,955500,955500,,100.0,0.0,JE Dunn,10337000,Medium
+PRJ-2021-249,11,9,2,0,3418400,2639700,778700.0,77.2,18.2,DPR Construction,22257000,Large
+PRJ-2021-250,11,9,2,0,1967900,1699200,268700.0,86.3,18.2,DPR Construction,13401000,Medium
+PRJ-2021-251,11,6,5,0,6675700,5910500,765200.0,88.5,45.5,Skanska USA,37123000,Large
+PRJ-2021-252,6,5,1,0,1165600,1103900,61700.0,94.7,16.7,Skanska USA,16141000,Medium
+PRJ-2021-253,15,13,2,0,2634600,1853800,780800.0,70.4,13.3,Turner Construction,15036000,Medium
+PRJ-2021-254,7,5,2,0,933900,608400,325500.0,65.1,28.6,Mortenson,7049000,Medium
+PRJ-2021-255,3,2,1,0,313700,254200,59500.0,81.0,33.3,Mortenson,10826000,Medium
+PRJ-2021-256,6,5,1,0,3002100,2652700,349400.0,88.4,16.7,Mortenson,27189000,Large
+PRJ-2021-257,14,10,4,0,4806200,3656700,1149500.0,76.1,28.6,DPR Construction,22625000,Large
+PRJ-2021-258,8,4,4,0,843900,325700,518200.0,38.6,50.0,Turner Construction,6385000,Medium
+PRJ-2021-259,11,9,2,0,2378000,1761500,616500.0,74.1,18.2,Mortenson,11725000,Medium
+PRJ-2021-260,12,9,3,0,230900,214600,16300.0,92.9,25.0,Mortenson,2608000,Small
+PRJ-2021-261,5,2,3,0,852200,32200,820000.0,3.8,60.0,DPR Construction,24629000,Large
+PRJ-2021-262,12,9,3,0,2429300,2089900,339400.0,86.0,25.0,Skanska USA,25551000,Large
+PRJ-2021-263,11,9,2,0,1503400,1200400,303000.0,79.8,18.2,DPR Construction,9504000,Medium
+PRJ-2021-264,17,8,9,0,4430500,2340900,2089600.0,52.8,52.9,Turner Construction,19784000,Medium
+PRJ-2021-265,11,10,1,0,1039000,902100,136900.0,86.8,9.1,Mortenson,5721000,Medium
+PRJ-2021-266,12,12,0,0,1917800,1917800,,100.0,0.0,Skanska USA,14520000,Medium
+PRJ-2021-267,11,10,1,0,2388700,2232000,156700.0,93.4,9.1,JE Dunn,11491000,Medium
+PRJ-2021-268,6,4,2,0,75800,69300,6500.0,91.4,33.3,Mortenson,2795000,Small
+PRJ-2021-269,13,11,2,0,1134700,1011600,123100.0,89.2,15.4,DPR Construction,5968000,Medium
+PRJ-2021-270,6,5,1,0,722300,695900,26400.0,96.3,16.7,Mortenson,10208000,Medium
+PRJ-2021-271,13,11,2,0,7394100,5602200,1791900.0,75.8,15.4,Skanska USA,37774000,Large
+PRJ-2021-272,4,3,1,0,218900,160500,58400.0,73.3,25.0,Mortenson,3248000,Small
+PRJ-2021-273,4,4,0,0,198300,198300,,100.0,0.0,Turner Construction,3323000,Small
+PRJ-2021-274,12,10,2,0,2209000,2099100,109900.0,95.0,16.7,Turner Construction,14505000,Medium
+PRJ-2021-275,5,4,1,0,1155600,871700,283900.0,75.4,20.0,DPR Construction,17258000,Medium
+PRJ-2021-276,11,6,5,0,4557900,3466500,1091400.0,76.1,45.5,JE Dunn,39364000,Large
+PRJ-2021-277,6,5,1,0,804700,703500,101200.0,87.4,16.7,Turner Construction,11417000,Medium
+PRJ-2021-278,9,6,3,0,1066600,743400,323200.0,69.7,33.3,Skanska USA,7335000,Medium
+PRJ-2021-279,8,8,0,0,751700,751700,,100.0,0.0,JE Dunn,6492000,Medium
+PRJ-2021-280,11,8,3,0,1747600,795500,952100.0,45.5,27.3,Turner Construction,17061000,Medium
+PRJ-2021-281,9,6,3,0,5151700,3465600,1686100.0,67.3,33.3,JE Dunn,43539000,Large
+PRJ-2021-282,11,6,5,0,3579100,2618800,960300.0,73.2,45.5,Skanska USA,20659000,Large
+PRJ-2021-283,10,10,0,0,287300,287300,,100.0,0.0,Skanska USA,3010000,Small
+PRJ-2021-284,6,5,1,0,207200,90900,116300.0,43.9,16.7,Turner Construction,6507000,Medium
+PRJ-2021-285,11,7,4,0,1134000,678300,455700.0,59.8,36.4,Mortenson,6250000,Medium
+PRJ-2021-286,11,11,0,0,4508600,4508600,,100.0,0.0,JE Dunn,33113000,Large
+PRJ-2021-287,6,5,1,0,209000,85300,123700.0,40.8,16.7,Mortenson,9202000,Medium
+PRJ-2021-288,11,5,6,0,1572300,925600,646700.0,58.9,54.5,Mortenson,9948000,Medium
+PRJ-2021-289,17,15,2,0,4456800,4334500,122300.0,97.3,11.8,DPR Construction,18201000,Medium
+PRJ-2021-290,14,10,4,0,3119400,1953200,1166200.0,62.6,28.6,Turner Construction,17033000,Medium
+PRJ-2021-291,13,8,5,0,3406000,2255400,1150600.0,66.2,38.5,JE Dunn,26365000,Large
+PRJ-2021-292,20,16,4,0,3270200,2572500,697700.0,78.7,20.0,Turner Construction,13023000,Medium
+PRJ-2021-293,11,9,2,0,1469900,1314600,155300.0,89.4,18.2,Turner Construction,8829000,Medium
+PRJ-2021-294,11,7,4,0,1719400,1019900,699500.0,59.3,36.4,Mortenson,8748000,Medium
+PRJ-2021-295,16,15,1,0,1126500,1012100,114400.0,89.8,6.2,Mortenson,8337000,Medium
+PRJ-2021-296,10,6,4,0,6507400,4658000,1849400.0,71.6,40.0,Skanska USA,41720000,Large
+PRJ-2021-297,11,10,1,0,1909000,1554200,354800.0,81.4,9.1,DPR Construction,30058000,Large
+PRJ-2021-298,12,11,1,0,2020000,1731000,289000.0,85.7,8.3,Turner Construction,11208000,Medium
+PRJ-2021-299,9,7,2,0,983800,852800,131000.0,86.7,22.2,JE Dunn,8616000,Medium
+PRJ-2021-300,4,3,1,0,1211900,772100,439800.0,63.7,25.0,Turner Construction,12081000,Medium
+PRJ-2021-301,8,3,5,0,1097200,452300,644900.0,41.2,62.5,Turner Construction,10245000,Medium
+PRJ-2021-302,4,2,2,0,922900,559200,363700.0,60.6,50.0,Turner Construction,10296000,Medium
+PRJ-2021-303,12,6,6,0,1208700,497500,711200.0,41.2,50.0,Mortenson,9518000,Medium
+PRJ-2021-304,10,9,1,0,703900,727300,-23400.0,103.3,10.0,Mortenson,4796000,Small
+PRJ-2021-305,18,16,2,0,1605300,1490600,114700.0,92.9,11.1,Skanska USA,7776000,Medium
+PRJ-2021-306,12,11,1,0,7431500,7569000,-137500.0,101.9,8.3,Turner Construction,38835000,Large
+PRJ-2021-307,10,6,4,0,5142400,3780800,1361600.0,73.5,40.0,Turner Construction,31171000,Large
+PRJ-2021-308,18,13,5,0,3235100,2676700,558400.0,82.7,27.8,DPR Construction,11781000,Medium
+PRJ-2021-309,16,11,5,0,4329900,3112900,1217000.0,71.9,31.2,Turner Construction,22317000,Large
+PRJ-2021-310,6,5,1,0,1875100,1952600,-77500.0,104.1,16.7,Mortenson,22291000,Large
+PRJ-2021-311,11,11,0,0,2615100,2615100,,100.0,0.0,Turner Construction,29341000,Large
+PRJ-2021-312,11,9,2,0,2082400,2175700,-93300.0,104.5,18.2,JE Dunn,12270000,Medium
+PRJ-2021-313,6,5,1,0,455900,332500,123400.0,72.9,16.7,Mortenson,5695000,Medium
+PRJ-2021-314,11,10,1,0,953000,889100,63900.0,93.3,9.1,DPR Construction,6447000,Medium
+PRJ-2021-315,13,12,1,0,1059600,888300,171300.0,83.8,7.7,Skanska USA,5465000,Medium
+PRJ-2021-316,7,5,2,0,2885900,2062100,823800.0,71.5,28.6,DPR Construction,32547000,Large
+PRJ-2021-317,3,2,1,0,8300,-8600,16900.0,-103.6,33.3,JE Dunn,3616000,Small
+PRJ-2021-318,11,8,3,0,294800,200700,94100.0,68.1,27.3,Mortenson,2373000,Small
+PRJ-2021-319,12,9,3,0,1401400,1155700,245700.0,82.5,25.0,Mortenson,8085000,Medium
+PRJ-2021-320,11,11,0,0,2309000,2309000,,100.0,0.0,DPR Construction,22790000,Large
+PRJ-2022-321,10,9,1,0,3693900,3041300,652600.0,82.3,10.0,DPR Construction,27273000,Large
+PRJ-2022-322,17,16,1,0,523800,547500,-23700.0,104.5,5.9,Mortenson,4371000,Small
+PRJ-2022-323,9,7,2,0,896500,801800,94700.0,89.4,22.2,Mortenson,6565000,Medium
+PRJ-2022-324,12,8,4,0,878300,735200,143100.0,83.7,33.3,JE Dunn,5373000,Medium
+PRJ-2022-325,16,11,5,0,964900,670700,294200.0,69.5,31.2,Mortenson,4398000,Small
+PRJ-2022-326,6,4,2,0,163600,275200,-111600.0,168.2,33.3,Turner Construction,4754000,Small
+PRJ-2022-327,12,7,5,0,4403500,2653200,1750300.0,60.3,41.7,Turner Construction,29520000,Large
+PRJ-2022-328,16,12,4,0,2762300,1236100,1526200.0,44.7,25.0,DPR Construction,15085000,Medium
+PRJ-2022-329,11,9,2,0,3355500,2778000,577500.0,82.8,18.2,JE Dunn,22622000,Large
+PRJ-2022-330,4,3,1,0,-14000,26200,-40200.0,-187.1,25.0,Mortenson,3812000,Small
+PRJ-2022-331,11,10,1,0,5023300,4814000,209300.0,95.8,9.1,JE Dunn,41560000,Large
+PRJ-2022-332,10,7,3,0,1637700,1073200,564500.0,65.5,30.0,Turner Construction,11220000,Medium
+PRJ-2022-333,8,6,2,0,1128100,895000,233100.0,79.3,25.0,Mortenson,13567000,Medium
+PRJ-2022-334,18,12,6,0,4583000,2617900,1965100.0,57.1,33.3,Mortenson,16918000,Medium
+PRJ-2022-335,7,5,2,0,1235400,668200,567200.0,54.1,28.6,Mortenson,12951000,Medium
+PRJ-2022-336,11,9,2,0,1654400,2166600,-512200.0,131.0,18.2,JE Dunn,19661000,Medium
+PRJ-2022-337,10,9,1,0,4077800,3835300,242500.0,94.1,10.0,JE Dunn,24013000,Large
+PRJ-2022-338,10,9,1,0,1080700,1051100,29600.0,97.3,10.0,DPR Construction,6503000,Medium
+PRJ-2022-339,17,10,7,0,5241100,3603600,1637500.0,68.8,41.2,Skanska USA,19158000,Medium
+PRJ-2022-340,7,6,1,0,2628700,2202100,426600.0,83.8,14.3,JE Dunn,21923000,Large
+PRJ-2022-341,11,6,5,0,4134500,2780000,1354500.0,67.2,45.5,DPR Construction,26652000,Large
+PRJ-2022-342,6,4,2,0,1085600,1254400,-168800.0,115.5,33.3,Skanska USA,25975000,Large
+PRJ-2022-343,10,6,4,0,375300,328900,46400.0,87.6,40.0,Skanska USA,4342000,Small
+PRJ-2022-344,6,5,1,0,713100,568900,144200.0,79.8,16.7,Mortenson,14429000,Medium
+PRJ-2022-345,19,15,4,0,5852400,4608000,1244400.0,78.7,21.1,Turner Construction,20889000,Large
+PRJ-2022-346,20,13,7,0,5125300,3606100,1519200.0,70.4,35.0,Mortenson,23652000,Large
+PRJ-2022-347,8,4,4,0,3453300,1234000,2219300.0,35.7,50.0,Skanska USA,27076000,Large
+PRJ-2022-348,6,4,2,0,189600,182900,6700.0,96.5,33.3,Mortenson,3189000,Small
+PRJ-2022-349,9,8,1,0,2366500,1982400,384100.0,83.8,11.1,Mortenson,22985000,Large
+PRJ-2022-350,15,8,7,0,1261400,657300,604100.0,52.1,46.7,Mortenson,8036000,Medium
+PRJ-2022-351,9,7,2,0,2889600,2231600,658000.0,77.2,22.2,JE Dunn,26481000,Large
+PRJ-2022-352,17,13,4,0,3447000,2259500,1187500.0,65.5,23.5,DPR Construction,17595000,Medium
+PRJ-2022-353,7,5,2,0,888700,633400,255300.0,71.3,28.6,DPR Construction,6748000,Medium
+PRJ-2022-354,8,6,2,0,1323000,851000,472000.0,64.3,25.0,Skanska USA,11352000,Medium
+PRJ-2022-355,17,13,4,0,3813000,3062700,750300.0,80.3,23.5,Turner Construction,19636000,Medium
+PRJ-2022-356,10,9,1,0,5552500,5320500,232000.0,95.8,10.0,DPR Construction,30571000,Large
+PRJ-2022-357,8,4,4,0,862500,393400,469100.0,45.6,50.0,Skanska USA,12804000,Medium
+PRJ-2022-358,8,7,1,0,524500,471800,52700.0,90.0,12.5,Mortenson,6596000,Medium
+PRJ-2022-359,6,4,2,0,854000,632800,221200.0,74.1,33.3,JE Dunn,8202000,Medium
+PRJ-2022-360,10,8,2,0,1112600,932400,180200.0,83.8,20.0,DPR Construction,8177000,Medium
+PRJ-2022-361,7,6,1,0,1440400,1218800,221600.0,84.6,14.3,Turner Construction,12912000,Medium
+PRJ-2022-362,12,7,5,0,2826100,1908500,917600.0,67.5,41.7,Turner Construction,25395000,Large
+PRJ-2022-363,7,5,2,0,538800,303300,235500.0,56.3,28.6,Turner Construction,5770000,Medium
+PRJ-2022-364,9,4,5,0,1988900,672900,1316000.0,33.8,55.6,Skanska USA,17834000,Medium
+PRJ-2022-365,8,7,1,0,1635800,1569300,66500.0,95.9,12.5,Skanska USA,20406000,Large
+PRJ-2022-366,12,10,2,0,1297100,946600,350500.0,73.0,16.7,JE Dunn,8337000,Medium
+PRJ-2022-367,14,10,4,0,1116500,882700,233800.0,79.1,28.6,JE Dunn,6499000,Medium
+PRJ-2022-368,12,12,0,0,1183800,1183800,,100.0,0.0,Skanska USA,12855000,Medium
+PRJ-2022-369,12,7,5,0,2425600,1141500,1284100.0,47.1,41.7,DPR Construction,16822000,Medium
+PRJ-2022-370,9,8,1,0,556800,508200,48600.0,91.3,11.1,Turner Construction,3301000,Small
+PRJ-2022-371,10,8,2,0,5645400,4262100,1383300.0,75.5,20.0,JE Dunn,43335000,Large
+PRJ-2022-372,12,6,6,0,889400,314900,574500.0,35.4,50.0,Skanska USA,7056000,Medium
+PRJ-2022-373,5,4,1,0,563100,391500,171600.0,69.5,20.0,Skanska USA,7091000,Medium
+PRJ-2022-374,20,15,5,0,1427800,1285900,141900.0,90.1,25.0,JE Dunn,5458000,Medium
+PRJ-2022-375,12,9,3,0,2468000,2024700,443300.0,82.0,25.0,Mortenson,11214000,Medium
+PRJ-2022-376,10,8,2,0,5410300,4062800,1347500.0,75.1,20.0,DPR Construction,36501000,Large
+PRJ-2022-377,6,3,3,0,1086600,689900,396700.0,63.5,50.0,JE Dunn,8864000,Medium
+PRJ-2022-378,5,5,0,0,49300,49300,,100.0,0.0,DPR Construction,9195000,Medium
+PRJ-2022-379,16,10,6,0,2334100,1354700,979400.0,58.0,37.5,Mortenson,11816000,Medium
+PRJ-2022-380,9,5,4,0,2549600,1462200,1087400.0,57.4,44.4,DPR Construction,17710000,Medium
+PRJ-2023-381,7,5,2,0,3287300,2289700,997600.0,69.7,28.6,Turner Construction,41186000,Large
+PRJ-2023-382,7,2,5,0,1190300,451100,739200.0,37.9,71.4,Skanska USA,10081000,Medium
+PRJ-2023-383,8,7,1,0,161300,182300,-21000.0,113.0,12.5,Mortenson,3222000,Small
+PRJ-2023-384,12,11,1,0,3007900,2820700,187200.0,93.8,8.3,Turner Construction,16654000,Medium
+PRJ-2023-385,8,6,2,0,2015100,1506500,508600.0,74.8,25.0,Mortenson,11398000,Medium
+PRJ-2023-386,4,2,2,0,982300,296800,685500.0,30.2,50.0,DPR Construction,14714000,Medium
+PRJ-2023-387,20,18,2,0,2599700,2402300,197400.0,92.4,10.0,DPR Construction,6827000,Medium
+PRJ-2023-388,11,9,2,0,2077000,1806200,270800.0,87.0,18.2,Turner Construction,11540000,Medium
+PRJ-2023-389,4,2,2,0,517600,343500,174100.0,66.4,50.0,DPR Construction,16458000,Medium
+PRJ-2023-390,18,13,5,0,1771400,1273300,498100.0,71.9,27.8,JE Dunn,9884000,Medium
+PRJ-2023-391,19,15,4,0,2556400,2306800,249600.0,90.2,21.1,Mortenson,9340000,Medium
+PRJ-2023-392,6,4,2,0,658400,277000,381400.0,42.1,33.3,DPR Construction,9070000,Medium
+PRJ-2023-393,7,7,0,0,130600,130600,,100.0,0.0,Turner Construction,5279000,Medium
+PRJ-2023-394,7,5,2,0,1006100,625500,380600.0,62.2,28.6,Skanska USA,11747000,Medium
+PRJ-2023-395,5,3,2,0,271800,208300,63500.0,76.6,40.0,Skanska USA,3591000,Small
+PRJ-2023-396,9,7,2,0,2852200,2257100,595100.0,79.1,22.2,Turner Construction,21976000,Large
+PRJ-2023-397,11,7,4,0,4540800,3012800,1528000.0,66.3,36.4,Skanska USA,24152000,Large
+PRJ-2023-398,12,8,4,0,1223600,886700,336900.0,72.5,33.3,DPR Construction,7209000,Medium
+PRJ-2023-399,16,13,3,0,2392600,1875200,517400.0,78.4,18.8,JE Dunn,8502000,Medium
+PRJ-2023-400,6,5,1,0,1420600,1343000,77600.0,94.5,16.7,Turner Construction,9928000,Medium
+PRJ-2024-001,12,9,3,0,5487300,4192500,1294800.0,76.4,25.0,Turner Construction,35194000,Large
+PRJ-2024-002,20,14,6,0,8715300,6338600,2376700.0,72.7,30.0,DPR Construction,30260000,Large
+PRJ-2024-003,8,5,3,0,694100,321300,372800.0,46.3,37.5,DPR Construction,5544000,Medium
+PRJ-2024-004,12,8,4,0,3958500,2743100,1215400.0,69.3,33.3,DPR Construction,16340000,Medium
+PRJ-2024-005,12,9,3,0,2477500,1570700,906800.0,63.4,25.0,Skanska USA,13650000,Medium
