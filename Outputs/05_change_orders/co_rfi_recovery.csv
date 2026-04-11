@@ -1,0 +1,406 @@
+project_id,cost_impact_rfi_count,rfi_with_approved_co,rfi_unrecovered_count,recovery_rate_%,project_name,gc_name,project_type
+PRJ-2018-001,6,1,5,16.67,Minneapolis Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2018-002,33,0,33,0.0,Louisville Office Park - Core & Shell MEP,JE Dunn,Commercial/Office
+PRJ-2018-003,19,1,18,5.26,Las Vegas Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2018-004,16,1,15,6.25,Houston Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2018-005,9,0,9,0.0,Phoenix Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2018-006,13,3,10,23.08,Kansas City Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2018-007,8,0,8,0.0,Portland Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2018-008,19,0,19,0.0,Louisville High School - New Construction,Skanska USA,Education
+PRJ-2018-009,8,0,8,0.0,Houston Edge Data Center - Thermal Management,Mortenson,Data Center
+PRJ-2018-010,8,1,7,12.5,San Antonio Mixed-Income Housing - Climate Control,JE Dunn,Other
+PRJ-2018-011,9,0,9,0.0,Albuquerque Hospital - Mechanical Systems Renovation,Mortenson,Healthcare
+PRJ-2018-012,19,0,19,0.0,Pittsburgh Business Center - MEP Systems,DPR Construction,Other
+PRJ-2018-013,11,0,11,0.0,Indianapolis Unified School District - HVAC Modernization,DPR Construction,Education
+PRJ-2018-014,11,2,9,18.18,Indianapolis Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2018-015,18,4,14,22.22,Minneapolis Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2018-016,31,2,29,6.45,Houston Surgery Center - Climate Control,JE Dunn,Other
+PRJ-2018-017,15,1,14,6.67,San Antonio Business Center - MEP Systems,DPR Construction,Other
+PRJ-2018-018,12,1,11,8.33,Las Vegas Unified School District - HVAC Modernization,Turner Construction,Education
+PRJ-2018-019,13,0,13,0.0,Oklahoma City Edge Data Center - Thermal Management,Mortenson,Data Center
+PRJ-2018-020,13,1,12,7.69,Chicago Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2018-021,13,1,12,7.69,San Antonio Surgery Center - Climate Control,JE Dunn,Other
+PRJ-2018-022,24,1,23,4.17,Tampa Office Park - Core & Shell MEP,Turner Construction,Commercial/Office
+PRJ-2018-023,11,2,9,18.18,Richmond High School - New Construction,DPR Construction,Education
+PRJ-2018-024,9,0,9,0.0,Raleigh Edge Data Center - Thermal Management,JE Dunn,Data Center
+PRJ-2018-025,19,0,19,0.0,Portland Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2018-026,13,0,13,0.0,Las Vegas Surgery Center - Climate Control,Turner Construction,Other
+PRJ-2018-027,16,0,16,0.0,Albuquerque Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2018-028,11,0,11,0.0,Louisville Elementary Campus - Climate Systems,Skanska USA,Education
+PRJ-2018-029,14,1,13,7.14,Kansas City Colocation Facility - HVAC,JE Dunn,Other
+PRJ-2018-030,21,3,18,14.29,Portland Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2018-031,16,1,15,6.25,Kansas City Surgery Center - Climate Control,Skanska USA,Other
+PRJ-2018-032,18,0,18,0.0,Sacramento Office Park - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2018-033,11,0,11,0.0,Pittsburgh Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2018-034,21,1,20,4.76,Boston Colocation Facility - HVAC,DPR Construction,Other
+PRJ-2018-035,15,0,15,0.0,Indianapolis Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2018-036,5,0,5,0.0,Pittsburgh Medical Campus - New HVAC Installation,Mortenson,Healthcare
+PRJ-2018-037,18,1,17,5.56,Albuquerque Business Center - MEP Systems,JE Dunn,Other
+PRJ-2018-038,12,2,10,16.67,Columbus Unified School District - HVAC Modernization,JE Dunn,Education
+PRJ-2018-039,10,0,10,0.0,Albuquerque Data Center - Precision Cooling Systems,Skanska USA,Data Center
+PRJ-2018-040,19,1,18,5.26,Sacramento Mixed-Income Housing - Climate Control,DPR Construction,Other
+PRJ-2018-041,6,0,6,0.0,San Antonio Regional Medical Center - HVAC Upgrade,Skanska USA,Healthcare
+PRJ-2018-042,12,0,12,0.0,Columbus Office Park - Core & Shell MEP,JE Dunn,Commercial/Office
+PRJ-2018-043,25,3,22,12.0,Salt Lake City High School - New Construction,Skanska USA,Education
+PRJ-2018-044,10,3,7,30.0,Oklahoma City Cloud Campus Phase 1 - Cooling,Mortenson,Education
+PRJ-2018-045,6,1,5,16.67,Cincinnati Apartment Complex - MEP,Skanska USA,Residential
+PRJ-2018-046,20,2,18,10.0,Albuquerque Medical Campus - New HVAC Installation,Skanska USA,Healthcare
+PRJ-2018-047,9,1,8,11.11,Oklahoma City Office Park - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2018-048,19,1,18,5.26,Boston Unified School District - HVAC Modernization,DPR Construction,Education
+PRJ-2018-049,13,0,13,0.0,San Antonio Data Center - Precision Cooling Systems,Skanska USA,Data Center
+PRJ-2018-050,9,1,8,11.11,Boston Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2018-051,9,3,6,33.33,San Antonio Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2018-052,16,1,15,6.25,Richmond Mixed-Use Tower - Mechanical,Skanska USA,Commercial/Office
+PRJ-2018-053,7,1,6,14.29,Las Vegas High School - New Construction,Mortenson,Education
+PRJ-2018-054,17,1,16,5.88,Denver Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2018-055,18,1,17,5.56,Oklahoma City Mixed-Income Housing - Climate Control,JE Dunn,Other
+PRJ-2018-056,12,1,11,8.33,Boston Medical Campus - New HVAC Installation,Skanska USA,Healthcare
+PRJ-2018-057,5,1,4,20.0,Sacramento Office Park - Core & Shell MEP,Mortenson,Commercial/Office
+PRJ-2018-058,5,0,5,0.0,Boston Middle School - HVAC Systems,DPR Construction,Education
+PRJ-2018-059,23,1,22,4.35,Atlanta Data Center - Precision Cooling Systems,DPR Construction,Data Center
+PRJ-2018-060,8,1,7,12.5,Boston Apartment Complex - MEP,Skanska USA,Residential
+PRJ-2018-061,7,2,5,28.57,Las Vegas Hospital - Mechanical Systems Renovation,Mortenson,Healthcare
+PRJ-2018-062,12,2,10,16.67,Chicago Business Center - MEP Systems,Turner Construction,Other
+PRJ-2018-063,9,1,8,11.11,Cincinnati High School - New Construction,Mortenson,Education
+PRJ-2018-064,24,3,21,12.5,Minneapolis Cloud Campus Phase 1 - Cooling,DPR Construction,Education
+PRJ-2018-065,9,1,8,11.11,Richmond Residential Tower - HVAC Systems,Skanska USA,Commercial/Office
+PRJ-2018-066,9,2,7,22.22,Portland Regional Medical Center - HVAC Upgrade,Skanska USA,Healthcare
+PRJ-2018-067,1,0,1,0.0,Nashville Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2018-068,11,1,10,9.09,Tampa Unified School District - HVAC Modernization,JE Dunn,Education
+PRJ-2018-069,16,0,16,0.0,Boston Colocation Facility - HVAC,Mortenson,Other
+PRJ-2018-070,14,1,13,7.14,Portland Senior Living - HVAC Upgrade,JE Dunn,Residential
+PRJ-2018-071,22,1,21,4.55,Atlanta Regional Medical Center - HVAC Upgrade,Mortenson,Healthcare
+PRJ-2018-072,4,0,4,0.0,Richmond Corporate Campus - HVAC Systems,DPR Construction,Education
+PRJ-2018-073,6,0,6,0.0,Minneapolis Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2018-074,19,1,18,5.26,Chicago Edge Data Center - Thermal Management,JE Dunn,Data Center
+PRJ-2018-075,17,1,16,5.88,Indianapolis Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2018-076,7,1,6,14.29,Pittsburgh Surgery Center - Climate Control,Turner Construction,Other
+PRJ-2018-077,12,2,10,16.67,Minneapolis Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2018-078,23,1,22,4.35,Baltimore High School - New Construction,JE Dunn,Education
+PRJ-2018-079,10,1,9,10.0,Baltimore Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2018-080,15,0,15,0.0,Raleigh Senior Living - HVAC Upgrade,Turner Construction,Residential
+PRJ-2019-081,17,0,17,0.0,Indianapolis Surgery Center - Climate Control,Turner Construction,Other
+PRJ-2019-082,17,3,14,17.65,Raleigh Business Center - MEP Systems,JE Dunn,Other
+PRJ-2019-083,19,1,18,5.26,Cincinnati Elementary Campus - Climate Systems,JE Dunn,Education
+PRJ-2019-084,24,0,24,0.0,Sacramento Data Center - Precision Cooling Systems,Turner Construction,Data Center
+PRJ-2019-085,8,1,7,12.5,Louisville Residential Tower - HVAC Systems,JE Dunn,Commercial/Office
+PRJ-2019-086,8,1,7,12.5,Louisville Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2019-087,18,1,17,5.56,Atlanta Mixed-Use Tower - Mechanical,Skanska USA,Commercial/Office
+PRJ-2019-088,23,1,22,4.35,Oklahoma City Elementary Campus - Climate Systems,JE Dunn,Education
+PRJ-2019-089,20,3,17,15.0,Tampa Cloud Campus Phase 1 - Cooling,Mortenson,Education
+PRJ-2019-090,12,1,11,8.33,Tampa Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2019-091,13,1,12,7.69,Portland Surgery Center - Climate Control,JE Dunn,Other
+PRJ-2019-092,16,2,14,12.5,Raleigh Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2019-093,7,1,6,14.29,Baltimore Middle School - HVAC Systems,JE Dunn,Education
+PRJ-2019-094,5,1,4,20.0,Atlanta Data Center - Precision Cooling Systems,DPR Construction,Data Center
+PRJ-2019-095,23,2,21,8.7,Phoenix Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2019-096,12,0,12,0.0,Portland Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2019-097,12,0,12,0.0,Cincinnati Mixed-Use Tower - Mechanical,DPR Construction,Commercial/Office
+PRJ-2019-098,9,1,8,11.11,Baltimore Unified School District - HVAC Modernization,Turner Construction,Education
+PRJ-2019-099,6,0,6,0.0,San Antonio Colocation Facility - HVAC,Mortenson,Other
+PRJ-2019-100,5,1,4,20.0,Richmond Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2019-101,12,1,11,8.33,Pittsburgh Hospital - Mechanical Systems Renovation,Turner Construction,Healthcare
+PRJ-2019-102,23,2,21,8.7,Indianapolis Business Center - MEP Systems,DPR Construction,Other
+PRJ-2019-103,20,1,19,5.0,Kansas City Middle School - HVAC Systems,Mortenson,Education
+PRJ-2019-104,3,0,3,0.0,Atlanta Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2019-105,11,0,11,0.0,Raleigh Mixed-Income Housing - Climate Control,DPR Construction,Other
+PRJ-2019-106,9,1,8,11.11,Raleigh Regional Medical Center - HVAC Upgrade,Skanska USA,Healthcare
+PRJ-2019-107,19,0,19,0.0,Boston Office Park - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2019-108,17,2,15,11.76,Richmond Elementary Campus - Climate Systems,JE Dunn,Education
+PRJ-2019-109,14,1,13,7.14,Portland Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2019-110,5,0,5,0.0,Las Vegas Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2019-111,8,1,7,12.5,Louisville Surgery Center - Climate Control,Skanska USA,Other
+PRJ-2019-112,13,0,13,0.0,Atlanta Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2019-113,27,0,27,0.0,Kansas City Middle School - HVAC Systems,Turner Construction,Education
+PRJ-2019-114,12,1,11,8.33,Tampa Colocation Facility - HVAC,JE Dunn,Other
+PRJ-2019-115,29,4,25,13.79,Phoenix Senior Living - HVAC Upgrade,JE Dunn,Residential
+PRJ-2019-116,23,1,22,4.35,Minneapolis Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2019-117,13,3,10,23.08,Atlanta Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2019-118,19,1,18,5.26,Portland Unified School District - HVAC Modernization,JE Dunn,Education
+PRJ-2019-119,9,1,8,11.11,Albuquerque Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2019-120,14,1,13,7.14,Albuquerque Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2019-121,20,3,17,15.0,Columbus Surgery Center - Climate Control,DPR Construction,Other
+PRJ-2019-122,5,0,5,0.0,Denver Office Park - Core & Shell MEP,Mortenson,Commercial/Office
+PRJ-2019-123,18,1,17,5.56,Oklahoma City High School - New Construction,JE Dunn,Education
+PRJ-2019-124,18,2,16,11.11,Sacramento Colocation Facility - HVAC,DPR Construction,Other
+PRJ-2019-125,27,1,26,3.7,Boston Mixed-Income Housing - Climate Control,DPR Construction,Other
+PRJ-2019-126,23,2,21,8.7,Cincinnati Surgery Center - Climate Control,DPR Construction,Other
+PRJ-2019-127,14,2,12,14.29,Phoenix Mixed-Use Tower - Mechanical,JE Dunn,Commercial/Office
+PRJ-2019-128,8,2,6,25.0,Kansas City High School - New Construction,JE Dunn,Education
+PRJ-2019-129,9,1,8,11.11,Boston Colocation Facility - HVAC,Mortenson,Other
+PRJ-2019-130,23,2,21,8.7,Columbus Senior Living - HVAC Upgrade,Turner Construction,Residential
+PRJ-2019-131,13,3,10,23.08,Cincinnati Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2019-132,9,1,8,11.11,San Antonio Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2019-133,8,0,8,0.0,Oklahoma City Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2019-134,13,0,13,0.0,Minneapolis Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2019-135,14,2,12,14.29,Minneapolis Mixed-Income Housing - Climate Control,JE Dunn,Other
+PRJ-2019-136,14,3,11,21.43,Salt Lake City Medical Campus - New HVAC Installation,Skanska USA,Healthcare
+PRJ-2019-137,19,1,18,5.26,Kansas City Office Park - Core & Shell MEP,JE Dunn,Commercial/Office
+PRJ-2019-138,18,3,15,16.67,Albuquerque Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2019-139,14,1,13,7.14,Sacramento Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2019-140,21,1,20,4.76,Boston Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2019-141,9,1,8,11.11,Richmond Medical Campus - New HVAC Installation,Turner Construction,Healthcare
+PRJ-2019-142,16,1,15,6.25,Louisville Business Center - MEP Systems,JE Dunn,Other
+PRJ-2019-143,8,1,7,12.5,Indianapolis Middle School - HVAC Systems,JE Dunn,Education
+PRJ-2019-144,19,0,19,0.0,Richmond Data Center - Precision Cooling Systems,DPR Construction,Data Center
+PRJ-2019-145,8,1,7,12.5,Oklahoma City Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2019-146,11,1,10,9.09,Denver Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2019-147,16,1,15,6.25,Oklahoma City Office Park - Core & Shell MEP,Skanska USA,Commercial/Office
+PRJ-2019-148,9,1,8,11.11,Las Vegas Middle School - HVAC Systems,JE Dunn,Education
+PRJ-2019-149,9,1,8,11.11,Boston Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2019-150,9,0,9,0.0,Oklahoma City Mixed-Income Housing - Climate Control,JE Dunn,Other
+PRJ-2019-151,12,1,11,8.33,Albuquerque Surgery Center - Climate Control,JE Dunn,Other
+PRJ-2019-152,16,2,14,12.5,Phoenix Mixed-Use Tower - Mechanical,Mortenson,Commercial/Office
+PRJ-2019-153,20,2,18,10.0,Indianapolis Middle School - HVAC Systems,DPR Construction,Education
+PRJ-2019-154,12,4,8,33.33,Las Vegas Colocation Facility - HVAC,DPR Construction,Other
+PRJ-2019-155,7,0,7,0.0,Cincinnati Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2019-156,10,1,9,10.0,Richmond Regional Medical Center - HVAC Upgrade,Mortenson,Healthcare
+PRJ-2019-157,25,3,22,12.0,Portland Office Park - Core & Shell MEP,Mortenson,Commercial/Office
+PRJ-2019-158,11,1,10,9.09,Denver High School - New Construction,DPR Construction,Education
+PRJ-2019-159,10,0,10,0.0,Albuquerque Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2019-160,12,2,10,16.67,Cincinnati Apartment Complex - MEP,JE Dunn,Residential
+PRJ-2020-161,33,0,33,0.0,Phoenix Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2020-162,8,0,8,0.0,Denver Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2020-163,22,4,18,18.18,Nashville High School - New Construction,Mortenson,Education
+PRJ-2020-164,16,0,16,0.0,Richmond Cloud Campus Phase 1 - Cooling,Turner Construction,Education
+PRJ-2020-165,18,4,14,22.22,Salt Lake City Senior Living - HVAC Upgrade,JE Dunn,Residential
+PRJ-2020-166,12,0,12,0.0,Portland Medical Campus - New HVAC Installation,Turner Construction,Healthcare
+PRJ-2020-167,9,0,9,0.0,Minneapolis Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2020-168,8,0,8,0.0,Cincinnati High School - New Construction,JE Dunn,Education
+PRJ-2020-169,13,1,12,7.69,Portland Colocation Facility - HVAC,Skanska USA,Other
+PRJ-2020-170,8,1,7,12.5,Minneapolis Residential Tower - HVAC Systems,JE Dunn,Commercial/Office
+PRJ-2020-171,7,1,6,14.29,Las Vegas Surgery Center - Climate Control,Skanska USA,Other
+PRJ-2020-172,16,0,16,0.0,Boston Business Center - MEP Systems,DPR Construction,Other
+PRJ-2020-173,7,1,6,14.29,Boston Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2020-174,18,1,17,5.56,Louisville Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2020-175,7,0,7,0.0,Baltimore Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2020-176,12,2,10,16.67,Chicago Regional Medical Center - HVAC Upgrade,Skanska USA,Healthcare
+PRJ-2020-177,11,2,9,18.18,Atlanta Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2020-178,18,2,16,11.11,Houston High School - New Construction,DPR Construction,Education
+PRJ-2020-179,20,0,20,0.0,Louisville Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2020-180,20,3,17,15.0,Kansas City Senior Living - HVAC Upgrade,Mortenson,Residential
+PRJ-2020-181,9,0,9,0.0,Oklahoma City Medical Campus - New HVAC Installation,Skanska USA,Healthcare
+PRJ-2020-182,13,1,12,7.69,Houston Office Park - Core & Shell MEP,JE Dunn,Commercial/Office
+PRJ-2020-183,9,3,6,33.33,Kansas City Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2020-184,20,1,19,5.0,San Antonio Cloud Campus Phase 1 - Cooling,Skanska USA,Education
+PRJ-2020-185,15,0,15,0.0,Baltimore Apartment Complex - MEP,DPR Construction,Residential
+PRJ-2020-186,11,1,10,9.09,Atlanta Medical Campus - New HVAC Installation,Turner Construction,Healthcare
+PRJ-2020-187,6,0,6,0.0,Las Vegas Corporate Campus - HVAC Systems,DPR Construction,Education
+PRJ-2020-188,19,2,17,10.53,Kansas City Unified School District - HVAC Modernization,Skanska USA,Education
+PRJ-2020-189,29,2,27,6.9,Salt Lake City Colocation Facility - HVAC,DPR Construction,Other
+PRJ-2020-190,6,2,4,33.33,Oklahoma City Residential Tower - HVAC Systems,Skanska USA,Commercial/Office
+PRJ-2020-191,15,3,12,20.0,Phoenix Medical Campus - New HVAC Installation,DPR Construction,Healthcare
+PRJ-2020-192,13,2,11,15.38,Houston Corporate Campus - HVAC Systems,DPR Construction,Education
+PRJ-2020-193,13,2,11,15.38,Boston Middle School - HVAC Systems,JE Dunn,Education
+PRJ-2020-194,10,1,9,10.0,Salt Lake City Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2020-195,18,3,15,16.67,San Antonio Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2020-196,12,2,10,16.67,Baltimore Surgery Center - Climate Control,Mortenson,Other
+PRJ-2020-197,15,0,15,0.0,Chicago Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2020-198,10,1,9,10.0,Minneapolis Elementary Campus - Climate Systems,JE Dunn,Education
+PRJ-2020-199,13,0,13,0.0,Cincinnati Data Center - Precision Cooling Systems,Skanska USA,Data Center
+PRJ-2020-200,8,2,6,25.0,Boston Senior Living - HVAC Upgrade,JE Dunn,Residential
+PRJ-2020-201,23,1,22,4.35,Raleigh Regional Medical Center - HVAC Upgrade,DPR Construction,Healthcare
+PRJ-2020-202,21,0,21,0.0,Salt Lake City Corporate Campus - HVAC Systems,DPR Construction,Education
+PRJ-2020-203,15,3,12,20.0,San Antonio High School - New Construction,DPR Construction,Education
+PRJ-2020-204,11,0,11,0.0,Sacramento Edge Data Center - Thermal Management,Turner Construction,Data Center
+PRJ-2020-205,15,0,15,0.0,Atlanta Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2020-206,13,1,12,7.69,Pittsburgh Medical Campus - New HVAC Installation,Skanska USA,Healthcare
+PRJ-2020-207,6,1,5,16.67,Salt Lake City Office Park - Core & Shell MEP,Mortenson,Commercial/Office
+PRJ-2020-208,23,2,21,8.7,Louisville High School - New Construction,Turner Construction,Education
+PRJ-2020-209,15,1,14,6.67,Phoenix Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2020-210,6,0,6,0.0,Boston Apartment Complex - MEP,DPR Construction,Residential
+PRJ-2020-211,12,0,12,0.0,Las Vegas Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2020-212,21,1,20,4.76,Oklahoma City Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2020-213,13,2,11,15.38,Richmond Middle School - HVAC Systems,Mortenson,Education
+PRJ-2020-214,15,0,15,0.0,Raleigh Edge Data Center - Thermal Management,JE Dunn,Data Center
+PRJ-2020-215,20,1,19,5.0,Phoenix Residential Tower - HVAC Systems,Skanska USA,Commercial/Office
+PRJ-2020-216,10,1,9,10.0,Kansas City Surgery Center - Climate Control,JE Dunn,Other
+PRJ-2020-217,4,1,3,25.0,Boston Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2020-218,14,2,12,14.29,Portland Middle School - HVAC Systems,JE Dunn,Education
+PRJ-2020-219,14,1,13,7.14,Denver Cloud Campus Phase 1 - Cooling,Mortenson,Education
+PRJ-2020-220,17,1,16,5.88,Portland Apartment Complex - MEP,Skanska USA,Residential
+PRJ-2020-221,12,0,12,0.0,Kansas City Regional Medical Center - HVAC Upgrade,DPR Construction,Healthcare
+PRJ-2020-222,21,2,19,9.52,Oklahoma City Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2020-223,5,1,4,20.0,Atlanta High School - New Construction,DPR Construction,Education
+PRJ-2020-224,15,0,15,0.0,San Antonio Edge Data Center - Thermal Management,Skanska USA,Data Center
+PRJ-2020-225,15,3,12,20.0,Salt Lake City Residential Tower - HVAC Systems,JE Dunn,Commercial/Office
+PRJ-2020-226,18,2,16,11.11,Nashville Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2020-227,17,0,17,0.0,Phoenix Mixed-Use Tower - Mechanical,Mortenson,Commercial/Office
+PRJ-2020-228,9,0,9,0.0,Oklahoma City Unified School District - HVAC Modernization,JE Dunn,Education
+PRJ-2020-229,11,1,10,9.09,Denver Colocation Facility - HVAC,Mortenson,Other
+PRJ-2020-230,5,0,5,0.0,Atlanta Residential Tower - HVAC Systems,DPR Construction,Commercial/Office
+PRJ-2020-231,14,1,13,7.14,Houston Medical Campus - New HVAC Installation,JE Dunn,Healthcare
+PRJ-2020-232,14,1,13,7.14,Minneapolis Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2020-233,17,1,16,5.88,Kansas City Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2020-234,3,1,2,33.33,Pittsburgh Cloud Campus Phase 1 - Cooling,DPR Construction,Education
+PRJ-2020-235,21,3,18,14.29,Oklahoma City Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2020-236,7,0,7,0.0,Denver Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2020-237,17,0,17,0.0,Sacramento Business Center - MEP Systems,Skanska USA,Other
+PRJ-2020-238,5,0,5,0.0,Nashville Middle School - HVAC Systems,Turner Construction,Education
+PRJ-2020-239,14,2,12,14.29,Nashville Edge Data Center - Thermal Management,JE Dunn,Data Center
+PRJ-2020-240,24,3,21,12.5,Atlanta Residential Tower - HVAC Systems,JE Dunn,Commercial/Office
+PRJ-2021-241,10,0,10,0.0,Portland Hospital - Mechanical Systems Renovation,Mortenson,Healthcare
+PRJ-2021-242,19,1,18,5.26,Sacramento Office Park - Core & Shell MEP,Turner Construction,Commercial/Office
+PRJ-2021-243,17,1,16,5.88,Columbus Middle School - HVAC Systems,Mortenson,Education
+PRJ-2021-244,14,0,14,0.0,Minneapolis Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2021-245,11,3,8,27.27,Phoenix Residential Tower - HVAC Systems,Mortenson,Commercial/Office
+PRJ-2021-246,22,4,18,18.18,San Antonio Hospital - Mechanical Systems Renovation,DPR Construction,Healthcare
+PRJ-2021-247,11,0,11,0.0,Columbus Business Center - MEP Systems,JE Dunn,Other
+PRJ-2021-248,10,0,10,0.0,San Antonio Elementary Campus - Climate Systems,JE Dunn,Education
+PRJ-2021-249,17,2,15,11.76,Cincinnati Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2021-250,17,3,14,17.65,Sacramento Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2021-251,13,1,12,7.69,Raleigh Surgery Center - Climate Control,Skanska USA,Other
+PRJ-2021-252,7,0,7,0.0,Raleigh Office Park - Core & Shell MEP,Skanska USA,Commercial/Office
+PRJ-2021-253,14,1,13,7.14,Oklahoma City Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2021-254,19,0,19,0.0,Baltimore Edge Data Center - Thermal Management,Mortenson,Data Center
+PRJ-2021-255,8,0,8,0.0,Louisville Apartment Complex - MEP,Mortenson,Residential
+PRJ-2021-256,14,1,13,7.14,Minneapolis Surgery Center - Climate Control,Mortenson,Other
+PRJ-2021-257,24,1,23,4.17,San Antonio Office Park - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2021-258,8,0,8,0.0,Portland Unified School District - HVAC Modernization,Turner Construction,Education
+PRJ-2021-259,10,0,10,0.0,Atlanta Colocation Facility - HVAC,Mortenson,Other
+PRJ-2021-260,23,1,22,4.35,Nashville Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2021-261,3,0,3,0.0,Raleigh Medical Campus - New HVAC Installation,DPR Construction,Healthcare
+PRJ-2021-262,17,3,14,17.65,Richmond Office Park - Core & Shell MEP,Skanska USA,Commercial/Office
+PRJ-2021-263,7,1,6,14.29,Phoenix Elementary Campus - Climate Systems,DPR Construction,Education
+PRJ-2021-264,30,2,28,6.67,Boston Edge Data Center - Thermal Management,Turner Construction,Data Center
+PRJ-2021-265,13,0,13,0.0,Salt Lake City Senior Living - HVAC Upgrade,Mortenson,Residential
+PRJ-2021-266,12,3,9,25.0,Salt Lake City Surgery Center - Climate Control,Skanska USA,Other
+PRJ-2021-267,23,3,20,13.04,Raleigh Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2021-268,6,0,6,0.0,Raleigh Unified School District - HVAC Modernization,Mortenson,Education
+PRJ-2021-269,27,1,26,3.7,Indianapolis Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2021-270,11,2,9,18.18,Richmond Apartment Complex - MEP,Mortenson,Residential
+PRJ-2021-271,20,3,17,15.0,Atlanta Regional Medical Center - HVAC Upgrade,Skanska USA,Healthcare
+PRJ-2021-272,4,1,3,25.0,Denver Business Center - MEP Systems,Mortenson,Other
+PRJ-2021-273,6,0,6,0.0,Portland High School - New Construction,Turner Construction,Education
+PRJ-2021-274,16,3,13,18.75,Kansas City Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2021-275,9,1,8,11.11,Las Vegas Residential Tower - HVAC Systems,DPR Construction,Commercial/Office
+PRJ-2021-276,15,0,15,0.0,Columbus Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2021-277,4,0,4,0.0,Houston Business Center - MEP Systems,Turner Construction,Other
+PRJ-2021-278,12,0,12,0.0,Boston Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2021-279,9,1,8,11.11,Baltimore Data Center - Precision Cooling Systems,JE Dunn,Data Center
+PRJ-2021-280,27,0,27,0.0,Denver Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2021-281,7,3,4,42.86,Houston Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2021-282,26,2,24,7.69,Louisville Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2021-283,11,3,8,27.27,Richmond High School - New Construction,Skanska USA,Education
+PRJ-2021-284,8,2,6,25.0,Richmond Cloud Campus Phase 1 - Cooling,Turner Construction,Education
+PRJ-2021-285,10,2,8,20.0,Atlanta Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2021-286,15,1,14,6.67,Chicago Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2021-287,10,0,10,0.0,Minneapolis Corporate Campus - HVAC Systems,Mortenson,Education
+PRJ-2021-288,9,0,9,0.0,Indianapolis Unified School District - HVAC Modernization,Mortenson,Education
+PRJ-2021-289,24,1,23,4.17,Pittsburgh Data Center - Precision Cooling Systems,DPR Construction,Data Center
+PRJ-2021-290,20,0,20,0.0,Phoenix Mixed-Income Housing - Climate Control,Turner Construction,Other
+PRJ-2021-291,15,0,15,0.0,Columbus Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2021-292,12,0,12,0.0,Chicago Corporate Campus - HVAC Systems,Turner Construction,Education
+PRJ-2021-293,13,1,12,7.69,Kansas City Elementary Campus - Climate Systems,Turner Construction,Education
+PRJ-2021-294,17,1,16,5.88,Pittsburgh Colocation Facility - HVAC,Mortenson,Other
+PRJ-2021-295,25,1,24,4.0,Sacramento Apartment Complex - MEP,Mortenson,Residential
+PRJ-2021-296,8,0,8,0.0,Richmond Hospital - Mechanical Systems Renovation,Skanska USA,Healthcare
+PRJ-2021-297,12,2,10,16.67,Kansas City Business Center - MEP Systems,DPR Construction,Other
+PRJ-2021-298,20,1,19,5.0,San Antonio High School - New Construction,Turner Construction,Education
+PRJ-2021-299,13,1,12,7.69,Boston Colocation Facility - HVAC,JE Dunn,Other
+PRJ-2021-300,8,0,8,0.0,Minneapolis Senior Living - HVAC Upgrade,Turner Construction,Residential
+PRJ-2021-301,11,0,11,0.0,Richmond Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2021-302,11,0,11,0.0,Pittsburgh Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2021-303,12,1,11,8.33,Nashville Unified School District - HVAC Modernization,Mortenson,Education
+PRJ-2021-304,9,1,8,11.11,Tampa Edge Data Center - Thermal Management,Mortenson,Data Center
+PRJ-2021-305,16,1,15,6.25,Albuquerque Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2021-306,11,0,11,0.0,Raleigh Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2021-307,23,0,23,0.0,Columbus Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2021-308,15,2,13,13.33,Phoenix Middle School - HVAC Systems,DPR Construction,Education
+PRJ-2021-309,12,2,10,16.67,Portland Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2021-310,8,1,7,12.5,Las Vegas Senior Living - HVAC Upgrade,Mortenson,Residential
+PRJ-2021-311,9,0,9,0.0,Salt Lake City Regional Medical Center - HVAC Upgrade,Turner Construction,Healthcare
+PRJ-2021-312,7,2,5,28.57,Las Vegas Mixed-Use Tower - Mechanical,JE Dunn,Commercial/Office
+PRJ-2021-313,13,0,13,0.0,Louisville Middle School - HVAC Systems,Mortenson,Education
+PRJ-2021-314,11,1,10,9.09,Tampa Data Center - Precision Cooling Systems,DPR Construction,Data Center
+PRJ-2021-315,25,2,23,8.0,Baltimore Mixed-Income Housing - Climate Control,Skanska USA,Other
+PRJ-2021-316,16,0,16,0.0,Portland Medical Campus - New HVAC Installation,DPR Construction,Healthcare
+PRJ-2021-317,6,0,6,0.0,Salt Lake City Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2021-318,8,2,6,25.0,Boston Middle School - HVAC Systems,Mortenson,Education
+PRJ-2021-319,17,2,15,11.76,Nashville Colocation Facility - HVAC,Mortenson,Other
+PRJ-2021-320,20,1,19,5.0,Raleigh Apartment Complex - MEP,DPR Construction,Residential
+PRJ-2022-321,8,1,7,12.5,Cincinnati Regional Medical Center - HVAC Upgrade,DPR Construction,Healthcare
+PRJ-2022-322,13,2,11,15.38,Kansas City Corporate Campus - HVAC Systems,Mortenson,Education
+PRJ-2022-323,9,2,7,22.22,Indianapolis Unified School District - HVAC Modernization,Mortenson,Education
+PRJ-2022-324,8,4,4,50.0,Houston Colocation Facility - HVAC,JE Dunn,Other
+PRJ-2022-325,25,2,23,8.0,Minneapolis Apartment Complex - MEP,Mortenson,Residential
+PRJ-2022-326,8,1,7,12.5,Kansas City Hospital - Mechanical Systems Renovation,Turner Construction,Healthcare
+PRJ-2022-327,15,2,13,13.33,Salt Lake City Office Park - Core & Shell MEP,Turner Construction,Commercial/Office
+PRJ-2022-328,12,2,10,16.67,Richmond High School - New Construction,DPR Construction,Education
+PRJ-2022-329,17,2,15,11.76,Pittsburgh Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2022-330,3,1,2,33.33,Boston Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2022-331,8,0,8,0.0,Baltimore Regional Medical Center - HVAC Upgrade,JE Dunn,Healthcare
+PRJ-2022-332,9,0,9,0.0,Louisville Mixed-Use Tower - Mechanical,Turner Construction,Commercial/Office
+PRJ-2022-333,14,1,13,7.14,Chicago High School - New Construction,Mortenson,Education
+PRJ-2022-334,23,1,22,4.35,Raleigh Edge Data Center - Thermal Management,Mortenson,Data Center
+PRJ-2022-335,15,2,13,13.33,Louisville Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2022-336,9,1,8,11.11,Cincinnati Medical Campus - New HVAC Installation,JE Dunn,Healthcare
+PRJ-2022-337,20,2,18,10.0,Oklahoma City Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2022-338,16,2,14,12.5,Salt Lake City Middle School - HVAC Systems,DPR Construction,Education
+PRJ-2022-339,28,3,25,10.71,Pittsburgh Colocation Facility - HVAC,Skanska USA,Other
+PRJ-2022-340,10,0,10,0.0,San Antonio Senior Living - HVAC Upgrade,JE Dunn,Residential
+PRJ-2022-341,7,0,7,0.0,Boston Medical Campus - New HVAC Installation,DPR Construction,Healthcare
+PRJ-2022-342,9,0,9,0.0,San Antonio Business Center - MEP Systems,Skanska USA,Other
+PRJ-2022-343,11,1,10,9.09,Boston Middle School - HVAC Systems,Skanska USA,Education
+PRJ-2022-344,8,0,8,0.0,Las Vegas Cloud Campus Phase 1 - Cooling,Mortenson,Education
+PRJ-2022-345,20,4,16,20.0,Indianapolis Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2022-346,29,4,25,13.79,Columbus Hospital - Mechanical Systems Renovation,Mortenson,Healthcare
+PRJ-2022-347,10,0,10,0.0,Raleigh Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2022-348,11,0,11,0.0,Nashville High School - New Construction,Mortenson,Education
+PRJ-2022-349,10,0,10,0.0,Boston Data Center - Precision Cooling Systems,Mortenson,Data Center
+PRJ-2022-350,27,2,25,7.41,San Antonio Senior Living - HVAC Upgrade,Mortenson,Residential
+PRJ-2022-351,14,2,12,14.29,Atlanta Medical Campus - New HVAC Installation,JE Dunn,Healthcare
+PRJ-2022-352,29,4,25,13.79,Kansas City Business Center - MEP Systems,DPR Construction,Other
+PRJ-2022-353,13,1,12,7.69,Atlanta Elementary Campus - Climate Systems,DPR Construction,Education
+PRJ-2022-354,20,3,17,15.0,Las Vegas Colocation Facility - HVAC,Skanska USA,Other
+PRJ-2022-355,19,2,17,10.53,Raleigh Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2022-356,12,0,12,0.0,Denver Surgery Center - Climate Control,DPR Construction,Other
+PRJ-2022-357,14,1,13,7.14,Chicago Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2022-358,10,1,9,10.0,Denver High School - New Construction,Mortenson,Education
+PRJ-2022-359,1,1,0,100.0,Kansas City Cloud Campus Phase 1 - Cooling,JE Dunn,Education
+PRJ-2022-360,15,0,15,0.0,Denver Senior Living - HVAC Upgrade,DPR Construction,Residential
+PRJ-2022-361,13,1,12,7.69,Salt Lake City Hospital - Mechanical Systems Renovation,Turner Construction,Healthcare
+PRJ-2022-362,12,2,10,16.67,Houston Business Center - MEP Systems,Turner Construction,Other
+PRJ-2022-363,5,0,5,0.0,Salt Lake City Middle School - HVAC Systems,Turner Construction,Education
+PRJ-2022-364,14,3,11,21.43,Baltimore Edge Data Center - Thermal Management,Skanska USA,Data Center
+PRJ-2022-365,14,3,11,21.43,Richmond Apartment Complex - MEP,Skanska USA,Residential
+PRJ-2022-366,13,0,13,0.0,Columbus Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2022-367,21,2,19,9.52,Houston Office Park - Core & Shell MEP,JE Dunn,Commercial/Office
+PRJ-2022-368,9,1,8,11.11,Tampa Elementary Campus - Climate Systems,Skanska USA,Education
+PRJ-2022-369,17,2,15,11.76,Louisville Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2022-370,11,1,10,9.09,Richmond Mixed-Income Housing - Climate Control,Turner Construction,Other
+PRJ-2022-371,9,1,8,11.11,Albuquerque Hospital - Mechanical Systems Renovation,JE Dunn,Healthcare
+PRJ-2022-372,19,3,16,15.79,Pittsburgh Business Center - MEP Systems,Skanska USA,Other
+PRJ-2022-373,4,0,4,0.0,Las Vegas Elementary Campus - Climate Systems,Skanska USA,Education
+PRJ-2022-374,12,2,10,16.67,Houston Colocation Facility - HVAC,JE Dunn,Other
+PRJ-2022-375,13,0,13,0.0,Pittsburgh Mixed-Income Housing - Climate Control,Mortenson,Other
+PRJ-2022-376,11,0,11,0.0,Columbus Regional Medical Center - HVAC Upgrade,DPR Construction,Healthcare
+PRJ-2022-377,11,1,10,9.09,Louisville Corporate Campus - HVAC Systems,JE Dunn,Education
+PRJ-2022-378,8,0,8,0.0,Raleigh Elementary Campus - Climate Systems,DPR Construction,Education
+PRJ-2022-379,14,1,13,7.14,Pittsburgh Data Center - Precision Cooling Systems,Mortenson,Data Center
+PRJ-2022-380,13,1,12,7.69,Portland Mixed-Income Housing - Climate Control,DPR Construction,Other
+PRJ-2023-381,10,0,10,0.0,Pittsburgh Surgery Center - Climate Control,Turner Construction,Other
+PRJ-2023-382,14,1,13,7.14,Baltimore Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2023-383,5,2,3,40.0,Pittsburgh High School - New Construction,Mortenson,Education
+PRJ-2023-384,16,0,16,0.0,Minneapolis Colocation Facility - HVAC,Turner Construction,Other
+PRJ-2023-385,18,2,16,11.11,Houston Senior Living - HVAC Upgrade,Mortenson,Residential
+PRJ-2023-386,4,0,4,0.0,Sacramento Regional Medical Center - HVAC Upgrade,DPR Construction,Healthcare
+PRJ-2023-387,23,2,21,8.7,Sacramento Office Park - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2023-388,13,0,13,0.0,Tampa High School - New Construction,Turner Construction,Education
+PRJ-2023-389,4,0,4,0.0,Houston Edge Data Center - Thermal Management,DPR Construction,Data Center
+PRJ-2023-390,7,2,5,28.57,Louisville Apartment Complex - MEP,JE Dunn,Residential
+PRJ-2023-391,23,0,23,0.0,Pittsburgh Regional Medical Center - HVAC Upgrade,Mortenson,Healthcare
+PRJ-2023-392,3,0,3,0.0,Las Vegas Corporate Campus - HVAC Systems,DPR Construction,Education
+PRJ-2023-393,15,0,15,0.0,Las Vegas High School - New Construction,Turner Construction,Education
+PRJ-2023-394,16,1,15,6.25,Pittsburgh Edge Data Center - Thermal Management,Skanska USA,Data Center
+PRJ-2023-395,7,0,7,0.0,Tampa Senior Living - HVAC Upgrade,Skanska USA,Residential
+PRJ-2023-396,16,2,14,12.5,Tampa Hospital - Mechanical Systems Renovation,Turner Construction,Healthcare
+PRJ-2023-397,13,3,10,23.08,Sacramento Corporate Campus - HVAC Systems,Skanska USA,Education
+PRJ-2023-398,18,1,17,5.56,Denver Middle School - HVAC Systems,DPR Construction,Education
+PRJ-2023-399,27,3,24,11.11,Louisville Edge Data Center - Thermal Management,JE Dunn,Data Center
+PRJ-2023-400,16,0,16,0.0,Columbus Apartment Complex - MEP,Turner Construction,Residential
+PRJ-2024-001,22,0,22,0.0,Mercy General Hospital - HVAC Modernization,Turner Construction,Healthcare
+PRJ-2024-002,25,2,23,8.0,Riverside Office Tower - Core & Shell MEP,DPR Construction,Commercial/Office
+PRJ-2024-003,9,0,9,0.0,Greenfield Elementary School - New Construction,DPR Construction,Education
+PRJ-2024-004,13,1,12,7.69,Summit Data Center - Phase 2 Expansion,DPR Construction,Data Center
+PRJ-2024-005,11,2,9,18.18,Harbor View Condominiums - 3 Buildings,Skanska USA,Residential

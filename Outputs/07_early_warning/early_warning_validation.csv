@@ -1,0 +1,2 @@
+true_positives,true_negatives,false_positives,false_negatives,precision_%,recall_%,accuracy_%,flag_threshold_score,total_projects_evaluated
+16,294,57,38,21.9,29.6,76.5,55,405
