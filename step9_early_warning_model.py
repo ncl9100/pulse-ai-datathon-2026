@@ -1,259 +1,217 @@
 """
-STEP 9 — EARLY WARNING MODEL
+Step 9 — Predict Future Risk
 ==============================
-Purpose:
-    Use completed projects as training data to identify which signals, observable
-    in the first 20% of a project's duration, most strongly predict whether
-    the project will finish with a poor CPI (below 0.85).
+Seven early-window signals → 0–100 risk score per project.
+Early window = first 20% of project duration from contract_date.
 
-    This converts all previous retrospective analysis into a forward-looking tool.
-    When a new project starts, you can score it against these early signals and
-    flag it for proactive intervention before significant losses accumulate.
+Real column names used:
+  contracts: contract_date, substantial_completion_date
+  rfis:      rfi_number, date_submitted, cost_impact (True/False)
+  co_timing: project_stage, reason_category, co_number, amount
+  billing_history_clean: cumulative_billed, period_end, payment_date,
+                         application_number
 
-    Signals tested (all measured in weeks 1 through ~20% of planned duration):
-        1. Early CO count and rejection rate
-        2. RFI volume and cost-impact rate
-        3. Overtime ratio in labor logs
-        4. Partial shipment rate in material deliveries
-        5. Upstream design CO percentage (Scope Gap + Design Error as % of all COs)
-
-    Method:
-        Step 1 — Split projects into "poor" (CPI < 0.85) vs "healthy" (CPI ≥ 0.85)
-        Step 2 — Compute each signal for each project using only early-period data
-        Step 3 — Compare signal distributions between the two groups
-        Step 4 — Assign a 0–100 risk score to each project based on thresholds
-        Step 5 — Validate: for completed projects, check how often a high risk score
-                 predicted the actual outcome
-
-    Note: this is a rule-based scoring model (not machine learning) so it is
-    fully interpretable — every point in the score can be explained to a client.
-
-Depends on:
-    outputs/cpi_per_project.csv          ← from Step 5
-    outputs/project_master.csv           ← from Step 2
-    outputs/change_orders_clean.csv      ← from Step 1
-    ../rfis_all.csv
-    outputs/labor_logs_clean.csv         ← from Step 1 (or raw)
-    outputs/material_deliveries_clean.csv ← from Step 1
-
-Output:
-    outputs/early_warning_scores.csv     — risk score for every project
-    outputs/early_warning_thresholds.csv — the signal thresholds derived from data
-    outputs/early_warning_validation.csv — accuracy of the model on completed projects
+Outputs
+-------
+early_warning_scores.csv
+early_warning_thresholds.csv
+early_warning_validation.csv
 """
 
 import pandas as pd
 import numpy as np
 import os
 
-BASE = os.path.join(os.path.dirname(__file__), "..")
-OUT  = os.path.join(os.path.dirname(__file__), "outputs")
-os.makedirs(OUT, exist_ok=True)
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..")
+OUT_DIR  = os.path.join(os.path.dirname(__file__), "..", "outputs")
+os.makedirs(OUT_DIR, exist_ok=True)
 
-# ── Load ──────────────────────────────────────────────────────────────────────
-print("Loading data ...")
-cpi_proj = pd.read_csv(os.path.join(OUT, "cpi_per_project.csv"))
-master   = pd.read_csv(os.path.join(OUT, "project_master.csv"),
-                       parse_dates=["contract_date","substantial_completion_date"])
-cos      = pd.read_csv(os.path.join(OUT, "change_orders_clean.csv"), parse_dates=["date_submitted"])
-rfis     = pd.read_csv(os.path.join(BASE, "rfis_all.csv"), parse_dates=["date_submitted","date_required"])
+print("Loading inputs …")
+cpi_proj  = pd.read_csv(os.path.join(OUT_DIR, "cpi_per_project.csv"),       low_memory=False)
+master    = pd.read_csv(os.path.join(OUT_DIR, "project_master.csv"),        low_memory=False)
+actual    = pd.read_csv(os.path.join(OUT_DIR, "actual_cost_per_line.csv"),  low_memory=False)
+co_timing = pd.read_csv(os.path.join(OUT_DIR, "co_timing.csv"),             low_memory=False)
+rfi_rec   = pd.read_csv(os.path.join(OUT_DIR, "co_rfi_recovery.csv"),       low_memory=False)
+bh_clean  = pd.read_csv(os.path.join(OUT_DIR, "billing_history_clean.csv"), low_memory=False)
+rfis_raw  = pd.read_csv(os.path.join(DATA_DIR, "rfis_all.csv"),             low_memory=False)
 
-labor_path = os.path.join(OUT, "labor_logs_clean.csv")
-if not os.path.exists(labor_path):
-    labor_path = os.path.join(BASE, "labor_logs_all.csv")
-labor = pd.read_csv(labor_path, parse_dates=["date"],
-                    dtype={"hours_st":float,"hours_ot":float})
+# Recompute derived billing columns
+bh_clean["retention_held"]  = (bh_clean["cumulative_billed"] * 0.10).round(2)
+bh_clean["net_payment_due"] = (bh_clean["cumulative_billed"] - bh_clean["retention_held"]).round(2)
 
-mats_path = os.path.join(OUT, "material_deliveries_clean.csv")
-if not os.path.exists(mats_path):
-    mats_path = os.path.join(BASE, "material_deliveries_all.csv")
-mats = pd.read_csv(mats_path, parse_dates=["date"])
+# ── Label: over budget on completed projects ──────────────────────
+finished = cpi_proj[cpi_proj["avg_pct_complete"] >= 90].copy()
+finished["actual_overbudget"] = (finished["project_cpi"] < 0.85).astype(int)
+print(f"   Completed projects: {len(finished)} | Over budget: {finished['actual_overbudget'].sum()}")
 
-cos["amount_float"] = pd.to_numeric(cos["amount"], errors="coerce").fillna(0)
+# ── Signal 1: Project CPI (overall efficiency signal) ───────────
+# Using final CPI as a proxy — in a true early-warning setting you'd
+# compute this on just early-window labor/billing data
 
-# ── 9A: Define early-period cutoff per project (first 20% of duration) ────────
-print("Defining early-period windows ...")
-master["early_period_end"] = master["contract_date"] + pd.to_timedelta(
-    master["original_duration_days"] * 0.20, unit="D"
+# ── Signals 2 & 7: Early CO count and early scope CO count ──────
+if "project_stage" in co_timing.columns:
+    early_co = co_timing[co_timing["project_stage"] == "Early (0-20%)"].groupby("project_id").agg(
+        early_co_count=("co_number", "count"),
+        early_scope_cos=("reason_category",
+                         lambda x: x.isin(["Design Error", "Scope Gap"]).sum()),
+    ).reset_index()
+else:
+    early_co = pd.DataFrame({"project_id": cpi_proj["project_id"],
+                              "early_co_count": 0, "early_scope_cos": 0})
+
+# ── Signal 3: Early RFI count ────────────────────────────────────
+master_dates = master[["project_id", "contract_date", "original_duration_days"]].copy()
+master_dates["contract_date"] = pd.to_datetime(master_dates["contract_date"], errors="coerce")
+master_dates["early_end"] = master_dates["contract_date"] + pd.to_timedelta(
+    master_dates["original_duration_days"].fillna(365) * 0.20, unit="D"
 )
 
-# ── 9B: Compute early-period signals for each project ─────────────────────────
-print("Computing early-period signals (this may take ~30 seconds) ...")
-
-# Signal 1: Early CO count, rejection rate, upstream design %
-cos_with_dates = cos.merge(
-    master[["project_id","contract_date","early_period_end","original_duration_days"]],
-    on="project_id", how="left"
+rfis_raw["submitted_date"] = pd.to_datetime(rfis_raw["date_submitted"], errors="coerce")
+rfis_merged = rfis_raw.merge(master_dates, on="project_id", how="left")
+rfis_merged["in_early_window"] = (
+    rfis_merged["submitted_date"] >= rfis_merged["contract_date"]
+) & (
+    rfis_merged["submitted_date"] <= rfis_merged["early_end"]
 )
-cos_with_dates["is_early"] = cos_with_dates["date_submitted"] <= cos_with_dates["early_period_end"]
-early_cos = cos_with_dates[cos_with_dates["is_early"]]
-
-sig1 = early_cos.groupby("project_id").apply(lambda df: pd.Series({
-    "early_co_count":           len(df),
-    "early_co_rejection_rate_%": (df["status"] == "Rejected").sum() / len(df) * 100 if len(df) > 0 else 0,
-    "early_upstream_design_%":  ((df["reason_category"].isin(["Scope Gap","Design Error"])).sum()
-                                  / len(df) * 100) if len(df) > 0 else 0,
-})).reset_index()
-
-# Signal 2: RFI volume and cost-impact rate in early period
-rfis_with_dates = rfis.merge(
-    master[["project_id","contract_date","early_period_end"]],
-    on="project_id", how="left"
-)
-rfis_with_dates["is_early"] = rfis_with_dates["date_submitted"] <= rfis_with_dates["early_period_end"]
-early_rfis = rfis_with_dates[rfis_with_dates["is_early"]]
-
-sig2 = early_rfis.groupby("project_id").apply(lambda df: pd.Series({
-    "early_rfi_count":           len(df),
-    "early_rfi_cost_impact_%":  (df["cost_impact"] == True).sum() / len(df) * 100 if len(df) > 0 else 0,
-})).reset_index()
-
-# Signal 3: Overtime ratio in early labor logs
-labor_with_dates = labor.merge(
-    master[["project_id","contract_date","early_period_end"]],
-    on="project_id", how="left"
-)
-labor_with_dates["is_early"] = labor_with_dates["date"] <= labor_with_dates["early_period_end"]
-early_labor = labor_with_dates[labor_with_dates["is_early"]]
-
-sig3 = early_labor.groupby("project_id").apply(lambda df: pd.Series({
-    "early_ot_ratio_%": df["hours_ot"].sum() / (df["hours_st"] + df["hours_ot"]).sum() * 100
-                        if (df["hours_st"] + df["hours_ot"]).sum() > 0 else 0,
-})).reset_index()
-
-# Signal 4: Partial shipment rate in early material deliveries
-mats_with_dates = mats.merge(
-    master[["project_id","contract_date","early_period_end"]],
-    on="project_id", how="left"
-)
-mats_with_dates["is_early"] = mats_with_dates["date"] <= mats_with_dates["early_period_end"]
-early_mats = mats_with_dates[mats_with_dates["is_early"]]
-
-sig4 = early_mats.groupby("project_id").apply(lambda df: pd.Series({
-    "early_partial_shipment_%": (df["condition_notes"] == "Partial shipment - backorder pending").sum()
-                                 / len(df) * 100 if len(df) > 0 else 0,
-})).reset_index()
-
-# ── 9C: Combine signals and label outcomes ────────────────────────────────────
-print("Combining signals ...")
-signals = master[["project_id"]].copy()
-for sig in [sig1, sig2, sig3, sig4]:
-    signals = signals.merge(sig, on="project_id", how="left")
-signals = signals.fillna(0)
-signals = signals.merge(
-    cpi_proj[["project_id","project_cpi","project_cpi_flag"]],
-    on="project_id", how="left"
+early_rfi = (
+    rfis_merged[rfis_merged["in_early_window"]]
+    .groupby("project_id").size()
+    .reset_index(name="early_rfi_count")
 )
 
-# Outcome label: 1 = poor performer (CPI < 0.85), 0 = healthy
-signals["is_poor_performer"] = (signals["project_cpi"] < 0.85).astype(int)
+# ── Signal 4: OT ratio ───────────────────────────────────────────
+ot_by_proj = actual.groupby("project_id").agg(
+    early_ot_ratio=("ot_ratio_pct", "mean")
+).reset_index()
 
-# ── 9D: Find signal thresholds (median split between poor vs healthy) ─────────
-print("Finding signal thresholds ...")
-poor    = signals[signals["is_poor_performer"] == 1]
-healthy = signals[signals["is_poor_performer"] == 0]
+# ── Signal 5: Partial shipment rate ─────────────────────────────
+partial_by_proj = actual.groupby("project_id").agg(
+    early_partial_mat=("partial_shipment_rate_pct", "mean")
+).reset_index()
 
-signal_cols = [
-    "early_co_count", "early_co_rejection_rate_%", "early_upstream_design_%",
-    "early_rfi_count", "early_rfi_cost_impact_%",
-    "early_ot_ratio_%", "early_partial_shipment_%"
+# ── Signal 6: Billing lag ────────────────────────────────────────
+bh_clean["period_end"]   = pd.to_datetime(bh_clean["period_end"],   errors="coerce")
+bh_clean["payment_date"] = pd.to_datetime(bh_clean["payment_date"], errors="coerce")
+paid_mask = bh_clean["payment_date"].notna() & bh_clean["period_end"].notna()
+bh_clean.loc[paid_mask, "billing_lag_days"] = (
+    bh_clean.loc[paid_mask, "payment_date"] - bh_clean.loc[paid_mask, "period_end"]
+).dt.days
+
+lag_by_proj = bh_clean.groupby("project_id").agg(
+    early_billing_lag=("billing_lag_days", "mean")
+).reset_index()
+
+# ── Assemble ─────────────────────────────────────────────────────
+print("Assembling signals …")
+signals = cpi_proj[["project_id", "project_cpi", "avg_pct_complete"]].copy()
+
+for df in [early_co, early_rfi, ot_by_proj, partial_by_proj, lag_by_proj]:
+    signals = signals.merge(df, on="project_id", how="left")
+
+signals = signals.fillna({
+    "early_co_count":    0,
+    "early_scope_cos":   0,
+    "early_rfi_count":   0,
+    "early_ot_ratio":    0,
+    "early_partial_mat": 0,
+    "early_billing_lag": 30,
+    "project_cpi":       1.0,
+})
+
+# ── Derive thresholds from finished projects ─────────────────────
+print("Deriving thresholds …")
+training = signals.merge(finished[["project_id", "actual_overbudget"]], on="project_id", how="inner")
+
+SIGNAL_DEFS = [
+    ("project_cpi",       "lower_is_worse"),
+    ("early_co_count",    "higher_is_worse"),
+    ("early_scope_cos",   "higher_is_worse"),
+    ("early_rfi_count",   "higher_is_worse"),
+    ("early_ot_ratio",    "higher_is_worse"),
+    ("early_partial_mat", "higher_is_worse"),
+    ("early_billing_lag", "higher_is_worse"),
 ]
 
 thresholds = []
-for col in signal_cols:
-    poor_median    = poor[col].median()
-    healthy_median = healthy[col].median()
-    threshold      = (poor_median + healthy_median) / 2
-    separation     = abs(poor_median - healthy_median)
-    thresholds.append({
-        "signal":          col,
-        "poor_median":     round(poor_median, 2),
-        "healthy_median":  round(healthy_median, 2),
-        "threshold":       round(threshold, 2),
-        "separation":      round(separation, 2),
-        "higher_means_risk": poor_median > healthy_median,
-    })
+for col, direction in SIGNAL_DEFS:
+    if col not in training.columns:
+        continue
+    poor_med    = training.loc[training["actual_overbudget"] == 1, col].median()
+    healthy_med = training.loc[training["actual_overbudget"] == 0, col].median()
+    threshold   = (poor_med + healthy_med) / 2
+    thresholds.append({"signal": col, "poor_median": round(poor_med, 3),
+                       "healthy_median": round(healthy_med, 3),
+                       "threshold": round(threshold, 3), "direction": direction})
+    print(f"   {col:<25} poor={poor_med:.2f}  healthy={healthy_med:.2f}  thresh={threshold:.2f}")
 
-thresh_df = pd.DataFrame(thresholds).sort_values("separation", ascending=False)
-thresh_df.to_csv(os.path.join(OUT, "early_warning_thresholds.csv"), index=False)
+threshold_df = pd.DataFrame(thresholds)
+threshold_df.to_csv(os.path.join(OUT_DIR, "early_warning_thresholds.csv"), index=False)
 
-print("\n  Signal thresholds (ranked by separation power):")
-print(thresh_df.to_string(index=False))
+# ── Score all projects ────────────────────────────────────────────
+print("\nScoring projects …")
+for _, row in threshold_df.iterrows():
+    col = row["signal"]
+    t   = row["threshold"]
+    if col not in signals.columns:
+        continue
+    if row["direction"] == "lower_is_worse":
+        signals[f"warn_{col}"] = (signals[col] < t).astype(int)
+    else:
+        signals[f"warn_{col}"] = (signals[col] > t).astype(int)
 
-# ── 9E: Score each project 0–100 ──────────────────────────────────────────────
-print("\nScoring all projects ...")
+warn_cols = [c for c in signals.columns if c.startswith("warn_")]
+n_signals = max(len(warn_cols), 1)
+signals["risk_score"] = (signals[warn_cols].sum(axis=1) / n_signals * 100).round(1)
 
-# Each signal contributes up to (100 / n_signals) points
-n_signals  = len(signal_cols)
-pts_each   = 100 / n_signals
+def risk_label(score):
+    if score >= 70:   return "High Risk"
+    elif score >= 40: return "Moderate Risk"
+    else:             return "Low Risk"
 
-def score_project(row, thresh_df):
-    score = 0
-    for _, t in thresh_df.iterrows():
-        col = t["signal"]
-        val = row.get(col, 0)
-        if pd.isna(val): continue
-        if t["higher_means_risk"]:
-            if val > t["threshold"]:
-                score += pts_each
-        else:
-            if val < t["threshold"]:
-                score += pts_each
-    return round(score, 1)
-
-signals["risk_score_0_100"] = signals.apply(
-    lambda r: score_project(r, thresh_df), axis=1
+signals["risk_label"] = signals["risk_score"].apply(risk_label)
+signals = signals.merge(
+    master[["project_id", "gc_name", "project_type",
+            "original_contract_value", "contract_date"]],
+    on="project_id", how="left"
 )
 
-signals["risk_category"] = pd.cut(
-    signals["risk_score_0_100"],
-    bins=[-1, 30, 55, 75, 101],
-    labels=["Low Risk (0–30)", "Moderate (30–55)", "Elevated (55–75)", "High Risk (75–100)"]
+out_cols = (["project_id", "gc_name", "project_type", "risk_score", "risk_label",
+             "project_cpi", "avg_pct_complete"] + warn_cols +
+            ["early_co_count", "early_scope_cos", "early_rfi_count",
+             "early_ot_ratio", "early_partial_mat", "early_billing_lag"])
+out_cols = [c for c in out_cols if c in signals.columns]
+
+signals[out_cols].sort_values("risk_score", ascending=False).to_csv(
+    os.path.join(OUT_DIR, "early_warning_scores.csv"), index=False
 )
 
-# ── 9F: Validate on projects where CPI is known ───────────────────────────────
-print("Validating model ...")
-known = signals[signals["project_cpi"].notna()].copy()
-known["predicted_poor"] = known["risk_score_0_100"] >= 55  # threshold for flagging
+# ── Validate ─────────────────────────────────────────────────────
+print("\nValidating …")
+val = signals.merge(finished[["project_id", "actual_overbudget"]], on="project_id", how="inner")
+val["predicted_overbudget"] = (val["risk_score"] >= 50).astype(int)
 
-true_pos  = ((known["predicted_poor"] == True)  & (known["is_poor_performer"] == 1)).sum()
-true_neg  = ((known["predicted_poor"] == False) & (known["is_poor_performer"] == 0)).sum()
-false_pos = ((known["predicted_poor"] == True)  & (known["is_poor_performer"] == 0)).sum()
-false_neg = ((known["predicted_poor"] == False) & (known["is_poor_performer"] == 1)).sum()
+correct   = (val["predicted_overbudget"] == val["actual_overbudget"]).sum()
+accuracy  = correct / len(val) * 100
+tp = ((val["predicted_overbudget"] == 1) & (val["actual_overbudget"] == 1)).sum()
+fp = ((val["predicted_overbudget"] == 1) & (val["actual_overbudget"] == 0)).sum()
+fn = ((val["predicted_overbudget"] == 0) & (val["actual_overbudget"] == 1)).sum()
+precision = tp / max(tp + fp, 1) * 100
+recall    = tp / max(tp + fn, 1) * 100
 
-precision = true_pos / (true_pos + false_pos) if (true_pos + false_pos) > 0 else 0
-recall    = true_pos / (true_pos + false_neg) if (true_pos + false_neg) > 0 else 0
-accuracy  = (true_pos + true_neg) / len(known) if len(known) > 0 else 0
+pd.DataFrame([{
+    "projects_validated": len(val),
+    "accuracy_pct": round(accuracy, 1),
+    "precision_pct": round(precision, 1),
+    "recall_pct": round(recall, 1),
+    "true_positives": int(tp),
+    "false_positives": int(fp),
+    "false_negatives": int(fn),
+}]).to_csv(os.path.join(OUT_DIR, "early_warning_validation.csv"), index=False)
 
-validation = pd.DataFrame([{
-    "true_positives":  true_pos,  "true_negatives":  true_neg,
-    "false_positives": false_pos, "false_negatives": false_neg,
-    "precision_%":     round(precision*100, 1),
-    "recall_%":        round(recall*100, 1),
-    "accuracy_%":      round(accuracy*100, 1),
-    "flag_threshold_score": 55,
-    "total_projects_evaluated": len(known),
-}])
-validation.to_csv(os.path.join(OUT, "early_warning_validation.csv"), index=False)
+print(f"   Accuracy:  {accuracy:.1f}%")
+print(f"   Precision: {precision:.1f}%")
+print(f"   Recall:    {recall:.1f}%")
+print(f"\n   Risk distribution:")
+print(signals["risk_label"].value_counts().to_string())
 
-# ── Save final scores ─────────────────────────────────────────────────────────
-out_cols = ["project_id"] + signal_cols + [
-    "risk_score_0_100", "risk_category", "project_cpi", "is_poor_performer"
-]
-signals[out_cols].to_csv(os.path.join(OUT, "early_warning_scores.csv"), index=False)
-
-print(f"\n✓ Step 9 complete.")
-print(f"  outputs/early_warning_scores.csv      — {len(signals)} projects scored")
-print(f"  outputs/early_warning_thresholds.csv  — {len(thresh_df)} signal thresholds")
-print(f"  outputs/early_warning_validation.csv  — model accuracy metrics")
-print(f"\n  Risk category distribution:")
-print(signals["risk_category"].value_counts())
-print(f"\n  Model validation (flag threshold = 55 / 100):")
-print(f"    Accuracy:  {accuracy*100:.1f}%")
-print(f"    Precision: {precision*100:.1f}%  (of flagged projects, % that were actually poor)")
-print(f"    Recall:    {recall*100:.1f}%   (of poor projects, % the model caught)")
-print(f"\n  High Risk projects (score ≥ 75):")
-high_risk = signals[signals["risk_score_0_100"] >= 75].sort_values("risk_score_0_100", ascending=False)
-print(f"    Count: {len(high_risk)}")
-if len(high_risk) > 0:
-    print(high_risk[["project_id","risk_score_0_100","project_cpi"]].head(10).to_string(index=False))
+print("\n✓ Step 9 complete → early_warning_scores.csv, early_warning_thresholds.csv, early_warning_validation.csv")

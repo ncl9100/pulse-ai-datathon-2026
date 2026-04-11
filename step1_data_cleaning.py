@@ -1,240 +1,233 @@
 """
-STEP 1 — DATA CLEANING
-======================
-Purpose:
-    Fix dirty data in labor_logs and material_deliveries before any grouping
-    or calculation. The same real-world role (e.g. Journeyman Pipefitter) appears
-    under 5–6 different name variants. The same material category (e.g. Equipment)
-    appears under 8+ variants. Leaving these unfixed means any GROUP BY on role or
-    category silently undercounts.
+Step 1 — Fix the Raw Data + Remove Redundant Columns
+=====================================================
+Standardizes messy text entries and removes columns that are either
+perfectly derived from other columns or duplicated across files.
 
-    Also parses the affected_sov_lines column in change_orders, which is stored as
-    a Python-list string (e.g. "['PRJ-2024-001-SOV-04', 'PRJ-2024-001-SOV-14']")
-    and must be exploded into one row per affected line before joining.
-
-    Finally flags and removes known data entry errors in field_notes.
-
-Inputs (from ../):
-    labor_logs_all.csv
-    material_deliveries_all.csv
-    change_orders_all.csv
-    field_notes_all.csv
-
-Outputs (to outputs/):
-    labor_logs_clean.csv           — standardized role names
-    material_deliveries_clean.csv  — standardized category names
-    change_orders_clean.csv        — affected_sov_lines parsed into individual rows
-    change_orders_exploded.csv     — one row per (co_number, affected_sov_line)
-    field_notes_clean.csv          — bad weather values and anomalous note_types removed
-    step1_cleaning_report.csv      — summary of every fix applied and how many rows it touched
+Outputs
+-------
+labor_logs_clean.csv
+material_deliveries_clean.csv
+change_orders_clean.csv
+change_orders_exploded.csv
+field_notes_clean.csv
+billing_line_items_clean.csv
+billing_history_clean.csv
+step1_cleaning_report.csv
 """
 
 import pandas as pd
-import ast
+import numpy as np
+import re
 import os
 
-# ── Paths ────────────────────────────────────────────────────────────────────
-BASE   = os.path.join(os.path.dirname(__file__), "..")
-OUT    = os.path.join(os.path.dirname(__file__), "outputs")
-os.makedirs(OUT, exist_ok=True)
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..")
+OUT_DIR  = os.path.join(os.path.dirname(__file__), "..", "outputs")
+os.makedirs(OUT_DIR, exist_ok=True)
 
-report_rows = []   # collects one dict per cleaning action for the summary report
+report_rows = []
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 1A — LABOR LOGS: standardize role names
-# ─────────────────────────────────────────────────────────────────────────────
-print("Cleaning labor_logs_all.csv ...")
-labor = pd.read_csv(os.path.join(BASE, "labor_logs_all.csv"))
+# ──────────────────────────────────────────────────────────────
+# 1A  Labor logs — normalize role names, drop cost_code
+# ──────────────────────────────────────────────────────────────
+print("1A  Cleaning labor_logs …")
+ll = pd.read_csv(os.path.join(DATA_DIR, "labor_logs_all.csv"), low_memory=False)
 
-ROLE_MAP = {
-    # Journeyman Pipefitter variants
-    "JM Pipefitter":       "Journeyman Pipefitter",
-    "J. Pipefitter":       "Journeyman Pipefitter",
-    "Pipefitter JM":       "Journeyman Pipefitter",
-    "Journeyman P.F.":     "Journeyman Pipefitter",
-    # Journeyman Sheet Metal variants
-    "Sheet Metal JM":      "Journeyman Sheet Metal",
-    "J. Sheet Metal":      "Journeyman Sheet Metal",
-    "JM Sheet Metal":      "Journeyman Sheet Metal",
-    "Journeyman S.M.":     "Journeyman Sheet Metal",
-    "Journeyman S.M":      "Journeyman Sheet Metal",
-    # Apprentice 2nd Year variants
-    "Apprentice 2nd Yr":   "Apprentice 2nd Year",
-    "App 2nd Year":        "Apprentice 2nd Year",
-    "Apprentice - 2nd":    "Apprentice 2nd Year",
-    # Apprentice 4th Year variants
-    "Apprentice 4th Yr":   "Apprentice 4th Year",
-    "App 4th Year":        "Apprentice 4th Year",
-    "Apprentice - 4th":    "Apprentice 4th Year",
-    "4th Yr Apprentice":   "Apprentice 4th Year",
-    # Controls Technician variants
-    "Controls Tech":       "Controls Technician",
-    "DDC Tech":            "Controls Technician",
-    "Ctrl Technician":     "Controls Technician",
-    "Controls Specialist": "Controls Technician",
-    "Apprentice Controls": "Controls Technician",
-    # Foreman variants
-    "Fmn":                 "Foreman",
-    "Lead Foreman":        "Foreman",
-    "General Foreman":     "Foreman",
-    # Helper variants
-    "Helper":              "Helper/Laborer",
-}
+def normalize_role(raw):
+    if pd.isna(raw): return raw
+    rl = str(raw).strip().lower()
+    if re.search(r'foreperson|foreman|forewoman|frm\b', rl):       return "Foreman"
+    if re.search(r'journeyperson|journeywoman|journeyman|jman|j-man|\bjour\b', rl): return "Journeyman"
+    if re.search(r'apprentice|appr?\b', rl):                       return "Apprentice"
+    if re.search(r'helper|hlpr?', rl):                             return "Helper"
+    if re.search(r'superintendent|supt\b|super\b', rl):            return "Superintendent"
+    if re.search(r'project.?manager|proj.?mgr|\bpm\b', rl):        return "Project Manager"
+    if re.search(r'engineer|\beng\b', rl):                         return "Engineer"
+    if re.search(r'technician|\btech\b', rl):                      return "Technician"
+    return str(raw).strip()
 
-before_counts = labor["role"].value_counts().to_dict()
-labor["role"] = labor["role"].replace(ROLE_MAP)
-after_counts  = labor["role"].value_counts().to_dict()
+before = ll["role"].nunique()
+ll["role"] = ll["role"].apply(normalize_role)
+after = ll["role"].nunique()
+report_rows.append({"file": "labor_logs", "action": "role standardization",
+                    "before": before, "after": after})
 
-rows_changed = (labor["role"].isin(ROLE_MAP.values())).sum()
-report_rows.append({
-    "file": "labor_logs_all.csv",
-    "column": "role",
-    "action": "Standardized role name variants to 8 canonical names",
-    "rows_affected": sum(before_counts.get(k, 0) for k in ROLE_MAP),
-    "unique_values_before": len(before_counts),
-    "unique_values_after": len(after_counts),
-})
+# cost_code is 100% redundant with the line number in sov_line_id
+if "cost_code" in ll.columns:
+    ll = ll.drop(columns=["cost_code"])
+    report_rows.append({"file": "labor_logs", "action": "drop cost_code (redundant with sov_line_id)",
+                        "before": "present", "after": "dropped"})
 
-labor.to_csv(os.path.join(OUT, "labor_logs_clean.csv"), index=False)
-print(f"  → {sum(before_counts.get(k,0) for k in ROLE_MAP):,} role name rows standardized")
-print(f"  → Saved: outputs/labor_logs_clean.csv")
+ll.to_csv(os.path.join(OUT_DIR, "labor_logs_clean.csv"), index=False)
+print(f"   Roles: {before} variants → {after} canonical | Rows: {len(ll):,}")
 
+# ──────────────────────────────────────────────────────────────
+# 1B  Material deliveries — normalize material_category
+# ──────────────────────────────────────────────────────────────
+print("1B  Cleaning material_deliveries …")
+md = pd.read_csv(os.path.join(DATA_DIR, "material_deliveries_all.csv"), low_memory=False)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 1B — MATERIAL DELIVERIES: standardize category names
-# ─────────────────────────────────────────────────────────────────────────────
-print("\nCleaning material_deliveries_all.csv ...")
-mats = pd.read_csv(os.path.join(BASE, "material_deliveries_all.csv"))
+def normalize_category(raw):
+    if pd.isna(raw): return raw
+    rl = str(raw).strip().lower()
+    if "duct" in rl:                    return "Ductwork"
+    if "pip" in rl:                     return "Piping"
+    if "equip" in rl:                   return "Equipment"
+    if "control" in rl or "ctrl" in rl: return "Controls"
+    if "insul" in rl:                   return "Insulation"
+    return str(raw).strip()
 
-def standardize_category(val):
-    """Map all variants to one of 5 canonical categories."""
-    v = str(val).strip().lower()
-    if v in ("ductwork", "duct work", "duct"):
-        return "Ductwork"
-    if v in ("piping", "pipe", "piping systems"):
-        return "Piping"
-    if v in ("equipment", "equip.", "equip", "equipmnt"):
-        return "Equipment"
-    if v in ("controls", "control", "controls/bas", "ddccontrols", "bas"):
-        return "Controls"
-    if v in ("insulation", "insul.", "insul"):
-        return "Insulation"
-    return val  # leave unchanged if not recognized (flag for review)
+before = md["material_category"].nunique()
+md["material_category"] = md["material_category"].apply(normalize_category)
+after = md["material_category"].nunique()
+report_rows.append({"file": "material_deliveries", "action": "material_category standardization",
+                    "before": before, "after": after})
 
-before_unique = mats["material_category"].nunique()
-mats["material_category"] = mats["material_category"].apply(standardize_category)
-after_unique  = mats["material_category"].nunique()
+md.to_csv(os.path.join(OUT_DIR, "material_deliveries_clean.csv"), index=False)
+print(f"   Categories: {before} variants → {after} canonical | Rows: {len(md):,}")
 
-non_standard = mats[~mats["material_category"].isin(
-    ["Ductwork","Piping","Equipment","Controls","Insulation"]
-)]
-
-report_rows.append({
-    "file": "material_deliveries_all.csv",
-    "column": "material_category",
-    "action": "Standardized category variants to 5 canonical names",
-    "rows_affected": len(mats) - len(non_standard),
-    "unique_values_before": before_unique,
-    "unique_values_after": after_unique,
-})
-
-mats.to_csv(os.path.join(OUT, "material_deliveries_clean.csv"), index=False)
-print(f"  → {len(mats) - len(non_standard):,} category rows standardized")
-if len(non_standard) > 0:
-    print(f"  → {len(non_standard)} rows left non-standard (review manually):")
-    print(non_standard["material_category"].value_counts())
-print(f"  → Saved: outputs/material_deliveries_clean.csv")
-
-
-# ─────────────────────────────────────────────────────────────────────────────
-# 1C — CHANGE ORDERS: parse affected_sov_lines and explode
-# ─────────────────────────────────────────────────────────────────────────────
-print("\nCleaning change_orders_all.csv ...")
-cos = pd.read_csv(os.path.join(BASE, "change_orders_all.csv"))
+# ──────────────────────────────────────────────────────────────
+# 1C  Change orders — parse list column, explode to one row per SOV line
+#     Real column names: co_number, date_submitted, reason_category, affected_sov_lines
+# ──────────────────────────────────────────────────────────────
+print("1C  Cleaning change_orders …")
+co = pd.read_csv(os.path.join(DATA_DIR, "change_orders_all.csv"), low_memory=False)
 
 def parse_sov_list(val):
-    """Convert "['SOV-01', 'SOV-02']" string into a Python list."""
-    if pd.isna(val) or val == "":
-        return []
-    try:
-        parsed = ast.literal_eval(val)
-        return parsed if isinstance(parsed, list) else [str(parsed)]
-    except Exception:
-        # fallback: strip brackets and split manually
-        cleaned = str(val).replace("[","").replace("]","").replace("'","").replace('"',"")
-        return [s.strip() for s in cleaned.split(",") if s.strip()]
+    if pd.isna(val): return []
+    val = str(val).strip().strip("[]\"'")
+    if not val: return []
+    parts = [p.strip().strip("\"'") for p in val.split(",")]
+    return [p for p in parts if p]
 
-cos["affected_sov_lines_parsed"] = cos["affected_sov_lines"].apply(parse_sov_list)
-cos["affected_sov_line_count"]   = cos["affected_sov_lines_parsed"].apply(len)
+co["affected_sov_lines_parsed"] = co["affected_sov_lines"].apply(parse_sov_list)
+co_clean = co.drop(columns=["affected_sov_lines"])
+co_clean.to_csv(os.path.join(OUT_DIR, "change_orders_clean.csv"), index=False)
 
-# Clean version: keep the list column for reference
-cos_clean = cos.drop(columns=["affected_sov_lines"])
-cos_clean = cos_clean.rename(columns={"affected_sov_lines_parsed": "affected_sov_lines"})
-cos_clean.to_csv(os.path.join(OUT, "change_orders_clean.csv"), index=False)
-
-# Exploded version: one row per (project_id, co_number, sov_line_id)
-cos_exploded = cos_clean.explode("affected_sov_lines").rename(
-    columns={"affected_sov_lines": "affected_sov_line_id"}
+co_exploded = co_clean.explode("affected_sov_lines_parsed").rename(
+    columns={"affected_sov_lines_parsed": "sov_line_id"}
 )
-cos_exploded = cos_exploded.dropna(subset=["affected_sov_line_id"])
-cos_exploded.to_csv(os.path.join(OUT, "change_orders_exploded.csv"), index=False)
+co_exploded = co_exploded[
+    co_exploded["sov_line_id"].notna() & (co_exploded["sov_line_id"] != "")
+]
+co_exploded.to_csv(os.path.join(OUT_DIR, "change_orders_exploded.csv"), index=False)
 
-report_rows.append({
-    "file": "change_orders_all.csv",
-    "column": "affected_sov_lines",
-    "action": "Parsed list-string into Python list; exploded to one row per SOV line",
-    "rows_affected": len(cos),
-    "unique_values_before": "N/A (string lists)",
-    "unique_values_after": f"{len(cos_exploded)} exploded rows",
-})
-print(f"  → {len(cos):,} change orders → {len(cos_exploded):,} exploded rows")
-print(f"  → Saved: outputs/change_orders_clean.csv")
-print(f"  → Saved: outputs/change_orders_exploded.csv")
+report_rows.append({"file": "change_orders", "action": "parse + explode affected_sov_lines",
+                    "before": len(co), "after": len(co_exploded)})
+print(f"   {len(co):,} orders → {len(co_exploded):,} exploded rows")
 
+# ──────────────────────────────────────────────────────────────
+# 1D  Field notes — normalize note_type and weather
+#     Real columns: note_type, weather (not weather_conditions)
+# ──────────────────────────────────────────────────────────────
+print("1D  Cleaning field_notes …")
+fn = pd.read_csv(os.path.join(DATA_DIR, "field_notes_all.csv"), low_memory=False)
 
-# ─────────────────────────────────────────────────────────────────────────────
-# 1D — FIELD NOTES: fix data entry errors
-# ─────────────────────────────────────────────────────────────────────────────
-print("\nCleaning field_notes_all.csv ...")
-notes = pd.read_csv(os.path.join(BASE, "field_notes_all.csv"))
+def normalize_note_type(raw):
+    if pd.isna(raw): return raw
+    rl = str(raw).strip().lower()
+    if "daily"   in rl: return "Daily Report"
+    if "safety"  in rl: return "Safety Log"
+    if "weather" in rl: return "Weather Delay"
+    if "inspect" in rl: return "Inspection"
+    if "quality" in rl or rl == "qc": return "Quality Control"
+    if "issue"   in rl: return "Issue Log"
+    if "rfi"     in rl: return "RFI Log"
+    return str(raw).strip()
 
-VALID_WEATHER    = {"Clear","Cloudy","Partly Cloudy","Cold","Rain","Hot"}
-VALID_NOTE_TYPES = {"Daily Report","Coordination Note","Issue Log","Safety Log","Inspection Note"}
+def normalize_weather(raw):
+    if pd.isna(raw): return raw
+    rl = str(raw).strip().lower()
+    if "clear" in rl or "sun"  in rl:           return "Clear"
+    if "rain"  in rl or "shower" in rl:          return "Rain"
+    if "snow"  in rl:                            return "Snow"
+    if "cloud" in rl or "overcast" in rl:        return "Cloudy"
+    if "wind"  in rl:                            return "Wind"
+    if "fog"   in rl:                            return "Fog"
+    if rl in ("n/a", "na", "none", ""):          return "N/A"
+    return str(raw).strip()
 
-# Fix weather = "RFI-042" (data entry error — set to null)
-bad_weather = ~notes["weather"].isin(VALID_WEATHER) & notes["weather"].notna() & (notes["weather"] != "")
-report_rows.append({
-    "file": "field_notes_all.csv",
-    "column": "weather",
-    "action": "Set invalid weather values to NaN",
-    "rows_affected": int(bad_weather.sum()),
-    "unique_values_before": notes["weather"].nunique(),
-    "unique_values_after": notes["weather"].nunique() - int(bad_weather.sum()),
-})
-notes.loc[bad_weather, "weather"] = None
+if "note_type" in fn.columns:
+    before = fn["note_type"].nunique()
+    fn["note_type"] = fn["note_type"].apply(normalize_note_type)
+    after = fn["note_type"].nunique()
+    report_rows.append({"file": "field_notes", "action": "note_type standardization",
+                        "before": before, "after": after})
 
-# Flag anomalous note_type rows (the 3 long-text entries) — keep but tag them
-anomalous_types = ~notes["note_type"].isin(VALID_NOTE_TYPES)
-notes["note_type_flag"] = anomalous_types
-report_rows.append({
-    "file": "field_notes_all.csv",
-    "column": "note_type",
-    "action": "Flagged non-standard note_type rows (kept for manual review)",
-    "rows_affected": int(anomalous_types.sum()),
-    "unique_values_before": notes["note_type"].nunique(),
-    "unique_values_after": f"{notes['note_type'].nunique()} (flagged rows kept)",
-})
+weather_col = next((c for c in ["weather", "weather_conditions"] if c in fn.columns), None)
+if weather_col:
+    before_w = fn[weather_col].nunique()
+    fn[weather_col] = fn[weather_col].apply(normalize_weather)
+    after_w = fn[weather_col].nunique()
+    report_rows.append({"file": "field_notes", "action": f"{weather_col} standardization",
+                        "before": before_w, "after": after_w})
 
-notes.to_csv(os.path.join(OUT, "field_notes_clean.csv"), index=False)
-print(f"  → {int(bad_weather.sum())} bad weather values fixed")
-print(f"  → {int(anomalous_types.sum())} anomalous note_type rows flagged")
-print(f"  → Saved: outputs/field_notes_clean.csv")
+fn.to_csv(os.path.join(OUT_DIR, "field_notes_clean.csv"), index=False)
+print(f"   Field notes cleaned: {len(fn):,} rows")
 
+# ──────────────────────────────────────────────────────────────
+# 1E  Billing line items — drop derived and cross-file duplicate columns
+#     Real columns: sov_line_id, description, scheduled_value,
+#                   previous_billed, this_period, total_billed,
+#                   pct_complete, balance_to_finish, project_id, application_number
+# ──────────────────────────────────────────────────────────────
+print("1E  Cleaning billing_line_items — removing redundant columns …")
+bl = pd.read_csv(os.path.join(DATA_DIR, "billing_line_items_all.csv"), low_memory=False)
 
-# ─────────────────────────────────────────────────────────────────────────────
+# Flag rows where pct_complete differs from derived value by > 0.01%
+# (evidence of a manual override — preserve this signal as a flag)
+if all(c in bl.columns for c in ["pct_complete", "total_billed", "scheduled_value"]):
+    derived_pct = (bl["total_billed"] / bl["scheduled_value"].replace(0, np.nan)) * 100
+    bl["pct_manually_adjusted"] = (bl["pct_complete"] - derived_pct).abs() > 0.01
+    n_manual = bl["pct_manually_adjusted"].sum()
+    report_rows.append({"file": "billing_line_items", "action": "flag pct_manually_adjusted",
+                        "before": "no flag", "after": f"{n_manual} rows flagged"})
+    print(f"   {n_manual:,} rows with manually-adjusted pct_complete flagged")
+
+# Drop perfectly derived columns (recomputed on demand from their source columns)
+# total_billed        = previous_billed + this_period
+# balance_to_finish   = scheduled_value - total_billed
+# Drop cross-file duplicates (sov_all.csv is the authoritative source)
+# scheduled_value, description
+DROP_COLS = [c for c in ["total_billed", "balance_to_finish", "scheduled_value", "description"]
+             if c in bl.columns]
+if DROP_COLS:
+    bl = bl.drop(columns=DROP_COLS)
+    report_rows.append({"file": "billing_line_items",
+                        "action": f"dropped redundant cols: {DROP_COLS}",
+                        "before": "present", "after": "dropped"})
+    print(f"   Dropped: {DROP_COLS}")
+
+bl.to_csv(os.path.join(OUT_DIR, "billing_line_items_clean.csv"), index=False)
+print(f"   billing_line_items saved: {len(bl):,} rows, {bl.shape[1]} columns")
+
+# ──────────────────────────────────────────────────────────────
+# 1F  Billing history — drop perfectly derived columns
+#     Real columns: project_id, application_number, period_end,
+#                   period_total, cumulative_billed, retention_held,
+#                   net_payment_due, status, payment_date, line_item_count
+# ──────────────────────────────────────────────────────────────
+print("1F  Cleaning billing_history — removing redundant columns …")
+bh = pd.read_csv(os.path.join(DATA_DIR, "billing_history_all.csv"), low_memory=False)
+
+# retention_held   = cumulative_billed × 0.10  (100% match)
+# net_payment_due  = cumulative_billed − retention_held  (100% match)
+BH_DROP = [c for c in ["retention_held", "net_payment_due"] if c in bh.columns]
+if BH_DROP:
+    bh = bh.drop(columns=BH_DROP)
+    report_rows.append({"file": "billing_history",
+                        "action": f"dropped derived cols: {BH_DROP}",
+                        "before": "present", "after": "dropped"})
+    print(f"   Dropped: {BH_DROP}")
+
+bh.to_csv(os.path.join(OUT_DIR, "billing_history_clean.csv"), index=False)
+print(f"   billing_history saved: {len(bh):,} rows, {bh.shape[1]} columns")
+
+# ──────────────────────────────────────────────────────────────
 # Save cleaning report
-# ─────────────────────────────────────────────────────────────────────────────
-report = pd.DataFrame(report_rows)
-report.to_csv(os.path.join(OUT, "step1_cleaning_report.csv"), index=False)
-print("\n✓ Step 1 complete. Cleaning report saved: outputs/step1_cleaning_report.csv")
-print(f"  Total cleaning actions: {len(report_rows)}")
+# ──────────────────────────────────────────────────────────────
+report_df = pd.DataFrame(report_rows)
+report_df.to_csv(os.path.join(OUT_DIR, "step1_cleaning_report.csv"), index=False)
+
+print("\n✓ Step 1 complete")
+print(report_df.to_string(index=False))

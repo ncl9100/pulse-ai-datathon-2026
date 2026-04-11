@@ -1,215 +1,154 @@
 """
-STEP 8 — CAUSE-AND-EFFECT CHAINS
-==================================
-Purpose:
-    The worst-performing projects (by CPI from Step 5) need a specific explanation
-    for why they went over budget. This step tests five causal chains against every
-    project in the bottom 20% of CPI and produces a per-project diagnosis.
+Step 8 — Explain Why Projects Failed
+======================================
+CO real column: reason_category (not 'reason'), co_number (not 'change_order_id')
+CO timing real column: reason_category, project_stage
 
-    The five chains are:
-      A. Design Incomplete at Bid   → Scope Gap / Design Error COs → rework labor
-      B. Material Shortage           → Idle Labor → Acceleration CO → OT premium
-      C. Slow RFI Response           → Standby labor → Unrecovered schedule impact
-      D. Rejected Change Order       → Unrecovered labor cost
-      E. High Early CO Volume        → Leading indicator of project-wide distress
-
-    For each chain, the script quantifies the estimated financial impact in dollars
-    so findings can be ranked by severity.
-
-Depends on:
-    outputs/cpi_per_project.csv          ← from Step 5
-    outputs/actual_cost_per_line.csv     ← from Step 3
-    outputs/change_orders_clean.csv      ← from Step 1
-    outputs/change_orders_exploded.csv   ← from Step 1
-    ../rfis_all.csv
-    outputs/material_deliveries_clean.csv ← from Step 1
-    ../labor_logs_all.csv                (uses clean if available)
-    outputs/project_master.csv           ← from Step 2
-
-Output:
-    outputs/cause_effect_diagnosis.csv   — per-project chain scores and estimated impacts
-    outputs/chain_A_design_rework.csv
-    outputs/chain_B_material_idle.csv
-    outputs/chain_C_rfi_standby.csv
-    outputs/chain_D_rejected_co_loss.csv
-    outputs/chain_E_early_cos.csv
+Outputs
+-------
+cause_effect_diagnosis.csv
+chain_a_design_rework.csv
+chain_b_material_shortage.csv
+chain_c_rfi_standby.csv
+chain_d_rejected_co.csv
+chain_e_early_co_volume.csv
 """
 
 import pandas as pd
 import numpy as np
-import ast
 import os
 
-BASE = os.path.join(os.path.dirname(__file__), "..")
-OUT  = os.path.join(os.path.dirname(__file__), "outputs")
-os.makedirs(OUT, exist_ok=True)
+OUT_DIR = os.path.join(os.path.dirname(__file__), "..", "outputs")
+os.makedirs(OUT_DIR, exist_ok=True)
 
-# ── Load ──────────────────────────────────────────────────────────────────────
-print("Loading data ...")
-cpi_proj  = pd.read_csv(os.path.join(OUT, "cpi_per_project.csv"))
-act_cost  = pd.read_csv(os.path.join(OUT, "actual_cost_per_line.csv"))
-master    = pd.read_csv(os.path.join(OUT, "project_master.csv"),
-                        parse_dates=["contract_date","substantial_completion_date"])
-rfis      = pd.read_csv(os.path.join(BASE, "rfis_all.csv"),
-                        parse_dates=["date_submitted","date_required","date_responded"])
+print("Loading inputs …")
+cpi_proj  = pd.read_csv(os.path.join(OUT_DIR, "cpi_per_project.csv"),        low_memory=False)
+actual    = pd.read_csv(os.path.join(OUT_DIR, "actual_cost_per_line.csv"),    low_memory=False)
+co_proj   = pd.read_csv(os.path.join(OUT_DIR, "co_analysis_by_project.csv"), low_memory=False)
+rfi_rec   = pd.read_csv(os.path.join(OUT_DIR, "co_rfi_recovery.csv"),        low_memory=False)
+co_timing = pd.read_csv(os.path.join(OUT_DIR, "co_timing.csv"),              low_memory=False)
+master    = pd.read_csv(os.path.join(OUT_DIR, "project_master.csv"),         low_memory=False)
 
-cos_path  = os.path.join(OUT, "change_orders_clean.csv")
-cos       = pd.read_csv(cos_path, parse_dates=["date_submitted"])
-cos["amount_float"] = pd.to_numeric(cos["amount"], errors="coerce").fillna(0)
-cos["labor_hours_impact_f"] = pd.to_numeric(cos["labor_hours_impact"], errors="coerce").fillna(0)
-cos["schedule_impact_days_f"] = pd.to_numeric(cos["schedule_impact_days"], errors="coerce").fillna(0)
+# Poor performers: CPI < 0.85
+poor = cpi_proj[cpi_proj["project_cpi"] < 0.85].copy()
+poor_ids = set(poor["project_id"])
+print(f"   Poor performers (CPI < 0.85): {len(poor)}")
 
-mats_path = os.path.join(OUT, "material_deliveries_clean.csv")
-mats      = pd.read_csv(mats_path)
+# ── Chain A: Design Rework ────────────────────────────────────────
+print("\nChain A: Design Rework …")
+# reason_category is the actual column name in co_timing
+design_early = co_timing[
+    co_timing.get("reason_category", pd.Series(dtype=str)).isin(["Design Error", "Scope Gap"]) &
+    co_timing.get("project_stage", pd.Series(dtype=str)).isin(["Early (0-20%)", "Mid (20-50%)"])
+] if "reason_category" in co_timing.columns else pd.DataFrame()
 
-# Use bottom 30% of projects by CPI as the focus set (include all if preferred)
-# Set to None to run on all projects
-cpi_threshold = cpi_proj["project_cpi"].quantile(0.30)
-focus_projects = cpi_proj[cpi_proj["project_cpi"] <= cpi_threshold]["project_id"].tolist()
-print(f"  Focus: bottom 30% of projects by CPI ({len(focus_projects)} projects, CPI ≤ {cpi_threshold:.3f})")
+if len(design_early) > 0:
+    chain_a = design_early.groupby("project_id").agg(
+        design_co_count=("co_number", "count"),
+        design_co_value_usd=("amount", "sum"),
+    ).reset_index()
+    chain_a["is_poor_performer"] = chain_a["project_id"].isin(poor_ids)
+    chain_a = chain_a.merge(cpi_proj[["project_id", "project_cpi"]], on="project_id", how="left")
+    total_a = chain_a.loc[chain_a["is_poor_performer"], "design_co_value_usd"].sum()
+else:
+    chain_a = pd.DataFrame({"note": ["No design CO data in early/mid stages"]})
+    total_a = 0
+chain_a.to_csv(os.path.join(OUT_DIR, "chain_a_design_rework.csv"), index=False)
+print(f"   Design rework loss in poor performers: ${total_a:,.0f}")
 
-# ── CHAIN A: Design Incomplete → Rework Labor ─────────────────────────────────
-print("\nChain A: Design rework from Scope Gap / Design Error COs ...")
-chain_a_cos = cos[
-    cos["reason_category"].isin(["Scope Gap","Design Error"])
-].copy()
-
-chain_a = chain_a_cos.groupby("project_id").agg(
-    design_co_count         = ("co_number",    "count"),
-    approved_design_co_usd    = ("amount_float", lambda x: x[cos.loc[x.index,"status"] == "Approved"].sum()),
-    rejected_design_co_usd    = ("amount_float", lambda x: x[(cos.loc[x.index,"status"] == "Rejected") & (x > 0)].sum()),
-    design_co_labor_hours   = ("labor_hours_impact_f", "sum"),
+# ── Chain B: Material Shortage ───────────────────────────────────
+print("\nChain B: Material Shortage …")
+mat_by_proj = actual.groupby("project_id").agg(
+    avg_partial_shipment_pct=("partial_shipment_rate_pct", "mean"),
+    avg_ot_ratio_pct=("ot_ratio_pct", "mean"),
+    total_actual_cost=("total_actual_cost", "sum"),
 ).reset_index()
+mat_by_proj["is_poor_performer"] = mat_by_proj["project_id"].isin(poor_ids)
 
-# Estimate labor cost of rework using average burdened rate from act_cost
-avg_rate = (
-    act_cost[act_cost["actual_labor_hours_total"] > 0]["actual_labor_cost_total"].sum()
-  / act_cost[act_cost["actual_labor_hours_total"] > 0]["actual_labor_hours_total"].sum()
-)
-chain_a["design_rework_estimated_cost_usd"] = chain_a["design_co_labor_hours"] * avg_rate
-chain_a["chain_A_net_loss_usd"] = chain_a["rejected_design_co_usd"] + chain_a["design_rework_estimated_cost_usd"]
-chain_a.to_csv(os.path.join(OUT, "chain_A_design_rework.csv"), index=False)
+chain_b = mat_by_proj[mat_by_proj["avg_partial_shipment_pct"] > 40].copy()
+# OT standby estimate: portion of OT cost attributable to waiting on materials
+chain_b["estimated_standby_cost_usd"] = (
+    chain_b["total_actual_cost"] * (chain_b["avg_ot_ratio_pct"] / 100) * 0.5
+).round(0)
+chain_b.to_csv(os.path.join(OUT_DIR, "chain_b_material_shortage.csv"), index=False)
+total_b = chain_b.loc[chain_b["is_poor_performer"], "estimated_standby_cost_usd"].sum()
+print(f"   Projects with >40% partial shipments: {len(chain_b)}")
+print(f"   Estimated standby loss in poor performers: ${total_b:,.0f}")
 
-# ── CHAIN B: Material Shortages → Idle Labor ─────────────────────────────────
-print("Chain B: Material shortage idle labor ...")
-partial_deliveries = mats[mats["condition_notes"] == "Partial shipment - backorder pending"].copy()
+# ── Chain C: RFI Standby ─────────────────────────────────────────
+print("\nChain C: RFI Standby …")
+if "cost_impact_rfis" in rfi_rec.columns:
+    chain_c = rfi_rec[
+        (rfi_rec["cost_impact_rfis"] > 10) & (rfi_rec["recovery_rate_pct"] < 20)
+    ].copy()
+    chain_c["is_poor_performer"] = chain_c["project_id"].isin(poor_ids)
+    total_c = len(chain_c[chain_c["is_poor_performer"]])
+else:
+    chain_c = pd.DataFrame({"note": ["No RFI cost impact data"]})
+    total_c = 0
+chain_c.to_csv(os.path.join(OUT_DIR, "chain_c_rfi_standby.csv"), index=False)
+print(f"   Projects with RFI standby pattern: {len(chain_c) if 'project_id' in chain_c.columns else 0}")
 
-chain_b = partial_deliveries.groupby("project_id").agg(
-    partial_delivery_count  = ("delivery_id",   "count"),
-    affected_sov_lines      = ("sov_line_id",   lambda x: list(x.unique())),
-).reset_index()
+# ── Chain D: Rejected COs ─────────────────────────────────────────
+print("\nChain D: Rejected COs …")
+chain_d = co_proj[co_proj.get("rejected_value_usd", pd.Series(0, index=co_proj.index)).fillna(0) > 500_000].copy()
+chain_d["is_poor_performer"] = chain_d["project_id"].isin(poor_ids)
+chain_d.to_csv(os.path.join(OUT_DIR, "chain_d_rejected_co.csv"), index=False)
+total_d = chain_d.loc[chain_d["is_poor_performer"], "rejected_value_usd"].sum() if "rejected_value_usd" in chain_d.columns else 0
+print(f"   Projects with >$500K rejected: {len(chain_d)}")
+print(f"   Total rejected CO loss (poor performers): ${total_d:,.0f}")
 
-# Acceleration COs are the financial consequence: add their approved values
-accel_cos = cos[cos["reason_category"] == "Acceleration"].groupby("project_id").agg(
-    acceleration_co_count    = ("co_number",    "count"),
-    acceleration_approved_usd  = ("amount_float", lambda x: x[cos.loc[x.index,"status"] == "Approved"].sum()),
-    acceleration_rejected_usd  = ("amount_float", lambda x: x[(cos.loc[x.index,"status"] == "Rejected") & (x > 0)].sum()),
-    acceleration_ot_hours    = ("labor_hours_impact_f", "sum"),
-).reset_index()
+# ── Chain E: Early CO Volume ─────────────────────────────────────
+print("\nChain E: Early CO volume (leading indicator) …")
+if "project_stage" in co_timing.columns:
+    early = co_timing[co_timing["project_stage"] == "Early (0-20%)"]
+    chain_e = early.groupby("project_id").size().reset_index(name="early_co_count")
+    chain_e["is_poor_performer"] = chain_e["project_id"].isin(poor_ids)
+    chain_e = chain_e.merge(cpi_proj[["project_id", "project_cpi"]], on="project_id", how="left")
+    chain_e.to_csv(os.path.join(OUT_DIR, "chain_e_early_co_volume.csv"), index=False)
+    high_early = chain_e[chain_e["early_co_count"] > 5]
+    if len(high_early) > 0:
+        poor_rate    = high_early["is_poor_performer"].mean() * 100
+        overall_rate = (cpi_proj["project_cpi"] < 0.85).mean() * 100
+        print(f"   Projects with >5 early COs: {len(high_early)}")
+        print(f"   Poor performer rate in this group: {poor_rate:.1f}% (overall: {overall_rate:.1f}%)")
+else:
+    pd.DataFrame({"note": ["No project_stage data"]}).to_csv(
+        os.path.join(OUT_DIR, "chain_e_early_co_volume.csv"), index=False
+    )
 
-chain_b = chain_b.merge(accel_cos, on="project_id", how="left").fillna(0)
-chain_b["chain_B_ot_premium_usd"] = chain_b["acceleration_ot_hours"] * avg_rate * 0.50
-# 0.50 = the extra 50% cost of OT hours vs standard time
-chain_b.to_csv(os.path.join(OUT, "chain_B_material_idle.csv"), index=False)
+# ── Master diagnosis ──────────────────────────────────────────────
+print("\nBuilding diagnosis table …")
+diag = poor[["project_id", "project_cpi", "total_bac", "total_actual_cost"]].copy()
+diag["cost_overrun_usd"] = diag["total_actual_cost"] - diag["total_bac"]
 
-# ── CHAIN C: Slow RFI Response → Standby Labor Cost ─────────────────────────
-print("Chain C: RFI response lag standby cost ...")
-rfis["response_lag_days"] = (rfis["date_responded"] - rfis["date_required"]).dt.days
-rfis_closed = rfis[rfis["status"] == "Closed"].copy()
+if "cost_impact_rfis" in rfi_rec.columns:
+    diag = diag.merge(
+        rfi_rec[["project_id", "cost_impact_rfis", "recovery_rate_pct"]],
+        on="project_id", how="left"
+    )
+if "rejected_value_usd" in co_proj.columns:
+    diag = diag.merge(
+        co_proj[["project_id", "rejected_value_usd", "rejection_rate_pct"]],
+        on="project_id", how="left"
+    )
 
-# Late = responded after deadline
-late_rfis = rfis_closed[rfis_closed["response_lag_days"] > 0].copy()
-late_rfis_with_impact = late_rfis[late_rfis["schedule_impact"] == True]
+def primary_cause(row):
+    rejected = row.get("rejected_value_usd") or 0
+    rfi_gap  = (row.get("recovery_rate_pct") or 100) < 20 and (row.get("cost_impact_rfis") or 0) > 10
+    if rejected > 100_000:  return "Rejected CO"
+    elif rfi_gap:           return "RFI Standby"
+    else:                   return "Cost Overrun (Other)"
 
-# Estimate standby cost: response_lag_days × typical daily crew cost
-# Daily crew cost approximated as avg burdened hourly rate × 8 hours × 5 workers
-daily_crew_cost = avg_rate * 8 * 5
+diag["primary_cause"] = diag.apply(primary_cause, axis=1)
+diag = diag.merge(master[["project_id", "gc_name", "project_type"]], on="project_id", how="left")
+diag.to_csv(os.path.join(OUT_DIR, "cause_effect_diagnosis.csv"), index=False)
 
-chain_c = late_rfis.groupby("project_id").agg(
-    late_rfi_count           = ("rfi_number",         "count"),
-    late_rfi_with_schedule   = ("schedule_impact",    lambda x: (x == True).sum()),
-    late_rfi_with_cost       = ("cost_impact",        lambda x: (x == True).sum()),
-    total_excess_lag_days    = ("response_lag_days",  "sum"),
-).reset_index()
+print(f"\n   Primary cause breakdown:")
+print(diag["primary_cause"].value_counts().to_string())
+print(f"\n   Estimated losses (poor performers):")
+print(f"     Chain A (Design Rework): ${total_a:>15,.0f}")
+print(f"     Chain B (Material):      ${total_b:>15,.0f}")
+print(f"     Chain D (Rejected CO):   ${total_d:>15,.0f}")
 
-chain_c["estimated_standby_cost_usd"] = chain_c["total_excess_lag_days"] * daily_crew_cost
-chain_c.to_csv(os.path.join(OUT, "chain_C_rfi_standby.csv"), index=False)
-
-# ── CHAIN D: Rejected COs → Unrecovered Labor ────────────────────────────────
-print("Chain D: Rejected CO labor loss ...")
-rejected_pos = cos[(cos["status"] == "Rejected") & (cos["amount_float"] > 0)].copy()
-
-chain_d = rejected_pos.groupby("project_id").agg(
-    rejected_co_count        = ("co_number",            "count"),
-    rejected_co_total_usd      = ("amount_float",         "sum"),
-    rejected_co_labor_hours  = ("labor_hours_impact_f", "sum"),
-    rejected_schedule_days   = ("schedule_impact_days_f","sum"),
-).reset_index()
-
-chain_d["rejected_labor_cost_usd"] = chain_d["rejected_co_labor_hours"] * avg_rate
-chain_d["chain_D_total_loss_usd"]  = chain_d["rejected_co_total_usd"]
-chain_d.to_csv(os.path.join(OUT, "chain_D_rejected_co_loss.csv"), index=False)
-
-# ── CHAIN E: High Early CO Volume → Project Distress Signal ──────────────────
-print("Chain E: Early CO volume as distress predictor ...")
-cos_with_timing = cos.merge(
-    master[["project_id","contract_date","original_duration_days"]],
-    on="project_id", how="left"
-)
-cos_with_timing["days_from_start"] = (
-    cos_with_timing["date_submitted"] - cos_with_timing["contract_date"]
-).dt.days
-cos_with_timing["in_first_20pct"] = (
-    cos_with_timing["days_from_start"] / cos_with_timing["original_duration_days"].replace(0,1)
-) <= 0.20
-
-chain_e = cos_with_timing.groupby("project_id").agg(
-    total_co_count           = ("co_number",       "count"),
-    early_co_count           = ("in_first_20pct",  "sum"),
-    early_co_approved_usd      = ("amount_float",    lambda x: x[(cos_with_timing.loc[x.index,"in_first_20pct"]) & (cos_with_timing.loc[x.index,"status"] == "Approved")].sum()),
-    early_co_rejected_usd      = ("amount_float",    lambda x: x[(cos_with_timing.loc[x.index,"in_first_20pct"]) & (cos_with_timing.loc[x.index,"status"] == "Rejected") & (x > 0)].sum()),
-).reset_index()
-chain_e["early_co_rate_%"] = (
-    chain_e["early_co_count"] / chain_e["total_co_count"].replace(0,1) * 100
-).round(2)
-chain_e.to_csv(os.path.join(OUT, "chain_E_early_cos.csv"), index=False)
-
-# ── Master diagnosis table ────────────────────────────────────────────────────
-print("\nBuilding master diagnosis table ...")
-diag = cpi_proj[["project_id","project_name","project_type","gc_name","project_cpi","project_cpi_flag","project_vac_%"]].copy()
-
-diag = (diag
-    .merge(chain_a[["project_id","design_co_count","chain_A_net_loss_usd"]], on="project_id", how="left")
-    .merge(chain_b[["project_id","partial_delivery_count","chain_B_ot_premium_usd"]], on="project_id", how="left")
-    .merge(chain_c[["project_id","late_rfi_count","estimated_standby_cost_usd"]], on="project_id", how="left")
-    .merge(chain_d[["project_id","rejected_co_count","chain_D_total_loss_usd"]], on="project_id", how="left")
-    .merge(chain_e[["project_id","early_co_count","early_co_rate_%"]], on="project_id", how="left")
-).fillna(0)
-
-diag["total_estimated_loss_usd"] = (
-    diag["chain_A_net_loss_usd"]
-  + diag["chain_B_ot_premium_usd"]
-  + diag["estimated_standby_cost_usd"]
-  + diag["chain_D_total_loss_usd"]
-)
-
-# Primary cause: which chain has the highest estimated loss
-loss_cols = {
-    "chain_A_net_loss_usd":       "A: Design Rework",
-    "chain_B_ot_premium_usd":     "B: Material Shortage / OT",
-    "estimated_standby_cost_usd": "C: RFI Standby",
-    "chain_D_total_loss_usd":     "D: Rejected CO",
-}
-diag["primary_cause"] = diag[list(loss_cols.keys())].idxmax(axis=1).map(loss_cols)
-
-diag.to_csv(os.path.join(OUT, "cause_effect_diagnosis.csv"), index=False)
-
-# Summary
-print(f"\n✓ Step 8 complete.")
-print(f"  outputs/cause_effect_diagnosis.csv  — {len(diag)} projects diagnosed")
-print(f"\n  Most common primary cause of loss:")
-print(diag["primary_cause"].value_counts())
-print(f"\n  Total estimated loss breakdown:")
-for col, label in loss_cols.items():
-    print(f"    {label:<30} ${diag[col].sum():>15,.0f}")
-print(f"  {'Total':<30} ${diag['total_estimated_loss_usd'].sum():>15,.0f}")
+print("\n✓ Step 8 complete → cause_effect_diagnosis.csv + 5 chain files")
