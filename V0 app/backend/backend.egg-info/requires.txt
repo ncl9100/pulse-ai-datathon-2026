@@ -1,0 +1,4 @@
+fastapi[standard]>=0.128.1
+pandas>=2.2.0
+duckdb>=1.0.0
+python-multipart>=0.0.9
