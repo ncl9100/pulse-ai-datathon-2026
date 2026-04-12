@@ -2,7 +2,7 @@
 Pulse AI Datathon Repo hosted by DSC Club @NYU
 
 ## Group name
-BNKT Profit Maximizers
+BNKT Margin Guardians
 
 ## Stack
 v0 + Next.js + Shadcn/ui + Recharts + Claude/OpenAI API + DuckDB
